@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Good Time Group</title>
-        <meta name="description" content="" />
+        <title>Good Time Hospitality Group</title>
+        <meta name="description" content="Vacation Home Rental" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
