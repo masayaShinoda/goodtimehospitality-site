@@ -24,11 +24,11 @@ export default function Home() {
           <p>Site is under construction.</p>
           <p>គេហទំព័រនឹងមកដល់ឆាប់ៗនេះ។</p>
           <div className={styles.socialContainer} style={{marginTop: `10px`}}>
-            <a href="https://facebook.com/sentinelspropertyalliance">
+            <a href="https://www.facebook.com/Good-Time-Hospitality-Group-106046934410922/">
               <Image src="/icons/Asset 3.png" width="35" height="35" alt="FB" 
               />
             </a>
-            <a href="https://instagram.com/sentinels_property_alliance/" style={{marginLeft: `10px`}}>
+            <a href="https://www.instagram.com/goodtimehospitalitygroup/" style={{marginLeft: `10px`}}>
               <Image src="/icons/Asset 4.png" width="35" height="35" alt="IG"
               />
             </a>
