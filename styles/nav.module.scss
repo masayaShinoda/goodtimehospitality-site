@@ -1,0 +1,183 @@
+@import './_variables.scss';
+
+@media(min-width: $mobile-bp) {
+    .openNavBtn, .closeNavBtn {
+        display: none !important;
+    }
+}
+#openNavBtn {
+    display: none;
+}
+.mobileLogoLink {display: none;}
+
+.navContainer {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    .openNavBtn, .closeNavBtn {  
+        display: none;
+    }
+    // align-items: center;
+    // border: 1px solid red; //debug
+    .navContent {
+        width: 1024px;
+        max-width: 1024px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        // border: 1px solid green; //debug
+        .navLinks {
+            padding: 10px 0;
+            a {
+                margin: 0 16px;
+                color: $black;
+                text-decoration: none;
+                transition: color 200ms ease-in-out;
+            }
+            a:hover, a:focus {
+                color: $gold;
+            }
+            a:last-of-type {margin-right: 0}
+            a.active {
+                border-bottom: 2px solid $gold;
+            }
+        }
+    }
+    
+    @media (max-width: $tablet-bp) {
+        .navContent {width: 640px; max-width: 640px;}
+    }
+
+    .bookingLink {
+        position: absolute;
+        top: 0;
+        right: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;        
+        border-radius: 0 0 8px 8px;
+        text-decoration: none;
+        color: $black;
+        background-color: $gold;
+        transition: background-color .2s ease-in;
+        p {
+            font-size: 16px;
+            font-family: $head;
+            margin-left: 5px;
+            line-height: 1;   
+        }
+    }
+    .bookingLink:hover {
+        background-color: saturate($gold, 25%);
+    }
+}
+
+.navMobile {display: none}
+
+// @media(max-width: $tablet-bp) {
+
+//     /
+// }
+
+@media(max-width: $mobile-bp) {
+    .bookingLink {
+        display: none !important;
+    }
+    .navContainer {
+        height: 150px;
+        // border: 1px solid red; //debug
+        align-items: center;
+        .mobileLogoLink {
+            display: block;
+            // border: 1px solid green; //debug
+
+        }
+    }
+    .navContent {
+        display: none !important;
+    }
+    .navMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #fcfcfc;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        z-index: 50;
+        // border: 1px solid green; //debug        
+    }
+    .mobileLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 25vh 0;
+        width: 100%;
+        a {
+            font-family: $head;
+            font-size: 28px;
+            text-align: center;
+            width: 100%;
+            padding: 25px 0;
+            text-decoration: none;
+            color: $black;
+            
+        }
+        a:hover, a:focus {
+            background: $gold;
+        }
+        // z-index: 60;
+
+    }
+    
+    .openNavBtn, .closeNavBtn {   
+        position: fixed;
+        top: 5vh;
+        left: 1.25vw;
+        color: #fcfcfc;
+        font-size: 1.2rem;
+        width: 70px; 
+        height: 70px;
+        border-radius: 100%;
+        background: #fcfcfc;
+        z-index: 150;
+        border: 0;
+        box-shadow: 0 0 6px rgba(0,0,0,.25);
+        span {
+            display: block;
+            margin: 10% auto;
+            width: 30px;
+            height: 4px;
+            // border-radius: 4px;
+            background: $darkGold;
+        }
+    }
+    .openNavBtn {
+        display: block;
+    }
+    .closeNavBtn {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        background: 0;
+        // border: 1px solid red; //debug
+        div {
+            // position: fixed;
+            // border: 1px solid blue; //debug
+            span {
+                display: block;
+                margin: 0 auto;
+                transform: rotate(45deg);                
+                background: $darkGold;
+            }
+            span:nth-of-type(2n) {            
+                // background: #fcfcfc;
+                transform: translateY(-4.5px) rotate(135deg);    
+            }
+        }
+    }
+}

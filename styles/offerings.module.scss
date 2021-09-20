@@ -1,0 +1,89 @@
+@import './_variables.scss';
+
+.offeringsContainer {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    // border: 1px solid red; //debug
+    .offeringsGrid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 20px 0;
+        // border: 1px solid green; //debug
+    }
+    .box {
+        width: 420px;
+        height: 240px;
+        display: flex;
+        // background: rgba(55,0,0,.5); //debug
+        background-position: center;
+        background-size: cover;
+        transition: all .4s ease-in-out;
+        box-shadow: 1px 2px 6px rgba(0,0,0,.425);
+        // border: 1px solid blue; //debug
+        margin: 20px;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $body;
+            font-style: italic;
+            font-size: 2.4rem;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            color: #fcfcfc;
+            background: rgb(51,51,51);
+            background: linear-gradient(0deg, rgba(15,15,15,.8) 0%, rgba(51,51,51,0) 90%);
+            font {
+                padding: .5rem 2.5rem;
+                // transition: border 1s ease;
+            }
+        }
+        a:hover font {
+            border: .25rem solid #ececec;
+
+        }
+    }
+    .box:hover {
+        transform: scale(1.05);
+    }
+    .box:nth-of-type(1) {background-image: url("/thumbnail/asset-5result.webp");}
+    .box:nth-of-type(2) {background-image: url("/thumbnail/asset-4result.webp");}
+    .box:nth-of-type(3) {background-image: url("/thumbnail/asset-3result.webp");}
+
+    
+}
+
+@media(max-width: $tablet-bp) {
+    .offeringsGrid {
+        .box {
+            width: 280px;
+            height: 160px;
+            margin: 10px;
+            a {font-size: 2.1rem;}
+            
+        }
+    
+    }
+
+}
+
+@media(max-width: $mobile-bp) {
+    .offeringsGrid {
+        flex-direction: column;
+        width: 100%;
+        padding: 50px 0;
+        .box {
+            width: 100%;
+            height: 180px;
+            margin: 2.5% 0;
+            
+        }
+    }
+}

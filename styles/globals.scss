@@ -1,0 +1,51 @@
+@import "./_variables.scss";
+
+html {
+    font-size: 62.5%;   
+}
+h1, h2, a {
+    font-family: $head;
+}
+div, span, p, font {
+    font-family: $body;
+}
+h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 1.1;
+}
+h2 {font-size: 1.8rem; line-height: 1.24;}
+p {font-size: 1.2rem; line-height: 1.6}
+a {font-weight: 500; font-size: 1.8rem}
+
+
+// arrow
+.arrow {
+    border: solid #fcfcfc;
+    display: inline-block;
+    border-width: 0 .4rem .4rem 0;
+    padding: .4rem;
+}
+  
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+// arrow end

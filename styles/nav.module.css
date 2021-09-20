@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@media (min-width: 480px) {
+  .openNavBtn, .closeNavBtn {
+    display: none !important;
+  }
+}
+
+#openNavBtn {
+  display: none;
+}
+
+.mobileLogoLink {
+  display: none;
+}
+
+.navContainer {
+  width: 100%;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navContainer .openNavBtn, .navContainer .closeNavBtn {
+  display: none;
+}
+
+.navContainer .navContent {
+  width: 1024px;
+  max-width: 1024px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.navContainer .navContent .navLinks {
+  padding: 10px 0;
+}
+
+.navContainer .navContent .navLinks a {
+  margin: 0 16px;
+  color: #110f0d;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.navContainer .navContent .navLinks a:hover, .navContainer .navContent .navLinks a:focus {
+  color: #e1b655;
+}
+
+.navContainer .navContent .navLinks a:last-of-type {
+  margin-right: 0;
+}
+
+.navContainer .navContent .navLinks a.active {
+  border-bottom: 2px solid #e1b655;
+}
+
+@media (max-width: 1024px) {
+  .navContainer .navContent {
+    width: 640px;
+    max-width: 640px;
+  }
+}
+
+.navContainer .bookingLink {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 16px;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  color: #110f0d;
+  background-color: #e1b655;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+}
+
+.navContainer .bookingLink p {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  margin-left: 5px;
+  line-height: 1;
+}
+
+.navContainer .bookingLink:hover {
+  background-color: #fac03c;
+}
+
+.navMobile {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .bookingLink {
+    display: none !important;
+  }
+  .navContainer {
+    height: 150px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navContainer .mobileLogoLink {
+    display: block;
+  }
+  .navContent {
+    display: none !important;
+  }
+  .navMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background: #fcfcfc;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 50;
+  }
+  .mobileLinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 25vh 0;
+    width: 100%;
+  }
+  .mobileLinks a {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    padding: 25px 0;
+    text-decoration: none;
+    color: #110f0d;
+  }
+  .mobileLinks a:hover, .mobileLinks a:focus {
+    background: #e1b655;
+  }
+  .openNavBtn, .closeNavBtn {
+    position: fixed;
+    top: 5vh;
+    left: 1.25vw;
+    color: #fcfcfc;
+    font-size: 1.2rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background: #fcfcfc;
+    z-index: 150;
+    border: 0;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  }
+  .openNavBtn span, .closeNavBtn span {
+    display: block;
+    margin: 10% auto;
+    width: 30px;
+    height: 4px;
+    background: #996600;
+  }
+  .openNavBtn {
+    display: block;
+  }
+  .closeNavBtn {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: 0;
+  }
+  .closeNavBtn div span {
+    display: block;
+    margin: 0 auto;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background: #996600;
+  }
+  .closeNavBtn div span:nth-of-type(2n) {
+    -webkit-transform: translateY(-4.5px) rotate(135deg);
+            transform: translateY(-4.5px) rotate(135deg);
+  }
+}
+/*# sourceMappingURL=nav.module.css.map */
