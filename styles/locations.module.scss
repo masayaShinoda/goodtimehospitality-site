@@ -1,0 +1,82 @@
+@import './_variables.scss';
+
+$cardWidthDesktop: 32%;
+$cardHeightDesktop: 240px;
+$cardHeightTablet: 300px;
+$cardWidthMobile: 100%;
+$cardHeightMobile: 240px;
+
+.locationsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 1280px;
+    // border: 1px solid red; //debug
+    @media (max-width: $tablet-bp) {
+        width: 100vw;
+    }
+    @media (max-width: $mobile-bp) {
+        flex-direction: column;
+        width: 100vw;
+    }
+    .card {
+        // border: 1px solid blue; //debug
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        cursor: pointer;
+        width: $cardWidthDesktop;
+        height: $cardHeightDesktop;
+        background-size: cover;
+        animation-duration: .8s;
+        @media (max-width: $tablet-bp) {
+            height: $cardHeightTablet;
+
+        }
+        @media (max-width: $mobile-bp) {
+            width: $cardWidthMobile;
+            height: $cardHeightMobile;
+        }
+        
+
+        // .cardBg {
+        //     display: flex;
+        //     width: $cardWidthDesktop;
+        //     height: auto;
+        //     top: 0;
+        //     background: rgba(200,0,0,.5);
+        // }
+        .textContainer {
+            padding: 8px 20px 12px 20px;
+            width: 100%;
+            background: rgb(19,19,19);
+            background: linear-gradient(0deg, rgba(19,19,19,.75) 0%, rgba(51,51,51,0) 100%);
+            @media (max-width: $tablet-bp) {padding: 20px 15px; height: 55%}
+            h1, span {
+                max-width: 80%;
+                @media(max-width: $tablet-bp) {max-width: 100%}
+            }
+            h1 {
+                color: #fcfcfc;
+                margin-bottom: .8rem;
+            }
+            span {
+                display: none;
+                transition: .2 ease-in-out;
+                color: #ececec;
+                animation-duration: .2s;
+                @media (max-width: $tablet-bp) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .card:hover {
+        span {display: inline-block; }
+    }
+    // .card:nth-of-type(2) {
+    //     animation-duration: 1.2s;
+    // }
+}

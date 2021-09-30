@@ -29,7 +29,7 @@ export default function Nav() {
                         Home
                         </a>
                     </Link>
-                    <Link href="/locations">
+                    <Link href="/locations" className={styles.dropdownNav}>
                         <a className={router.pathname === "/locations" ? `${styles.active}` : ""}>
                         Locations
                         </a>
