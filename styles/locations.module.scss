@@ -31,6 +31,10 @@ $cardHeightMobile: 240px;
         height: $cardHeightDesktop;
         background-size: cover;
         animation-duration: .8s;
+        background-position: center;
+        transition: .2s ease-in-out;
+
+
         @media (max-width: $tablet-bp) {
             height: $cardHeightTablet;
 
@@ -74,6 +78,12 @@ $cardHeightMobile: 240px;
         }
     }
     .card:hover {
+        // background-size: 110%;
+        background-position: bottom;
+        transition: .2s ease-in-out;
+        // animation-duration: .8s;
+        
+
         span {display: inline-block; }
     }
     // .card:nth-of-type(2) {

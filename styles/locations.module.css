@@ -51,6 +51,9 @@
   background-size: cover;
   -webkit-animation-duration: .8s;
           animation-duration: .8s;
+  background-position: center;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 @media (max-width: 1024px) {
@@ -109,6 +112,12 @@
   .locationsContainer .card .textContainer span {
     display: inline-block;
   }
+}
+
+.locationsContainer .card:hover {
+  background-position: bottom;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .locationsContainer .card:hover span {
