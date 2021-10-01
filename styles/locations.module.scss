@@ -32,7 +32,12 @@ $cardHeightMobile: 240px;
         background-size: cover;
         animation-duration: .8s;
         background-position: center;
-        transition: .2s ease-in-out;
+        
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
 
 
         @media (max-width: $tablet-bp) {
@@ -78,9 +83,9 @@ $cardHeightMobile: 240px;
         }
     }
     .card:hover {
-        // background-size: 110%;
+        background-size: 110%;
         background-position: bottom;
-        transition: .2s ease-in-out;
+        
         // animation-duration: .8s;
         
 
