@@ -86,8 +86,8 @@ export default function Hero() {
                                 } else {
                                     setOrder(order + 1)
                                 }
-                                animChangeSlide()
-                                animRemoveClasses()
+                                // animChangeSlide()
+                                // animRemoveClasses()
                             }}
                         >
                             <i className="arrow left"></i>
@@ -100,8 +100,8 @@ export default function Hero() {
                                 } else {
                                     setOrder(order - 1)
                                 }
-                                animChangeSlide()
-                                animRemoveClasses()
+                                // animChangeSlide()
+                                // animRemoveClasses()
                             }}
                         >
                             <i className="arrow right"></i>
