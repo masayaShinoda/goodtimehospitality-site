@@ -1,4 +1,4 @@
-// import Nav from '../../components/nav.js'
+import MessengerComponent from 'react-messenger-customer-chat';
 import Layout from '../../components/layout'
 import styles from '../../styles/subpage.module.css';
 
@@ -21,6 +21,15 @@ export default function GoodTimeRelaxResort() {
                         COMING SOON
                     </h1>
                 </div>
+                {
+                    typeof window !== 'undefiend' && (
+                        <MessengerComponent
+                        pageId="111918520338184"
+                        // appId="<APP_ID>"
+                        // htmlRef="<REF_STRING>"
+                        />
+                    )
+                }
 
             </Layout>
         </>
