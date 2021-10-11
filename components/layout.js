@@ -1,6 +1,7 @@
-import Head from 'next/head'
 import { NextSeo } from 'next-seo'
+import Head from 'next/head'
 import Nav from '../components/nav'
+import Footer from '../components/footer'
 import styles from '../styles/layout.module.css'
 
 export default function Layout({ children, pageName }) {
@@ -30,6 +31,8 @@ export default function Layout({ children, pageName }) {
         <main>
             {children}
         </main>
+
+        <Footer />
 
         </div>
     )

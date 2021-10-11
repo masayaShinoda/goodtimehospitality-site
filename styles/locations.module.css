@@ -12,7 +12,9 @@
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 100px;
   width: 1280px;
+  max-width: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -52,6 +54,7 @@
   -webkit-animation-duration: .8s;
           animation-duration: .8s;
   background-position: center;
+  background-repeat: no-repeat;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
@@ -115,11 +118,17 @@
 }
 
 .locationsContainer .card:hover {
-  background-size: 110%;
+  background-size: 125%;
   background-position: bottom;
 }
 
 .locationsContainer .card:hover span {
   display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .locationsContainer .card:hover {
+    background-size: cover;
+  }
 }
 /*# sourceMappingURL=locations.module.css.map */

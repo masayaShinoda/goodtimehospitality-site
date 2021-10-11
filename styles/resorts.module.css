@@ -8,8 +8,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 65%;
-  position: absolute;
+  max-width: 100%;
+  height: 480px;
+  top: 120px;
+  position: static;
 }
 
 .twinContainer .choice {
@@ -50,5 +52,19 @@
 
 .twinContainer .choice img {
   width: 50%;
+}
+
+@media (max-width: 480px) {
+  .twinContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 180px;
+  }
+  .twinContainer .choice {
+    width: 100%;
+    height: 50%;
+  }
 }
 /*# sourceMappingURL=resorts.module.css.map */

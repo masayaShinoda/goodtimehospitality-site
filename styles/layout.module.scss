@@ -3,17 +3,21 @@
 .layout {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-
+    // align-items: flex-start;
+    align-items: center;
+    width: 100%;
+    // min-height: 100vh;
     main {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         // main container, content goes here
-        margin: 0 auto;    
+        // margin: 0 auto;    
         // padding: 50px 0;
         width: 100%;
         max-width: 100%;
+        min-height: 50vh;
         // margin: auto;
     }
 
@@ -32,15 +36,15 @@
         //widescreen container size
         main {
             min-width: 960px;
-            max-width: 1280px;
+            max-width: 100%;
             // background: green;
             // border: 1px solid green;
         }
     }
     @media (max-width: $tablet-bp) {
         main {
-            width: 640px;
-            max-width: 640px;
+            // width: 640px;
+            // max-width: 640px;
             // padding: 5vmax 0;
             
             // border: 1px solid orange; //debug

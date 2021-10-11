@@ -13,7 +13,7 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 100%;
+  max-width: 1280px;
 }
 
 .offeringsContainer .offeringsGrid {

@@ -4,8 +4,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 65%;
-    position: absolute;
+    max-width: 100%;
+    height: $navHeight * 4;
+    top: $navHeight;
+
+    // z-index: -100;
+    position: static;
+    // margin-bottom: 30vh;
     // top: 30%;
     // border: 1px solid red; //debug
     .choice {
@@ -39,6 +44,15 @@
         // border: 1px solid blue; //debug
         a {
             // background: rgba(255,255,255.)
+        }
+    }
+
+    @media (max-width: $mobile-bp) {
+        flex-direction: column;
+        top: $navHeight * 1.5;
+        .choice {
+            width: 100%;
+            height: 50%;
         }
     }
 }

@@ -30,6 +30,10 @@
   background-size: cover;
 }
 
+.subpageContainer h1 {
+  text-align: center;
+}
+
 .background {
   width: 100%;
   z-index: -10;

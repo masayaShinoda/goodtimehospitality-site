@@ -70,22 +70,22 @@ export default function Nav() {
             <div className={styles.navMobile} style={{display: `none`}} id="navMobile">
                 <span className={styles.mobileLinks}>
                     <Link href="/">
-                        <a className={router.pathname === "/" ? `${styles.active}` : ""}>
+                        <a onClick={closeNav} className={router.pathname === "/" ? `${styles.active}` : ""}>
                         Home
                         </a>
                     </Link>
                     <Link href="/locations">
-                        <a className={router.pathname === "/locations" ? `${styles.active}` : ""}>
+                        <a onClick={closeNav} className={router.pathname === "/locations" ? `${styles.active}` : ""}>
                         Locations
                         </a>
                     </Link>
-                    <Link href="/">
-                        <a className={router.pathname === "/about" ? `${styles.active}` : ""}>
+                    <Link href="/about">
+                        <a onClick={closeNav} className={router.pathname === "/about" ? `${styles.active}` : ""}>
                         About
                         </a>
                     </Link>
                     <Link href="/">
-                        <a href="">
+                        <a onClick={closeNav}>
                             Booking
                         </a>
                     </Link>
