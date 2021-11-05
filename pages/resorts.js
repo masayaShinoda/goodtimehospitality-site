@@ -15,7 +15,6 @@ export default function Resorts() {
                         <a>
                             <Link href="/resort/good-time-relax-resort">
                                     <img src="/images/goodtimerelaxresort-logo_result.webp" alt="Good Time Relax Resort logo" />
-
                             </Link>
                         </a>
                     </div>

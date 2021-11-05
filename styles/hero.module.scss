@@ -7,7 +7,7 @@ $heroHeightMobile: 600px;
     0% {opacity: 0}
     100% {opacity: 1}
 }
-
+  
 .heroContainer {
     display: flex;
     flex-direction: column;
@@ -34,6 +34,11 @@ $heroHeightMobile: 600px;
             display: flex;
             flex-direction: column;
             max-width: 50%;
+        }
+        .leftDiv.grow, .rightDiv.grow {
+            animation-name: opacityAppear;
+            animation-duration: .8s;
+            animation-fill-mode: forwards;
         }
 
         .leftDiv {
@@ -133,5 +138,61 @@ $heroHeightMobile: 600px;
             height: $heroHeightMobile;
             top: 150px;
         }
+    }
+}
+
+.carouselContainer {
+    // border: 1px solid red; //debug
+    max-width: 100%;
+    @media(max-width: $mobile-bp) {button {display: none}}
+    .carouselBg {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        filter: blur(5px) brightness(50%);
+        transform: scale(1.25);
+        @media(max-width: $mobile-bp) {display: none}
+    }
+
+    .carousel {
+        height: $heroHeight;
+        background-position: center;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        // width: 100%;
+        // padding: 0 10%;
+        @media(max-width: $mobile-bp) {flex-direction: column-reverse; padding: 0;}
+    }
+    .carouselTextContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 5vmax;
+        @media(max-width: $mobile-bp) {padding-left: 0; width: 100%}
+    }
+    .carouselText {
+        color: #fcfcfc;
+        text-align: left;
+        max-width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: flex-start;
+        // border: 1px solid green; //debug
+        @media(max-width: $mobile-bp) {color: $black; width: 98%; padding: 1.1rem .8rem}
+        h1 {font-size: 2.8rem; margin-bottom: 1.8rem}
+        p {font-size: 1.25rem; max-width: 45ch}
+    }
+
+    .carouselImg {
+        width: 50%;
+        max-width: 50%;
+        @media(max-width: $mobile-bp) {width: 100%; max-width: 100%; max-height: 200px; margin-bottom: 1.25rem}
+        
+
     }
 }
