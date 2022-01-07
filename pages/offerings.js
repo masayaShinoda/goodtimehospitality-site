@@ -5,12 +5,30 @@ import styles from '../styles/locations.module.css'
 export default function Locations() {
 
     return (
-        <Layout pageName="Locations">
-            <span style={{padding: `50px 0`, display: `flex`, flexDirection: `column`, alignItems: `center`}}>
-                <h1>Locations</h1> 
+        <Layout pageName="Offerings">
+            <span className={styles.headerText}>
+                <h1 id="pageTitle">Offerings</h1> 
             </span>
             <div className={styles.locationsContainer}>
+                <LocationCard
+                    title="Resorts"
+                    desc="Located in environments with unparalleled tranquility, specially designed for memorable experiences."
+                    callToAction="/resorts"
+                    bg="thumbnail/gt-rr-choice_result.webp"
+                />
                 <LocationCard 
+                    title="Vacation Homes"
+                    desc="Page coming soon."
+                    callToAction="/vacation-homes"
+                    bg="/thumbnail/asset-4result.webp"
+                />
+                <LocationCard 
+                    title="Apartments"
+                    desc="Page coming soon."
+                    callToAction="/apartments"
+                    bg="/thumbnail/asset-3result.webp"
+                />
+                {/* <LocationCard 
                     title="Kampot"
                     desc="Our resorts and vacation homes are ideal for a vacation in southern Cambodia's beautiful seaside province."
                     callToAction="/"
@@ -27,7 +45,7 @@ export default function Locations() {
                     desc="Check out our apartments that we have on offer for our dear customers."
                     callToAction="/"
                     bg="/thumbnail/thumb-pp.webp"
-                />
+                /> */}
             </div>
         </Layout>
     )

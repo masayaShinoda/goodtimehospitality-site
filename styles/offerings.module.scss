@@ -8,7 +8,7 @@
     width: 100%;
     max-width: 1280px;
     // max-width: 100%;
-    // border: 1px solid red; //debug
+    // outline: 1px solid red; //debug
     .offeringsGrid {
         display: flex;
         justify-content: center;
@@ -21,13 +21,15 @@
         width: 420px;
         height: 240px;
         display: flex;
-        // background: rgba(55,0,0,.5); //debug
         background-position: center;
         background-size: cover;
         transition: all .4s ease-in-out;
         box-shadow: 1px 2px 6px rgba(0,0,0,.425);
-        // border: 1px solid blue; //debug
+        // outline: 1px solid blue; //debug
         margin: 20px;
+        @media (max-width: $mobile-bp) {
+            margin: 0 !important;
+        }
         a {
             display: flex;
             align-items: center;
@@ -57,7 +59,6 @@
     .box:nth-of-type(1) {background-image: url("/thumbnail/asset-5result.webp");}
     .box:nth-of-type(2) {background-image: url("/thumbnail/asset-4result.webp");}
     .box:nth-of-type(3) {background-image: url("/thumbnail/asset-3result.webp");}
-
     
 }
 
@@ -69,8 +70,7 @@
             margin: 10px;
             a {font-size: 2.1rem;}
             
-        }
-    
+        }    
     }
 
 }

@@ -11,14 +11,36 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         // main container, content goes here
         // margin: 0 auto;    
         // padding: 50px 0;
         width: 100%;
         max-width: 100%;
         min-height: 50vh;
+        margin-top: $navHeight;
         // margin: auto;
+    }
+    .main_bg {
+        position: absolute;
+        display: flex;
+        justify-content: center; align-items: flex-start;
+        z-index: -50;
+        width: 100%; height: 100%;
+        overflow: hidden;
+        @media (max-width: $mobile-bp) {
+            display: none;
+        }
+        img {
+            filter: blur(15px) brightness(90%);
+            transform: scale(1.125);
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+        }
     }
 
     @media (min-width: $ultrawide-bp) {
@@ -52,7 +74,7 @@
     }
     @media (max-width: $mobile-bp) {
         main {
-            padding: 5% 2.5%;
+            // padding: 5% 2.5%;
             width: 100%;
             // width: 337.5px;
             // max-width: 337.5px;

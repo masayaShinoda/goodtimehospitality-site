@@ -2,11 +2,13 @@
 
 
 .footerContainer{
-    background: $gt-rr-brown;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    margin-top: 15vmin;
+  background: $gt-rr-brown;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  // position: relative;
+    
+    // margin-top: 15vmin;
     // position: fixed;
 }
 // .footerContainer::before{

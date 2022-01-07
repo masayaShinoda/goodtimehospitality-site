@@ -29,9 +29,9 @@ export default function Nav() {
                         Home
                         </a>
                     </Link>
-                    <Link href="/locations" className={styles.dropdownNav}>
-                        <a className={router.pathname === "/locations" ? `${styles.active}` : ""}>
-                        Locations
+                    <Link href="/offerings" className={styles.dropdownNav}>
+                        <a className={router.pathname === "/offerings" ? `${styles.active}` : ""}>
+                        Offerings
                         </a>
                     </Link>
                     <Link href="/about">
@@ -74,9 +74,9 @@ export default function Nav() {
                         Home
                         </a>
                     </Link>
-                    <Link href="/locations">
+                    <Link href="/offerings">
                         <a onClick={closeNav} className={router.pathname === "/locations" ? `${styles.active}` : ""}>
-                        Locations
+                        Offerings
                         </a>
                     </Link>
                     <Link href="/about">

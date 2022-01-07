@@ -11,10 +11,17 @@
 .mobileLogoLink {display: none;}
 
 .navContainer {
-    width: 100%;
-    height: $navHeight;
     display: flex;
     justify-content: center;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    height: $navHeight;
+    box-shadow: 0 2px 6px rgba(0,0,0,.125);
+    z-index: 100;
+    @media (max-width: $mobile-bp) {
+        box-shadow: none;
+    }
     .openNavBtn, .closeNavBtn {  
         display: none;
     }

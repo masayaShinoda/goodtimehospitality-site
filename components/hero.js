@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import styles from '../styles/hero.module.css'
@@ -66,100 +65,33 @@ export default function Hero() {
     }
 
     return (
-        // <div className={styles.carouselContainer}>
-            <Carousel 
-                showStatus={false}
-                showThumbs={false}
-                infiniteLoop={true}
-                renderIndicator={false}
-                className={styles.carouselContainer}
-            >
-                {heros && heros.map(hero => 
-                    <>
-                        
-                        
-                        <div className={styles.carousel}>
-                            <img src={hero['image'][0]['url']} className={styles.carouselBg}/>
-                            <div className={styles.carouselTextContainer}>
-                                <span className={styles.carouselText}>
-                                    <h1>{hero.heading}</h1>
-                                    <p>{hero.body}</p>
-                                </span>
+    <Carousel 
+        autoPlay={true}
+        transitionTime={600}
+        showStatus={false}
+        showIndicators={false}
+        showThumbs={false}
+        infiniteLoop={true}
+        useKeyboardArrows={true}
+        className={styles.carouselContainer}
+    >
+        {heros ? heros.map(hero => 
+            <>                       
+                
+                <div className={styles.carousel}>
+                    <img src={hero['image'][0]['url']} className={styles.carouselBg}/>
+                    <div className={styles.carouselTextContainer}>
+                        <span className={styles.carouselText}>
+                            <h2>{hero.heading}</h2>
+                            <p>{hero.body}</p>
+                        </span>
 
-                            </div>
-                            <img className={styles.carouselImg} src={hero['image'][0]['url']} />
-                            {/* <p className="legend">{hero.body}</p> */}
-                        </div>
-                    </>
-                )}
-            </Carousel>
+                    </div>
+                    <img className={styles.carouselImg} src={hero['image'][0]['url']} />
+                </div>
 
-        // </div>
-
-        // <div className={styles.heroContainer}>
-        //     {
-        //     heros && 
-        //         <>
-        //             <div className={styles.heroBackground}>
-        //                 <Image
-        //                     src={heros[order]["image"][0]["url"]} 
-        //                     layout="fill"
-        //                     loading="lazy"
-        //                 />
-        //             </div>
-        //             <div className={styles.heroContent}>
-        //                 <button 
-        //                     className={styles.arrow}
-        //                     onClick={() => {
-        //                         handleAnimate()
-        //                         if((order - 1) > -1) {
-        //                             setOrder(order - 1)
-        //                         } else {
-        //                             setOrder(order + 1)
-        //                         }
-        //                     }}
-        //                 >
-        //                     <i className="arrow left"></i>
-        //                 </button>
-        //                 <button 
-        //                     className={styles.arrow}
-        //                     onClick={() => {
-        //                         handleAnimate()
-        //                         if(order < heros.length - 1) {
-        //                             setOrder(order + 1)
-        //                         } else {
-        //                             setOrder(order - 1)
-        //                         }
-        //                     }}
-        //                 >
-        //                     <i className="arrow right"></i>
-        //                 </button>
-
-        //                 <div 
-        //                     className={styles.leftDiv} 
-        //                     id="heroContentLeft"
-        //                 >
-        //                     <h1 id="heroHeading">{heros[order].heading}</h1>
-        //                     <p>{heros[order].body}</p>
-        //                 </div>
-        //                 <div
-        //                     className={`${styles.rightDiv}`} 
-        //                     id="heroContentRight"
-        //                 >                            
-        //                     <Image 
-        //                         src={heros[order]["image"][0]["url"]}
-        //                         width="420"
-        //                         height="280"
-        //                         objectFit="cover"
-        //                         id="heroRightImg"
-        //                     />
-        //                     {heros[order].imagecaption && 
-        //                         <p>{heros[order].imagecaption}</p>                            
-        //                     }
-        //                 </div>
-        //             </div>
-        //         </>
-        //     }
-        // </div>
+            </>
+        ) : <div className="lds_ellipsis"><div></div><div></div><div></div><div></div></div>}
+    </Carousel>
     )
 }

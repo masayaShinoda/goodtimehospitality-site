@@ -29,6 +29,9 @@ export default function Layout({ children, pageName }) {
         <Nav />
 
         <main>
+            <div 
+            className={styles.main_bg} 
+            id="mainBg"></div>
             {children}
         </main>
 
