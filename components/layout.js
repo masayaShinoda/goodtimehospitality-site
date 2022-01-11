@@ -34,8 +34,8 @@ export default function Layout({ children, pageName }) {
             id="mainBg"></div>
             {children}
         </main>
-
         <Footer />
+
 
         </div>
     )

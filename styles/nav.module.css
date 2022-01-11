@@ -163,8 +163,22 @@
           align-items: flex-end;
 }
 
+.navContainer .navContent .logoLink img {
+  width: 10rem;
+  max-width: 10rem;
+  min-height: 5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 0 75%;
+     object-position: 0 75%;
+  margin: .5rem 0;
+}
+
 .navContainer .navContent .navLinks {
-  padding: 10px 0;
+  padding: .5rem 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .navContainer .navContent .navLinks a {
@@ -225,6 +239,11 @@
 
 .navContainer .bookingLink:hover {
   background-color: #fac03c;
+}
+
+.navContainer .minimized {
+  right: 0;
+  border-radius: 0 0 0 8px;
 }
 
 .navMobile {

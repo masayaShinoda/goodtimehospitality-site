@@ -34,8 +34,17 @@
         justify-content: space-between;
         align-items: flex-end;
         // border: 1px solid green; //debug
+        .logoLink img {
+            width: 10rem; max-width: 10rem;
+            min-height: 5rem;
+            object-fit: contain;
+            object-position: 0 75%;
+            // height: 10rem; max-height: 10rem;
+            margin: .5rem 0;
+        }
         .navLinks {
-            padding: 10px 0;
+            padding: .5rem 0;
+            align-items: flex-end;
             a {
                 margin: 0 16px;
                 color: $black;
@@ -79,6 +88,10 @@
     .bookingLink:hover {
         background-color: saturate($gold, 25%);
     }
+    .minimized {
+        right: 0;
+        border-radius: 0 0 0 8px;
+    }
 }
 
 .navMobile {display: none}
@@ -104,6 +117,7 @@
     }
     .navContent {
         display: none !important;
+        // hide desktop nav on mobile
     }
     .navMobile {
         display: flex;
