@@ -155,6 +155,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 2.5%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -244,6 +245,12 @@
 .navContainer .minimized {
   right: 0;
   border-radius: 0 0 0 8px;
+}
+
+@media (max-width: 1024px) {
+  .navContainer .minimized {
+    opacity: 0;
+  }
 }
 
 .navMobile {

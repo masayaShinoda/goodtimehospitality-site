@@ -157,7 +157,6 @@
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  outline: 1px solid blue;
 }
 
 .subpageContainer .gt_rr .sec_1 {
@@ -185,10 +184,10 @@
      object-fit: cover;
   z-index: -10;
   position: fixed;
-  background-position: center;
-  background-position-y: -2.5rem;
+  top: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  outline: 1px solid red;
 }
 
 .subpageContainer .gt_rr .sec_1 .sec_1_content {
@@ -212,8 +211,8 @@
   height: 100%;
   color: #fcfcfc;
   background: #131313;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(10, 10, 10, 0.65)), color-stop(65%, rgba(33, 33, 33, 0)));
-  background: linear-gradient(0deg, rgba(10, 10, 10, 0.65) 0%, rgba(33, 33, 33, 0) 65%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(10, 10, 10, 0.65)), color-stop(75%, rgba(33, 33, 33, 0)));
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.65) 0%, rgba(33, 33, 33, 0) 75%);
 }
 
 @media (max-width: 480px) {

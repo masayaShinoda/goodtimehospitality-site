@@ -26,7 +26,7 @@ export default function Nav() {
     }, [])
 
     function scrollFunction() {
-        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             document.getElementById("nav_container").classList.add('animate__slideInDown')
             document.getElementById("nav_container").style.height = "60px"
             document.getElementById("desktop_logo").src = "/images/logo-text.png"
@@ -46,7 +46,7 @@ export default function Nav() {
     } 
     
     return (
-    <div className={styles.navContainer + ` animate__animated`} id="nav_container">
+    <div className={styles.navContainer + ` animate__animated animate__faster`} id="nav_container">
         <div className={styles.navContent}>
             <Link href="/">
                 <a className={styles.logoLink}>
