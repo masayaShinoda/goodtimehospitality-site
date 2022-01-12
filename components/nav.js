@@ -27,20 +27,28 @@ export default function Nav() {
 
     function scrollFunction() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("nav_container").classList.add(styles.navContainerMinimized)
             document.getElementById("nav_container").classList.add('animate__slideInDown')
-            document.getElementById("nav_container").style.height = "60px"
+            // document.getElementById("nav_container").style.height = "60px"
             document.getElementById("desktop_logo").src = "/images/logo-text.png"
+            document.getElementById("mobile_logo").src = "/images/logo-text-white.png"
             document.getElementById("desktop_logo").style.width = "20rem"
             document.getElementById("desktop_logo").style.maxWidth = "20rem"
-            document.getElementById("booking_link").classList.add(styles.minimized)
+            document.getElementById("mobile_logo").style.width = "17.5rem"
+            document.getElementById("mobile_logo").style.maxWidth = "17.5rem"
 
+            document.getElementById("booking_link").classList.add(styles.minimizedBookingLink)
         } else {
+            document.getElementById("nav_container").classList.remove(styles.navContainerMinimized)
             document.getElementById("nav_container").classList.remove('animate__slideInDown')
-            document.getElementById("nav_container").style.height = "120px"
+            // document.getElementById("nav_container").style.height = "120px"
             document.getElementById("desktop_logo").src = "/images/logo-goodtimegrouphospitality.png"
+            document.getElementById("mobile_logo").src = "/images/logo-goodtimegrouphospitality.png"
             document.getElementById("desktop_logo").style.width = "10rem"
             document.getElementById("desktop_logo").style.maxWidth = "10rem"
-            document.getElementById("booking_link").classList.remove(styles.minimized)
+            document.getElementById("mobile_logo").style.width = "10rem"
+            document.getElementById("mobile_logo").style.maxWidth = "10rem"
+            document.getElementById("booking_link").classList.remove(styles.minimizedBookingLink)
 
         }
     } 
@@ -58,7 +66,7 @@ export default function Nav() {
                     />
                 </a>
             </Link>
-            <span className={styles.navLinks}>
+            <span className={styles.navLinks} id="nav_links">
                 <Link href="/">
                     <a className={router.pathname === "/" ? `${styles.active}` : ""}>
                     Home
@@ -74,14 +82,21 @@ export default function Nav() {
                     About
                     </a>
                 </Link>
+                <Link href="/">
+                    <a 
+                    className={styles.bookingLink} 
+                    id="booking_link"
+                    title="Contact Us"
+                    >
+                        <Image 
+                        src="/icons/phone_result.webp" 
+                        className={styles.bookingLinkIcon}
+                        width="18px" height="18px" />
+                        <p>Booking</p>
+                    </a>
+                </Link>
             </span>
         </div>
-        <Link href="/">
-            <a className={styles.bookingLink} id="booking_link">
-                <Image src="/icons/phone_result.webp" width="18px" height="18px" />
-                <p>Booking</p>
-            </a>
-        </Link>
         <button id="openNavBtn" onClick={openNav} className={styles.openNavBtn} 
         style={{display: `block`}}
         >
@@ -99,7 +114,13 @@ export default function Nav() {
         </button>
         <Link href="/">
             <a className={styles.mobileLogoLink}>
-                <Image src={logo} width="100" height="100" alt="Logo" />
+                <img 
+                src="/images/logo-goodtimegrouphospitality.png"
+                alt="Logo" 
+                width="100" height="100" 
+                id="mobile_logo"
+                />
+                
             </a>
         </Link>
         <div className={styles.navMobile} style={{display: `none`}} id="navMobile">

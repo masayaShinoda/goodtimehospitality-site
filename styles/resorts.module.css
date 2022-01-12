@@ -117,8 +117,8 @@
           justify-content: center;
   width: 100%;
   max-width: 100%;
-  height: 480px;
-  top: 120px;
+  height: 48rem;
+  top: 12rem;
   position: static;
 }
 
@@ -168,7 +168,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: 180px;
+    top: 18rem;
   }
   .twinContainer .choice {
     width: 100%;

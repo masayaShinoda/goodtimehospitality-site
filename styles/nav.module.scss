@@ -80,6 +80,7 @@
         background-color: $gold;
         transition: background-color .2s ease-in;
         p {
+            display: inline;
             font-size: 16px;
             font-family: $head;
             margin-left: 5px;
@@ -88,13 +89,27 @@
     }
     .bookingLink:hover {
         background-color: saturate($gold, 25%);
+        color: inherit !important;
     }
-    .minimized {
+    .minimizedBookingLink {
+        flex-direction: column; background-color: none;
+        // position: relative;
+        padding: 0 1.5rem;
+        margin: 0;
         right: 0;
-        border-radius: 0 0 0 8px;
-        @media (max-width: $tablet-bp) {
-            opacity: 0;
-        }
+        bottom: 0;
+        border-radius: 0;
+        p {display: none}
+        
+    }
+}
+
+.navContainerMinimized {
+    height: 6rem;
+    @media (max-width: $mobile-bp) {
+        position: fixed;
+    background: $darkGold;
+        height: 5rem !important;
     }
 }
 
@@ -111,12 +126,16 @@
     }
     .navContainer {
         height: 150px;
+        // position: relative;
         // border: 1px solid red; //debug
         align-items: center;
         .mobileLogoLink {
             display: block;
             // border: 1px solid green; //debug
-
+            img {
+                object-fit: contain;
+                margin: 0 auto;
+            }
         }
     }
     .navContent {
