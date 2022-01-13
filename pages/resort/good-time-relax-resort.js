@@ -15,7 +15,7 @@ export default function GoodTimeRelaxResort() {
     // const divider_kbach_khmer_hori_lines_512 = '/images/SVG/khmer-ornament-1-512-hori-with-lines.svg'
     const divider_kbach_khmer_hori_lines_1920 = '/images/SVG/khmer-ornament-1-1920-hori-with-lines.svg'
     const phoneIcon = '/icons/phone_result_transparent.png'
-    const fbIcon = '/icons/fb-icon.png'
+    const fbIcon = '/icons/fb-icon-margins.png'
 
     return (
     <>
@@ -46,23 +46,56 @@ export default function GoodTimeRelaxResort() {
                             privacy, each of our resort’s beautiful 2-room bungalow structure is unmatched, especially
                             designed for memorable experiences.
                             </p>
-                            {/* <Link href="tel:+85599313535">
-                                <a title="Call 099 313 535">
-                                    <Image 
-                                    src={phoneIcon} 
-                                    alt="telephone icon" 
-                                    width="50"
-                                    height="50"
-                                    />
-                                </a>
-                            </Link> */}
+                            <span style={{
+                                display: `flex`, width: `100%`,
+                                flexDirection: `row`, justifyContent: `center`
+                                }}>
+
+                                <Link href="tel:+85599313535">
+                                    <a 
+                                    title="Call 099 313 535"
+                                    style={{
+                                        display: `flex`, flexDirection: `row`, alignItems: `center`,
+                                        color: `#fff`, outline: `2px solid #ececec`, borderRadius: `100%`,
+                                        margin: `0 1rem`
+                                    }}
+                                    >
+                                        <Image 
+                                        src={phoneIcon} 
+                                        alt="telephone icon" 
+                                        width="42"
+                                        height="42"
+                                        />
+                                    </a>
+                                </Link>
+                                <Link href="tel:+85599313535">
+                                    <a 
+                                    title="Call 099 313 535"
+                                    style={{
+                                        display: `flex`, flexDirection: `row`, alignItems: `center`,
+                                        color: `#fff`, outline: `2px solid #ececec`, borderRadius: `100%`,
+                                        margin: `0 1rem`
+                                    }}
+                                    >
+                                        <Image 
+                                        src={fbIcon} 
+                                        alt="telephone icon" 
+                                        width="42"
+                                        height="42"
+                                        />
+                                    </a>
+                                </Link>
+                            </span>
                         </span>
                     </div>
                     
                 </section>
                 <section className={styles.sec_2}>
-                    <div className={styles.sec_2_content} 
-                    data-aos="fade-up">
+                    <div 
+                    className={styles.sec_2_content} 
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    >
                         <div className={styles.sec_2_left_img_container}>
                             <Zoom zoomMargin={100} overlayBgColorEnd="rgba(247, 240, 182, .25)"> 
                             <img 
@@ -73,7 +106,9 @@ export default function GoodTimeRelaxResort() {
                             />
                             </Zoom>
                         </div>
-                        <div className={styles.sec_2_right_div}>
+                        <div 
+                        className={styles.sec_2_right_div}
+                        >
                             <span>
                             <p>
                             Good Time Relax Resort introduces true Khmer hospitality by sharing with our valued guests a royal luxury. Named after King Sisowath Monivong, the Preah Monivong Bokor National Park, an national park on the highland established in 1993, designated as ASEAN Heritage Park, is offering a heavenly-like mountain view clearly visible from the resort.
@@ -92,11 +127,11 @@ export default function GoodTimeRelaxResort() {
                         </div>
                     </div>
                 </section>
-                {/* <img 
+                <img 
                 src={divider_kbach_khmer_hori_lines_1920} 
                 alt="kbach khmer dividing line"
                 className={styles.divider_kbach_khmer_hori_lines}
-                /> */}
+                />
             </div>
 
         </div>
