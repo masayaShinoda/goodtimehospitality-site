@@ -1,7 +1,7 @@
 @import './_variables.scss';
 
 .offeringsContainer {
-    padding: 80px 0;
+    padding: 8rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +9,9 @@
     max-width: 1280px;
     // max-width: 100%;
     // outline: 1px solid red; //debug
+    @media (min-width: $ultrawide-bp) {
+        max-width: 100%;
+    }
     .offeringsGrid {
         display: flex;
         justify-content: center;
@@ -18,15 +21,15 @@
         // border: 1px solid green; //debug
     }
     .box {
-        width: 420px;
-        height: 240px;
+        width: 42rem;
+        height: 24rem;
         display: flex;
         background-position: center;
         background-size: cover;
         transition: all .4s ease-in-out;
         box-shadow: 1px 2px 6px rgba(0,0,0,.425);
         // outline: 1px solid blue; //debug
-        margin: 20px;
+        margin: 2rem;
         @media (max-width: $mobile-bp) {
             margin: 0 !important;
         }

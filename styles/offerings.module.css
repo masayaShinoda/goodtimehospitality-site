@@ -109,7 +109,7 @@
 }
 
 .offeringsContainer {
-  padding: 80px 0;
+  padding: 8rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,6 +122,12 @@
           align-items: center;
   width: 100%;
   max-width: 1280px;
+}
+
+@media (min-width: 2159px) {
+  .offeringsContainer {
+    max-width: 100%;
+  }
 }
 
 .offeringsContainer .offeringsGrid {
@@ -138,8 +144,8 @@
 }
 
 .offeringsContainer .box {
-  width: 420px;
-  height: 240px;
+  width: 42rem;
+  height: 24rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,7 +155,7 @@
   transition: all .4s ease-in-out;
   -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.425);
           box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.425);
-  margin: 20px;
+  margin: 2rem;
 }
 
 @media (max-width: 480px) {

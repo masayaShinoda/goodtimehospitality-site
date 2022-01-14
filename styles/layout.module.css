@@ -138,8 +138,19 @@
   background-position: center;
   width: 100%;
   max-width: 100%;
-  min-height: 50vh;
   margin-top: 12rem;
+}
+
+@media (min-width: 1025px) {
+  .layout main {
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout main {
+    margin-top: 15rem;
+  }
 }
 
 .layout .main_bg {
@@ -181,8 +192,7 @@
 
 @media (min-width: 2159px) {
   .layout main {
-    width: 1440px;
-    max-width: 1440px;
+    min-width: 1440px;
   }
 }
 

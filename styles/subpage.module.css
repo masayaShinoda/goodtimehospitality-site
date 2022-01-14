@@ -182,11 +182,14 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   z-index: -10;
   position: fixed;
   top: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .subpageContainer .gt_rr .sec_1 .sec_1_content {
@@ -286,9 +289,12 @@
   }
 }
 
-.subpageContainer .gt_rr .sec_2 {
+.subpageContainer .gt_rr .sec_2, .subpageContainer .gt_rr .sec_3 {
   width: 100%;
-  background: #fcfcfc;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,7 +304,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.subpageContainer .gt_rr .sec_2 {
   padding: 10%;
+  background: #fcfcfc;
+}
+
+.subpageContainer .gt_rr .sec_2 h2 {
+  font-size: 2.8rem;
+  font-family: "Merriweather", serif;
 }
 
 @media (max-width: 480px) {
@@ -356,6 +371,8 @@
 .subpageContainer .gt_rr .sec_2 .sec_2_content img {
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-box-shadow: 0 0 2.5rem rgba(40, 40, 40, 0.225);
+          box-shadow: 0 0 2.5rem rgba(40, 40, 40, 0.225);
 }
 
 .subpageContainer .gt_rr .sec_2 .sec_2_content .sec_2_left_img_container {
@@ -376,8 +393,6 @@
   aspect-ratio: 3 / 2;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-box-shadow: -3.5rem -2.5rem #f7f0b6;
-          box-shadow: -3.5rem -2.5rem #f7f0b6;
   margin: 0 auto;
 }
 
@@ -472,16 +487,105 @@
 }
 
 .subpageContainer .gt_rr .divider_kbach_khmer_hori_lines {
-  background: #fff;
+  padding: .5rem 0;
+  background: #302729;
   height: 3.25rem;
   max-height: 3.25rem;
   min-width: 100%;
   width: 100%;
   max-width: 100%;
+  margin: 2.5rem 0;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.subpageContainer .gt_rr .sec_3 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: #302729;
+  padding: 0;
+  padding-bottom: 10%;
+}
+
+.subpageContainer .gt_rr .sec_3 .sec_3_content {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: .2fr 1fr;
+  -ms-grid-columns: .2fr 1fr;
+  grid-template-rows: 1fr;
+  -ms-grid-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  padding: 0;
+  outline: 2px solid coral;
+}
+
+.subpageContainer .gt_rr .sec_3 .sec_3_content .sec_3_left_div {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.subpageContainer .gt_rr .sec_3 .sec_3_content .sec_3_left_div h2 {
+  position: relative;
+  top: 15rem;
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  /* IE */
+  /* Opera */
+  /* Internet Explorer */
+  transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  border-bottom: 1.5rem solid #e1b655;
+  letter-spacing: .5rem;
+  font-size: 5.25rem;
+  line-height: 2;
+  color: #fff;
+}
+
+.subpageContainer .gt_rr .sec_3 .sec_3_content .sec_3_right_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 80%;
+  max-width: 80%;
+}
+
+.subpageContainer .gt_rr .sec_3 .sec_3_content .sec_3_right_div p {
+  font-size: 1.6rem;
+  max-width: 65ch;
+  line-height: 2;
+  color: #fcfcfc;
+}
+
+.subpageContainer .gt_rr .sec_3 .sec_3_content .sec_3_right_div .sec_3_right_tabs {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+  height: 65rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  outline: 2px solid paleturquoise;
 }
 
 .background {

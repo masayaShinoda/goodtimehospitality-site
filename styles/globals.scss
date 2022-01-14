@@ -50,3 +50,16 @@ a {font-weight: 500; font-size: 1.8rem}
 }
 
 // arrow end
+
+// carousel modification
+.control-arrow {
+  transform: scaleX(1.5);
+}
+@media (min-width: $ultrawide-bp) {
+  .control-prev {
+    margin-left: 15%;
+  }
+  .control-next {
+    margin-right: 15%;
+  }
+}

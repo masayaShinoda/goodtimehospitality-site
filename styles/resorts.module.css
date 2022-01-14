@@ -122,6 +122,12 @@
   position: static;
 }
 
+@media (min-width: 1025px) {
+  .twinContainer {
+    height: 80vh;
+  }
+}
+
 .twinContainer .choice {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,6 +174,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 60rem;
     top: 18rem;
   }
   .twinContainer .choice {

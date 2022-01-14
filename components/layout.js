@@ -4,7 +4,7 @@ import Nav from '../components/nav'
 import Footer from '../components/footer'
 import styles from '../styles/layout.module.css'
 
-export default function Layout({ children, pageName }) {
+export default function Layout({ children, pageName, seoDesc }) {
 
     return (
         <div className={styles.layout}>
@@ -16,7 +16,10 @@ export default function Layout({ children, pageName }) {
         {pageName ? 
             <NextSeo
                 title={`${pageName} | Good Time Hospitality Group`}
-                description="Vacation home rental in Cambodia."
+                description={
+                    seoDesc ? seoDesc : 
+                    "Vacation home rental in Cambodia."
+                }
                 keywords="goodtime, goodtimegroup, good time, good time cambodia, good time hospitality, good time hospitality group, goodtime vacation home, vacation home rental, vacation home rental in cambodia, good time resort"
             /> 
             :   <NextSeo

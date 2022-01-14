@@ -171,4 +171,18 @@ a {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+
+.control-arrow {
+  -webkit-transform: scaleX(1.5);
+          transform: scaleX(1.5);
+}
+
+@media (min-width: 2159px) {
+  .control-prev {
+    margin-left: 15%;
+  }
+  .control-next {
+    margin-right: 15%;
+  }
+}
 /*# sourceMappingURL=globals.css.map */

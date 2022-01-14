@@ -111,6 +111,7 @@
 .footerContainer {
   background: #302729;
   width: 100%;
+  position: relative;
   bottom: 0;
   left: 0;
 }
