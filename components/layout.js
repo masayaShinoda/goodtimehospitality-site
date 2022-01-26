@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo'
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
-import styles from '../styles/layout.module.css'
+import styles from '../styles/layout.module.scss'
 
 export default function Layout({ children, pageName, seoDesc }) {
 

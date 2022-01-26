@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import Link from 'next/link'
-import styles from '../styles/resorts.module.css'
+import styles from '../styles/resorts.module.scss'
 
 export default function Resorts() {
     const pageName = "Resorts"

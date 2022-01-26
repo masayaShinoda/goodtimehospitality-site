@@ -74,7 +74,7 @@ $heroHeightMobile: 600px;
         .arrow:first-of-type {left: 0%; padding-left: 10%;  padding-right: 2.5%}
         .arrow:last-of-type {right: 0%; padding-right: 10%; padding-left: 2.5%;}
     }
-    @media (max-width: $tablet-bp) {
+    @media #{$mq-small} {
         .heroContent {
             width: 640px; max-width: 640px;
             .leftDiv {max-width: 45%;}
@@ -102,7 +102,7 @@ $heroHeightMobile: 600px;
 
 
 
-@media(max-width: $mobile-bp) {
+@media #{$mq-xsmall} {
     .heroContainer {
         height: $heroHeightMobile;
         
@@ -126,11 +126,11 @@ $heroHeightMobile: 600px;
             .rightDiv {margin: 0}
             
             .arrow {
-                min-height: $heroHeightMobile / 1.6108;
-                height: $heroHeightMobile / 1.6108;
-                max-height: $heroHeightMobile / 1.6108;
+                min-height: calc($heroHeightMobile / 1.6108);
+                height: calc($heroHeightMobile / 1.6108);
+                max-height: calc($heroHeightMobile / 1.6108);
                 z-index: 5;
-                top: $heroHeightMobile / 1.6108;
+                top: calc($heroHeightMobile / 1.6108);
             }
             .arrow:first-of-type {padding-left: 2.5%;  padding-right: 1.25%}
             .arrow:last-of-type {padding-right: 2.5%; padding-left: 1.25%;}
@@ -147,7 +147,7 @@ $heroHeightMobile: 600px;
     // border: 1px solid red; //debug
     max-width: 100%;
     
-    @media (max-width: $mobile-bp) {button {display: none}}
+    @media #{$mq-xsmall} {button {display: none}}
     .carouselBg {
         display: flex;
         position: absolute;
@@ -157,10 +157,10 @@ $heroHeightMobile: 600px;
         z-index: -10;
         filter: blur(5px) brightness(50%);
         transform: scale(1.25);
-        @media (min-width: $ultrawide-bp) {
+        @media #{$mq-xlarge} {
             min-width: 200%;
         }
-        @media (max-width: $mobile-bp) {display: none}
+        @media #{$mq-xsmall} {display: none}
     }
 
     .carousel {
@@ -173,10 +173,10 @@ $heroHeightMobile: 600px;
         // width: 100%;
         // padding: 0 10%;
         // border: 2px solid purple; //debug
-        @media (min-width: $ultrawide-bp) {
+        @media #{$mq-xlarge} {
             max-width: 1440px;
         }
-        @media(max-width: $mobile-bp) {flex-direction: column-reverse; padding: 0;}
+        @media #{$mq-xsmall} {flex-direction: column-reverse; padding: 0;}
     }
     .carouselTextContainer {
         width: 50%;
@@ -184,7 +184,7 @@ $heroHeightMobile: 600px;
         display: flex;
         align-items: center;
         padding-left: 5vmax;
-        @media(max-width: $mobile-bp) {
+        @media#{$mq-xsmall} {
             width: 100%; 
             padding-left: 0; padding: 0 2.5%;
         }
@@ -195,15 +195,15 @@ $heroHeightMobile: 600px;
         max-width: 100%;
         // border: 1px solid green; //debug
         
-        @media(max-width: $tablet-bp) {width: 80%;}
-        @media(max-width: $mobile-bp) {
+        @media #{$mq-small} {width: 80%;}
+        @media #{$mq-xsmall} {
             color: $black; width: 98%; padding: 1.1rem .8rem;
             border-bottom: .5rem solid $gold;
             
         }
         h2 {
             font-size: 2.8rem; margin-bottom: 1.8rem;
-            @media (max-width: $mobile-bp) {
+            @media #{$mq-xsmall} {
                 margin-bottom: 1.25rem;
             }
         }
@@ -213,7 +213,7 @@ $heroHeightMobile: 600px;
     .carouselImg {
         width: 50%;
         max-width: 50%;
-        @media(max-width: $mobile-bp) {
+        @media #{$mq-xsmall} {
             width: 100%; max-width: 100%;
             min-height: 24rem; height: 24rem;
             max-height: 24rem; 

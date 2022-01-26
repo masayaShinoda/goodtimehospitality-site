@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import LocationCard from '../components/locationCard'
-import styles from '../styles/locations.module.css'
+import styles from '../styles/locations.module.scss'
 
 export default function Locations() {
 

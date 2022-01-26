@@ -55,7 +55,7 @@ a {font-weight: 500; font-size: 1.8rem}
 .control-arrow {
   transform: scaleX(1.5);
 }
-@media (min-width: $ultrawide-bp) {
+@media #{$mq-xlarge} {
   .control-prev {
     margin-left: 15%;
   }

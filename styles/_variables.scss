@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-//viewport breakpoints
-$ultrawide-bp: 2159px;
-$desktop-bp: 1025px;
-$tablet-bp: 1024px;
-$mobile-bp: 480px;
+
+// //viewport breakpoints
+// $ultrawide-bp: 2159px;
+// $desktop-bp: 1025px;
+// $tablet-bp: 1024px;
+// $mobile-bp: 480px;
+
+// Breakpoints
+$bp-xsmall: 40em; // 640px
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-xsmall: "(max-width: #{$bp-small})";
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
 
 $lightGold: #f7f0b6;
 $gold: #e1b655;

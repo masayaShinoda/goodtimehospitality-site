@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import styles from '../styles/hero.module.css'
+import styles from '../styles/hero.module.scss'
 
 export default function Hero() {
     const token = '471202f89cdbcba570cb00dfa31609'

@@ -8,7 +8,7 @@
     height: $navHeight * 4;
     top: $navHeight;
     
-    @media(min-width: $desktop-bp) {
+    @media #{$mq-small} {
         height: $desktopMinHeight;
 
     }
@@ -51,7 +51,7 @@
         }
     }
 
-    @media (max-width: $mobile-bp) {
+    @media #{$mq-xsmall} {
         flex-direction: column;
         height: $navHeight * 5;
         top: $navHeight * 1.5;

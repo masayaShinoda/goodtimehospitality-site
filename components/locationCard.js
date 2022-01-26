@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../styles/locations.module.css'
+import styles from '../styles/locations.module.scss'
 
 export default function LocationCard({ title, desc, callToAction, bg }) {
 

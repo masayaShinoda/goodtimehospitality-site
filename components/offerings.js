@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../styles/offerings.module.css'
+import styles from '../styles/offerings.module.scss'
 
 export default function Offerings() {
     

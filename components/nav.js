@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from '../public/images/logo-goodtimegrouphospitality.png'
-import styles from '../styles/nav.module.css'
+import styles from '../styles/nav.module.scss'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 

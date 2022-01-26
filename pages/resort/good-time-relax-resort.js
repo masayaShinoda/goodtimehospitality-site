@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import MessengerComponent from 'react-messenger-customer-chat';
 import Layout from '../../components/layout'
-import styles from '../../styles/subpage.module.css';
+import styles from '../../styles/subpage.module.scss';
 
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
@@ -13,11 +13,36 @@ export default function GoodTimeRelaxResort() {
     const gt_rr_exterior_bokor_bg = '/images/gt-rr/SRN07369_result.webp'
     const gt_rr_pool_bokor_view = '/images/gt-rr/SRN07340_result.webp'
     const booking_dot_com_logo_white = '/images/Booking.Com-logo-white_result.webp'
+    
     // const divider_kbach_khmer_hori_lines_512 = '/images/SVG/khmer-ornament-1-512-hori-with-lines.svg'
     const divider_kbach_khmer_hori_lines_1920 = '/images/SVG/khmer-ornament-1-1920-hori-with-lines.svg'
     const phoneIcon = '/icons/phone_result_transparent.png'
     const fbIcon = '/icons/fb-icon-margins.png'
     const seoDesc = "Surrounded by the Kampot River and set in unparalleled tranquility for complete privacy, each of our resort’s beautiful 2-room bungalow structures is unmatched, specially designed for memorable experiences."
+
+    const gt_rr_activity_images = [
+        {
+            desc: 'Kayaking',
+            url: '/images/gt-rr/activities/DSC09092_result.webp',
+            alt: 'Kayaking'
+        },
+        {
+            desc: 'Gym & Spa',
+            url: '/images/gt-rr/activities/SRN09101_result.webp',
+            alt: 'Gym & Spa'
+        },
+        {
+            desc: 'Poolside Bar',
+            url: '/images/gt-rr/activities/SRN09113_result.webp',
+            alt: 'Poolside Bar'
+        },
+        {
+            desc: 'Watercraft',
+            url: '/images/gt-rr/activities/SRN07107_result.webp',
+            alt: 'Watercraft'
+        },
+
+    ]
 
     return (
     <>
@@ -145,7 +170,7 @@ export default function GoodTimeRelaxResort() {
                     data-aos="fade-up"
                     data-aos-duration="500"
                     >
-                        Bokor Mountain View
+                    Bokor Mountain View
                     </h2>
                     <div 
                     className={styles.sec_2_content} 
@@ -189,18 +214,37 @@ export default function GoodTimeRelaxResort() {
                     alt="kbach khmer dividing line"
                     className={styles.divider_kbach_khmer_hori_lines}
                     />
-                    <div className={styles.sec_3_content}>
+                    <div 
+                    className={styles.sec_3_content}>
                         <div className={styles.sec_3_left_div}>
                             <h2>Activities</h2>
                         </div>
-                        <div className={styles.sec_3_right_div}>
+                        <div 
+                        className={styles.sec_3_right_div}
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        >
                             <p>
                             Not only does the resort offer supreme natural surroundings, our valued guests can also enjoy many joyous activities such as fishing right from your balcony, kayaking along
                             the river, taking pleasure from having snacks and drinks at the poolside, having a cup of tea with
                             your partner/business partner, delighting yourself by walking along the long wooden bridge or rejuvenating at the Spa.
                             </p>
-                            <div className={styles.sec_3_right_tabs}>
-                                
+                            <div className={styles.sec_3_right_gallery}>
+                            {gt_rr_activity_images.map(i => {
+                            return (
+                                <div key={i.desc}>
+                                    <Zoom zoomMargin={15} overlayBgColorEnd="rgba(247, 240, 182, .25)"> 
+                                    <Image
+                                    src={i.url}
+                                    width="1500" height="1000"
+                                    alt={i.alt}
+                                    loading="lazy"
+                                    />
+                                    </Zoom>
+                                    {/* <p>{i.desc}</p> */}
+                                </div>
+                                )
+                            })}
                             </div>
 
                         </div>
