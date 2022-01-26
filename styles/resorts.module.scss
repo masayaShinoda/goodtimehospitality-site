@@ -7,7 +7,11 @@
     max-width: 100%;
     height: $navHeight * 4;
     top: $navHeight;
+    
+    @media #{$mq-small} {
+        height: $desktopMinHeight;
 
+    }
     // z-index: -100;
     position: static;
     // margin-bottom: 30vh;
@@ -47,12 +51,14 @@
         }
     }
 
-    @media (max-width: $mobile-bp) {
+    @media #{$mq-xsmall} {
         flex-direction: column;
+        height: $navHeight * 5;
         top: $navHeight * 1.5;
         .choice {
             width: 100%;
             height: 50%;
+            // border: 2x solid salmon; //debug
         }
     }
 }

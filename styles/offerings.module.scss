@@ -1,14 +1,18 @@
 @import './_variables.scss';
 
 .offeringsContainer {
-    padding: 80px 0;
+    padding: 8rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 1280px;
+    max-width: 116rem;
     // max-width: 100%;
-    // border: 1px solid red; //debug
+    // outline: 1px solid red; //debug
+    @media #{$mq-xlarge} {
+        max-width: 100%;
+        // outline: 1px solid green; //debug
+    }
     .offeringsGrid {
         display: flex;
         justify-content: center;
@@ -18,16 +22,6 @@
         // border: 1px solid green; //debug
     }
     .box {
-        width: 420px;
-        height: 240px;
-        display: flex;
-        // background: rgba(55,0,0,.5); //debug
-        background-position: center;
-        background-size: cover;
-        transition: all .4s ease-in-out;
-        box-shadow: 1px 2px 6px rgba(0,0,0,.425);
-        // border: 1px solid blue; //debug
-        margin: 20px;
         a {
             display: flex;
             align-items: center;
@@ -50,6 +44,29 @@
             border: .25rem solid #ececec;
 
         }
+        
+        display: flex;
+        background-position: center;
+        background-size: cover;
+        transition: all .4s ease-in-out;
+        box-shadow: 1px 2px 6px rgba(0,0,0,.425);
+        // outline: 1px solid blue; //debug
+        margin: 2rem;
+        @media #{$mq-xsmall} {
+            margin: 0 !important;
+        }
+        @media #{$mq-small} {
+            width: 28rem;
+            height: 16rem;
+            margin: 1rem;
+            a {font-size: 2.1rem;}
+        }
+        @media #{$mq-medium} {
+            width: 42rem;
+            height: 24rem;
+        }
+        
+
     }
     .box:hover {
         transform: scale(1.05);
@@ -57,25 +74,11 @@
     .box:nth-of-type(1) {background-image: url("/thumbnail/asset-5result.webp");}
     .box:nth-of-type(2) {background-image: url("/thumbnail/asset-4result.webp");}
     .box:nth-of-type(3) {background-image: url("/thumbnail/asset-3result.webp");}
-
     
 }
 
-@media(max-width: $tablet-bp) {
-    .offeringsGrid {
-        .box {
-            width: 280px;
-            height: 160px;
-            margin: 10px;
-            a {font-size: 2.1rem;}
-            
-        }
-    
-    }
 
-}
-
-@media(max-width: $mobile-bp) {
+@media #{$mq-xsmall} {
     .offeringsGrid {
         flex-direction: column;
         width: 100%;

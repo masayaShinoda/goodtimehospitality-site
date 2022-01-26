@@ -1,11 +1,22 @@
 @import './_variables.scss';
 
 $cardWidthDesktop: 32%;
-$cardHeightDesktop: 240px;
+$cardHeightDesktop: 250px;
 $cardHeightTablet: 300px;
 $cardWidthMobile: 100%;
-$cardHeightMobile: 240px;
+$cardHeightMobile: 280px;
 
+.headerText {
+    padding: 5rem 0;
+    width: 100%;
+    display: flex; flex-direction: column; align-items: center;
+    @media #{$mq-xsmall} {
+        padding: 7.5rem 0 2.5rem 0;
+        h1 {
+            color: #000 !important;
+        }
+    }
+}
 .locationsContainer {
     display: flex;
     justify-content: center;
@@ -13,13 +24,16 @@ $cardHeightMobile: 240px;
     flex-wrap: wrap;
     
     margin-bottom: 100px;
-    width: 1280px;
     max-width: 100%;
-    // border: 1px solid red; //debug
-    @media (max-width: $tablet-bp) {
+    // margin-top: $navHeight;
+    // outline: 1px solid red; //debug
+    @media #{$mq-small} {
         width: 100vw;
     }
-    @media (max-width: $mobile-bp) {
+    @media #{$mq-medium} {
+        width: 110rem;
+    }
+    @media #{$mq-xsmall} {
         flex-direction: column;
         width: 100vw;
     }
@@ -30,8 +44,7 @@ $cardHeightMobile: 240px;
         justify-content: flex-end;
         align-items: flex-start;
         cursor: pointer;
-        width: $cardWidthDesktop;
-        height: $cardHeightDesktop;
+        
         background-size: cover;
         animation-duration: .8s;
         background-position: center;
@@ -41,34 +54,34 @@ $cardHeightMobile: 240px;
         -ms-transition: all .5s ease;
         -o-transition: all .5s ease;
         transition: all .5s ease;
-
-
-        @media (max-width: $tablet-bp) {
+        
+        
+        @media #{$mq-small} {
             height: $cardHeightTablet;
-
         }
-        @media (max-width: $mobile-bp) {
+
+        @media #{$mq-medium}{
+            width: $cardWidthDesktop;
+            height: $cardHeightDesktop;
+        }
+
+        @media #{$mq-xsmall} {
             width: $cardWidthMobile;
             height: $cardHeightMobile;
         }
         
-
-        // .cardBg {
-        //     display: flex;
-        //     width: $cardWidthDesktop;
-        //     height: auto;
-        //     top: 0;
-        //     background: rgba(200,0,0,.5);
-        // }
         .textContainer {
-            padding: 8px 20px 12px 20px;
             width: 100%;
             background: rgb(19,19,19);
-            background: linear-gradient(0deg, rgba(19,19,19,.75) 0%, rgba(51,51,51,0) 100%);
-            @media (max-width: $tablet-bp) {padding: 20px 15px; height: 55%}
+            background: linear-gradient(0deg, rgba(48, 39, 41, .75) 0%, rgba(51,51,51,0) 100%);
+            @media #{$mq-small} {padding: 20px 15px; height: 55%}
+            @media #{$mq-medium} {
+                padding: 8px 20px 12px 20px;
+                height: auto;
+            }
             h1, span {
                 max-width: 80%;
-                @media(max-width: $tablet-bp) {max-width: 100%}
+                @media#{$mq-small} {max-width: 100%}
             }
             h1 {
                 color: #fcfcfc;
@@ -79,7 +92,7 @@ $cardHeightMobile: 240px;
                 transition: .2 ease-in-out;
                 color: #ececec;
                 animation-duration: .2s;
-                @media (max-width: $tablet-bp) {
+                @media #{$mq-small} {
                     display: inline-block;
                 }
             }
@@ -90,7 +103,7 @@ $cardHeightMobile: 240px;
         background-position: bottom;
         // animation-duration: .8s;
         span {display: inline-block; }
-        @media (max-width: $tablet-bp) {
+        @media #{$mq-small} {
             background-size: cover;
         }
     }

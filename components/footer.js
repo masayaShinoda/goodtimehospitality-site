@@ -1,4 +1,4 @@
-import styles from '../styles/footer.module.css'
+import styles from '../styles/footer.module.scss'
 
 export default function Footer() {
     return (
@@ -54,7 +54,7 @@ export default function Footer() {
 	
 		</div>
 	</div>
-	    <div className={styles.bottom_details}>
+	<div className={styles.bottom_details}>
       <div className={styles.bottom_text}>
         <span>
             <p>

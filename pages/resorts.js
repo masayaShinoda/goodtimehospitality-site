@@ -1,53 +1,45 @@
 import Layout from '../components/layout'
 import Link from 'next/link'
-import styles from '../styles/resorts.module.css'
+import styles from '../styles/resorts.module.scss'
 
 export default function Resorts() {
     const pageName = "Resorts"
 
     return (
         <Layout pageName={pageName}>
-            {/* <span style={{padding: `50px 0`, display: `flex`, flexDirection: `column`, alignItems: `center`}}>
-                <h1 style={{marginBottom: `1.4rem`}}>{pageName}</h1>
-            </span> */}
-                <div className={styles.twinContainer}>
-                    <div className={styles.choice} style={{backgroundImage: `url("/images/gt-rr-choice_result.webp")`}}>
+            <div className={styles.twinContainer}>
+                <div 
+                className={styles.choice}
+                style={{
+                    backgroundImage: `url("/images/gt-rr-choice_result.webp")`
+                }}>
+                    <Link href="/resort/good-time-relax-resort">
                         <a>
-                            <Link href="/resort/good-time-relax-resort">
-                                    <img src="/images/goodtimerelaxresort-logo_result.webp" alt="Good Time Relax Resort logo" />
-                            </Link>
+                        <img 
+                        src="/images/goodtimerelaxresort-logo_result.webp" 
+                        alt="Good Time Relax Resort logo" 
+                        className="animate__animated animate__fadeInLeft"
+                        />
                         </a>
-                    </div>
-                    <div className={styles.choice} style={{backgroundImage: `url("/images/gt-br-choice_result.webp")`}}>
-                        <a>
-                            <Link href="/resort/good-time-relax-resort">
-                                <img src="/images/goodtimeboutiquehotel-logo_result.webp" alt="Good Time Boutique Hotel" />
-                            </Link>
-                        </a>
-
-
-                    </div>
-
+                    </Link>
                 </div>
+                <div 
+                className={styles.choice} 
+                style={{
+                    backgroundImage: `url("/images/gt-br-choice_result.webp")`
+                }}>
+                    <Link href="/resort/good-time-boutique-hotel">
+                        <a>
+                        <img 
+                        src="/images/goodtimeboutiquehotel-logo_result.webp" 
+                        alt="Good Time Boutique Hotel" 
+                        className="animate__animated animate__fadeInRight"
+                        />
+                        </a>
+                    </Link>
+                </div>
+
+            </div>
         </Layout>
-
-// homepage slideshow 50% size
-// add footer with grey and kbach khmer
-
-
-// wait for about page content
-
-// resort -> 
-
-// KPS:
-// - for KPS, goodtime resort dont include yet
-// - boutique hotel
-// - goodtime apartment
-
-
-// can use map directory: 
-
-// contact options:
-// - goodtimeresort (email, tel, ..etc)
     )
 }

@@ -1,6 +1,6 @@
 @import './_variables.scss';
 
-@media(min-width: $mobile-bp) {
+@media #{$mq-small} {
     .openNavBtn, .closeNavBtn {
         display: none !important;
     }
@@ -8,13 +8,22 @@
 #openNavBtn {
     display: none;
 }
-.mobileLogoLink {display: none;}
+.mobileLogoLink {
+    display: none;
+}
 
 .navContainer {
-    width: 100%;
-    height: $navHeight;
     display: flex;
     justify-content: center;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    height: $navHeight;
+    box-shadow: 0 2px 6px rgba(0,0,0,.125);
+    z-index: 100;
+    @media #{$mq-xsmall} {
+        box-shadow: none;
+    }
     .openNavBtn, .closeNavBtn {  
         display: none;
     }
@@ -24,11 +33,21 @@
         width: 1024px;
         max-width: 1024px;
         display: flex;
+        padding: 0 2.5%;
         justify-content: space-between;
         align-items: flex-end;
         // border: 1px solid green; //debug
+        .logoLink img {
+            width: 10rem; max-width: 10rem;
+            min-height: 5rem;
+            object-fit: contain;
+            object-position: 0 75%;
+            // height: 10rem; max-height: 10rem;
+            margin: .5rem 0;
+        }
         .navLinks {
-            padding: 10px 0;
+            padding: .5rem 0;
+            align-items: flex-end;
             a {
                 margin: 0 16px;
                 color: $black;
@@ -45,8 +64,17 @@
         }
     }
     
-    @media (max-width: $tablet-bp) {
-        .navContent {width: 640px; max-width: 640px;}
+    .navContent {
+        // border: 1px solid red; //debug
+        @media #{$mq-small} {
+            width: 70rem; max-width: 70rem;
+        }
+        @media #{$mq-medium} {
+            width: 100rem; max-width: 100rem;
+        }
+        @media #{$mq-large} {
+            width: 116rem; max-width: 116rem;
+        }
     }
 
     .bookingLink {
@@ -63,6 +91,7 @@
         background-color: $gold;
         transition: background-color .2s ease-in;
         p {
+            display: inline;
             font-size: 16px;
             font-family: $head;
             margin-left: 5px;
@@ -71,32 +100,58 @@
     }
     .bookingLink:hover {
         background-color: saturate($gold, 25%);
+        color: inherit !important;
+    }
+    .minimizedBookingLink {
+        flex-direction: column; background-color: none;
+        // position: relative;
+        padding: 0 1.5rem;
+        margin: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        p {display: none}
+        
+    }
+}
+
+.navContainerMinimized {
+    height: 6rem;
+    @media #{$mq-xsmall} {
+        position: fixed;
+        background: $darkGold;
+        height: 5rem !important;
     }
 }
 
 .navMobile {display: none}
 
-// @media(max-width: $tablet-bp) {
+// @media #{$mq-small} {
 
 //     /
 // }
 
-@media(max-width: $mobile-bp) {
+@media #{$mq-xsmall} {
     .bookingLink {
         display: none !important;
     }
     .navContainer {
         height: 150px;
+        // position: relative;
         // border: 1px solid red; //debug
         align-items: center;
         .mobileLogoLink {
             display: block;
             // border: 1px solid green; //debug
-
+            img {
+                object-fit: contain;
+                margin: 0 auto;
+            }
         }
     }
     .navContent {
         display: none !important;
+        // hide desktop nav on mobile
     }
     .navMobile {
         display: flex;

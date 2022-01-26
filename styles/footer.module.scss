@@ -2,11 +2,14 @@
 
 
 .footerContainer{
-    background: $gt-rr-brown;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    margin-top: 15vmin;
+  background: $gt-rr-brown;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  // position: relative;
+    
+    // margin-top: 15vmin;
     // position: fixed;
 }
 // .footerContainer::before{
@@ -19,14 +22,19 @@
 //   background: $gold;
 // }
 .footerContainer .content {
-  max-width: 1250px;
   margin: auto;
   padding: 30px 40px 40px 40px;
+  @media #{$mq-medium} {
+    max-width: 100rem;
+  }
+  @media #{$mq-large} {
+    max-width: 110rem;
+  }
   ul {
     padding: 0;
   }
 }
-@media (max-width: $mobile-bp) {
+@media #{$mq-xsmall} {
   .footerContainer .content {
     padding: 0 30px 0 30px;
   }
@@ -103,7 +111,7 @@
   :nth-of-type(odd) {
     padding-right: 5vw;
   }
-  @media(max-width: $mobile-bp) {
+  @media #{$mq-xsmall} {
   :nth-of-type(odd) {padding: 0}
   }
 }
@@ -181,11 +189,16 @@
 background: $black;
 }
 .footerContainer .bottom_details .bottom_text{
-  max-width: 1250px;
   margin: auto;
   padding: 10px 40px;
   display: flex;
   justify-content: space-between;
+  @media #{$mq-medium} {
+    max-width: 100rem;
+  }
+  @media #{$mq-large} {
+    max-width: 110rem;
+  }
 }
 .bottom_details .bottom_text span,
 .bottom_details .bottom_text a{
