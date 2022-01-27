@@ -99,12 +99,15 @@ $cardHeightMobile: 280px;
         }
     }
     .card:hover {
-        background-size: 125%;
+        // background-size: 125%;
         background-position: bottom;
         // animation-duration: .8s;
         span {display: inline-block; }
         @media #{$mq-small} {
             background-size: cover;
+        }
+        @media #{$mq-medium} {
+            background-size: 135%;
         }
     }
     

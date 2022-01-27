@@ -178,7 +178,7 @@ export default function GoodTimeRelaxResort() {
                     data-aos-duration="500"
                     >   
                         <div className={styles.sec_2_left_img_container}>
-                            <Zoom zoomMargin={100} overlayBgColorEnd="rgba(247, 240, 182, .25)"> 
+                            <Zoom zoomMargin={15} overlayBgColorEnd="rgba(247, 240, 182, .25)"> 
                             <img 
                             src={gt_rr_exterior_bokor_bg} 
                             width="100%" height="100%"
@@ -197,7 +197,7 @@ export default function GoodTimeRelaxResort() {
                             </span>
                         </div>
                         <div className={styles.sec_2_right_img_container}>
-                            <Zoom zoomMargin={100} overlayBgColorEnd="rgba(247, 240, 182, .25)"> 
+                            <Zoom zoomMargin={15} overlayBgColorEnd="rgba(247, 240, 182, .25)"> 
                             <img 
                             src={gt_rr_pool_bokor_view} 
                             width="100%" height="100%"
