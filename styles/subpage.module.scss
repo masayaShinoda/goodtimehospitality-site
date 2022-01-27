@@ -359,13 +359,21 @@
                         margin: 0;
                         // outline: 2px solid #999; //debug
                         > div {
+                            // individual image container
                             display: flex; justify-content: center; align-items: center;
                             margin: 0;
                             width: 50%;
+                            transition: all 200ms ease-in-out;
                             // outline: 2px solid #999; //debug
                             @media #{$mq-xsmall} {
                                 width: 100%;
                             }                                
+                        }
+                        > div:hover {
+                            z-index: 10;
+                            transform: scale(1.05);
+                            outline: .325rem solid $lightGold;
+                            // box-shadow: 0 0 1.5rem .5rem transparentize($lightGold, 0.69);
                         }
                     }
                 }

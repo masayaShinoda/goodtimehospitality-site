@@ -89,7 +89,7 @@ export default function GoodTimeRelaxResort() {
                                     style={{
                                         display: `flex`, flexDirection: `row`, alignItems: `center`,
                                         color: `#fff`, outline: `2px solid #ececec`, borderRadius: `100%`,
-                                        margin: `0 1rem`
+                                        margin: `0 1rem`, transition: `all 150ms ease-in`
                                     }}
                                     onMouseOver={() => {
                                         const element = document.getElementById('tel_link')
@@ -115,7 +115,7 @@ export default function GoodTimeRelaxResort() {
                                     style={{
                                         display: `flex`, flexDirection: `row`, alignItems: `center`,
                                         color: `#fff`, outline: `2px solid #ececec`, borderRadius: `100%`,
-                                        margin: `0 1rem`
+                                        margin: `0 1rem`, transition: `all 150ms ease-in`
                                     }}
                                     onMouseOver={() => {
                                         const element = document.getElementById('fb_link')
@@ -141,7 +141,7 @@ export default function GoodTimeRelaxResort() {
                                     style={{
                                         display: `flex`, flexDirection: `row`, alignItems: `center`,
                                         color: `#fff`, outline: "2px solid #ececec", borderRadius: `.25rem`,
-                                        margin: `0 1rem`, padding: `.75rem`
+                                        margin: `0 1rem`, padding: `.75rem`, transition: `all 150ms ease-in`
                                     }}
                                     onMouseOver={() => {
                                         const element = document.getElementById('booking_dot_com_link')
@@ -167,8 +167,7 @@ export default function GoodTimeRelaxResort() {
                 </section>
                 <section className={styles.sec_2}>
                     <h2
-                    data-aos="fade-up"
-                    data-aos-duration="500"
+                    
                     >
                     Bokor Mountain View
                     </h2>
@@ -221,7 +220,7 @@ export default function GoodTimeRelaxResort() {
                         </div>
                         <div 
                         className={styles.sec_3_right_div}
-                        data-aos="fade-up"
+                        data-aos="fade-left"
                         data-aos-duration="500"
                         >
                             <p>
