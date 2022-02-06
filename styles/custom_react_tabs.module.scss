@@ -103,12 +103,13 @@ $tab_panel_bg_height: 65rem;
             span {
                 width: 27.5%;
                 h3 {
-                    line-height: 1.5;
+                    line-height: 1.1;
                     font-family: $head;
                     font-weight: 200;
                     color: #fcfcfc;               
                     font-size: 4.8rem; margin-bottom: 2.1rem;
                     border-bottom: 0.5rem solid $gold;
+                    padding-bottom: .5rem;
                 }
                 p, li {
                     // border: 2px solid purple; //debug

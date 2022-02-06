@@ -2,11 +2,11 @@ import { useState, useCallback } from 'react'
 import Image from 'next/image'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
-import styles from '../styles/custom_react_tabs.module.scss'
 import Gallery from "react-photo-gallery"
 import Carousel, { Modal, ModalGateway } from "react-images"
 
 import Zoom from 'react-medium-image-zoom'
+import styles from '../styles/custom_react_tabs.module.scss'
 
 export default function BungalowsTabs() {
     const [currentImage, setCurrentImage] = useState(0);
@@ -88,8 +88,7 @@ return (
             <h3>{i.name}</h3>
             <p>{i.desc}</p>
             </span>
-            {i.photos ? <Gallery photos={i.photos} onClick={openLightbox} /> : null}
-            {i.photos ? 
+            <Gallery photos={i.photos} onClick={openLightbox} />
             <ModalGateway>
             {viewerIsOpen ? (
               <Modal onClose={closeLightbox}>
@@ -103,8 +102,7 @@ return (
                 />
               </Modal>
             ) : null}
-          </ModalGateway>
-            : null}
+            </ModalGateway>
         </div>
         </TabPanel>)}
   </Tabs>

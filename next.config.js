@@ -2,7 +2,7 @@ module.exports = {
   cssLoaderOptions: {
     url: false
   },
-  // reactStrictMode: true,
+  reactStrictMode: true,
   assetPrefix: './',
   images: {
     loader: 'imgix',
