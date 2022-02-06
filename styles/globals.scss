@@ -63,3 +63,8 @@ a {font-weight: 500; font-size: 1.8rem}
     margin-right: 15%;
   }
 }
+
+// photo gallery carousel fullscreen style fix
+.react-images__view-image--isModal {
+  margin: 0 auto;
+}

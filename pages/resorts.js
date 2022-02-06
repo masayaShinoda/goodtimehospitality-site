@@ -11,7 +11,7 @@ export default function Resorts() {
                 <div 
                 className={styles.choice}
                 style={{
-                    backgroundImage: `url("/images/gt-rr-choice_result.webp")`
+                    backgroundImage: `url("/thumbnail/gt-rr-bokor-bg-thumb.webp")`
                 }}>
                     <Link href="/resort/good-time-relax-resort">
                         <a>

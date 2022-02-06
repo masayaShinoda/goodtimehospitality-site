@@ -130,11 +130,24 @@ export default function Nav() {
                     Home
                     </a>
                 </Link>
-                <Link href="/offerings">
-                    <a onClick={closeNav} className={router.pathname === "/locations" ? `${styles.active}` : ""}>
-                    Offerings
-                    </a>
-                </Link>
+                <div>
+                    <Link href="/offerings">
+                        <a onClick={closeNav} className={router.pathname === "/locations" ? `${styles.active}` : ""}>
+                        Offerings
+                        </a>
+                    </Link>
+                    <span>
+                        <Link href="/resorts">
+                            Resorts
+                        </Link>
+                        <Link href="/vacation-homes">
+                            Vacation Homes
+                        </Link>
+                        <Link href="/apartments">
+                            Apartments
+                        </Link>
+                    </span>
+                </div>
                 <Link href="/about">
                     <a onClick={closeNav} className={router.pathname === "/about" ? `${styles.active}` : ""}>
                     About
@@ -142,7 +155,7 @@ export default function Nav() {
                 </Link>
                 <Link href="/">
                     <a onClick={closeNav}>
-                        Booking
+                    Booking
                     </a>
                 </Link>
 

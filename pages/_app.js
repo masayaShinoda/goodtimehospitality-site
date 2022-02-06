@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
   
   useEffect(() => {
     typeof window !== 'undefiend' && (
-      AOS.init()      
+      AOS.init()
     )
   }, [])
 

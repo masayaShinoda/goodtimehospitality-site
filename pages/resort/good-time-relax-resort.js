@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import MessengerComponent from 'react-messenger-customer-chat';
+import BungalowsTabs from '../../components/bungalowsTabs'
 import Layout from '../../components/layout'
 import styles from '../../styles/subpage.module.scss';
 
@@ -19,6 +19,12 @@ export default function GoodTimeRelaxResort() {
     const phoneIcon = '/icons/phone_result_transparent.png'
     const fbIcon = '/icons/fb-icon-margins.png'
     const seoDesc = "Surrounded by the Kampot River and set in unparalleled tranquility for complete privacy, each of our resort’s beautiful 2-room bungalow structures is unmatched, specially designed for memorable experiences."
+
+    const khmer_hori_line = <img
+    src={divider_kbach_khmer_hori_lines_1920} 
+    alt="kbach khmer dividing line"
+    className={styles.divider_kbach_khmer_hori_lines}
+    />
 
     const gt_rr_activity_images = [
         {
@@ -166,9 +172,7 @@ export default function GoodTimeRelaxResort() {
                     
                 </section>
                 <section className={styles.sec_2}>
-                    <h2
-                    
-                    >
+                    <h2>
                     Bokor Mountain View
                     </h2>
                     <div 
@@ -208,11 +212,7 @@ export default function GoodTimeRelaxResort() {
                     </div>
                 </section>
                 <section className={styles.sec_3}>
-                    <img
-                    src={divider_kbach_khmer_hori_lines_1920} 
-                    alt="kbach khmer dividing line"
-                    className={styles.divider_kbach_khmer_hori_lines}
-                    />
+                    {khmer_hori_line}
                     <div 
                     className={styles.sec_3_content}>
                         <div className={styles.sec_3_left_div}>
@@ -248,9 +248,23 @@ export default function GoodTimeRelaxResort() {
 
                         </div>
                     </div>
+                    {khmer_hori_line}
+                </section>
+                <section className={styles.sec_4}>
+                    <div className={styles.sec_4_content}>
+                        <div className={styles.sec_4_div_1}>
+                            <h2>Bungalows</h2>
+                            <div className={styles.sec_4_div_1_content}>
+                                <BungalowsTabs />
+                            </div>
+
+                        </div>
+                        <div className={styles.sec_4_div_2}>
+                            <h2>Dormitories</h2>
+                        </div>
+                    </div>
                 </section>
             </div>
-
         </div>
     </Layout>
     </>

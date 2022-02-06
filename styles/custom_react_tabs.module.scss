@@ -1,0 +1,136 @@
+@import './_variables.scss';
+
+$tab_panel_bg_height: 65rem;
+
+.tabs {
+    // .react-tabs__tab--selected {
+    //     border: 2px solid red; //debug
+    // }
+    padding-bottom: calc($tab_panel_bg_height / 5);
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-family: $head;
+        font-size: 1.8rem;
+        border: 0;
+        margin: 0;
+        @media #{$mq-xsmall} {justify-content: flex-start;}
+        @media #{$mq-small} {justify-content: flex-start;}
+        // border-bottom: 2px solid $gold;
+        // border: 2px solid $gt-rr-brown; //debug
+        
+        li {
+            margin: 0;
+            color: $black;
+            border: 0;
+            border-radius: 0;
+            bottom: 0;
+            // background: transparentize($gt-rr-brown, .95);
+            // background: transparentize($lightGold, .9);
+            background: transparentize(#ececec, .75);
+            border-bottom: 2px solid rgba(255,255,255,0) !important;
+            transition: 150ms ease-in border;
+            padding: 1.25rem 2rem;
+            box-shadow: .25rem 0 .25rem rgba(40,40,40,.075);
+            @media #{$mq-xsmall} {
+                text-align: center;
+                padding: 1.5rem 1rem;
+                width: 100%;
+            }
+        }
+        li:first-of-type {
+            @media #{$mq-xsmall} {border-radius: 0;}
+            @media #{$mq-small} {border-radius: 0;}
+            @media #{$mq-medium} {border-radius: .75rem 0 0 0;}
+        }
+        li:last-of-type {            
+            @media #{$mq-xsmall} {border-radius: 0;}
+            @media #{$mq-small} {border-radius: 0;}
+            @media #{$mq-medium} {border-radius: 0 .75rem 0 0;}
+        }
+        li:hover {
+            // border-top: 2px solid $gold;
+            border-bottom: 2px solid $gold !important;
+        }
+        [aria-selected='true'] {
+            transition: 200ms ease-in-out all;
+            background: $gt-rr-brown;
+            color: #fcfcfc;
+            border-bottom: 2px solid $gold !important;
+        }
+    }
+    > div {
+        width: 100%;
+        left: 0;
+        // border: 1px solid green; //debug
+        .tab_panel_bg {
+            // box-shadow: inset 0 0 0 .25rem $gold;
+            position: absolute;
+            // z-index: -1;
+            // top: 0;
+            left: 0; right: 0;
+            width: 100%; height: $tab_panel_bg_height;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            // background: linear-gradient(90deg, rgba(19,19,19,1) 0%, rgba(33,33,33,0) 100%);
+            // border: 1px solid green; //debug
+        }
+        .tab_panel_bg_filter {
+            position: absolute;
+            left: 0; right: 0;
+            width: 100%; height: $tab_panel_bg_height;
+            background: rgb(21,21,21);
+            background: linear-gradient(90deg, rgba(21,21,21,.425) 0%, rgba(33,33,33,0) 50%); 
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .tab_panel_content {
+            // padding: 4.5rem 0;
+            // width: max-content;
+            width: 100%;
+            height: calc($tab_panel_bg_height / 1.1);
+            position: relative;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 2.5rem 0;
+            color: #fcfcfc;
+            // border: 2px solid yellow; //debug
+            // background-color: rgba(240,240,240,.9);
+            span {
+                width: 27.5%;
+                h3 {
+                    line-height: 1.5;
+                    font-family: $head;
+                    font-weight: 200;
+                    color: #fcfcfc;               
+                    font-size: 4.8rem; margin-bottom: 2.1rem;
+                    border-bottom: 0.5rem solid $gold;
+                }
+                p, li {
+                    // border: 2px solid purple; //debug
+                    // font-size: 1.4rem;
+                    max-width: 50ch;
+                    // padding-left: 1.5rem;
+                    // border-left: 0.75rem solid $gold;
+                }
+            }
+            > div {
+                // border: 1px solid red; //debug
+                // height: 100%;
+                width: 65%; max-width: 65%;
+                img {
+                    // border: 1px solid #fcfcfc;
+                    box-shadow: 0 0 .5rem rgba(40,40,40,.325);
+                    max-height: 25rem;
+                    object-fit: cover;
+
+                }
+            }
+        }
+        // border: 1px solid green; //debug
+    }
+}
