@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import BungalowsTabs from '../../components/bungalowsTabs'
-import Layout from '../../components/layout'
-import styles from '../../styles/subpage.module.scss';
+import BungalowsTabs from '../components/bungalowsTabs'
+import Layout from '../components/layout'
+import styles from '../styles/subpage.module.scss';
 
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
 export default function GoodTimeRelaxResort() {
     const gt_rr_logo_white_text = "/images/goodtimerelaxresort-logo-white-text_result.webp"
-    const gt_rr_interior_1 = '/images/gt-rr/SRN09144_result.jpg'
+    const gt_rr_interior_1 = '/images/gt-rr/SRN09144_result.webp'
     const gt_rr_exterior_bokor_bg = '/images/gt-rr/SRN07369_result.webp'
     const gt_rr_pool_bokor_view = '/images/gt-rr/SRN07340_result.webp'
     const booking_dot_com_logo_white = '/images/Booking.Com-logo-white_result.webp'
@@ -53,8 +53,8 @@ export default function GoodTimeRelaxResort() {
     return (
     <>
     <Layout
-        pageName="Good Time Relax Resort"
-        seoDesc={seoDesc}
+    pageName="Good Time Relax Resort"
+    seoDesc={seoDesc}
     >
         <div className={styles.subpageContainer}>
             <div className={styles.gt_rr}>
@@ -253,14 +253,18 @@ export default function GoodTimeRelaxResort() {
                 <section className={styles.sec_4}>
                     <div className={styles.sec_4_content}>
                         <div className={styles.sec_4_div_1}>
+                            <span className={styles.sec_4_heading_span}>
                             <h2>Bungalows</h2>
+                            </span>
                             <div className={styles.sec_4_div_1_content}>
                                 <BungalowsTabs />
                             </div>
 
                         </div>
                         <div className={styles.sec_4_div_2}>
+                            <span className={styles.sec_4_heading_span}>
                             <h2>Dormitories</h2>
+                            </span>
                         </div>
                     </div>
                 </section>

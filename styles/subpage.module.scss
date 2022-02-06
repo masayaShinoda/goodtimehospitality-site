@@ -24,9 +24,8 @@
     // padding-bottom: 10%;
     // background: url("/images/gt-rr-hero-1_result.webp");
     background-position: center;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
     background-size: cover;
+    // border: 2px solid red; //debug
     h1 {
         text-align: center;
     }
@@ -92,6 +91,7 @@
                 width: 25rem; height: 25rem; 
                 max-width: 25rem; max-height: 25rem;
                 // margin-right: 7.5rem;
+                // outline: 2px solid red; //debug
                 @media #{$mq-xsmall} {
                     width: 20rem; height: 20rem; 
                     max-width: 20rem; max-height: 20rem;   
@@ -389,14 +389,17 @@
             .sec_4_content {
                 width: 100%;
                 // border: 1px solid red; //debug
-                h2 {
-                    font-size: 4.25rem;
-                    display: inline-block;
-                    max-width: fit-content;
+                .sec_4_heading_span {
+                    display: flex; justify-content: center;
                     width: 100%;
-                    text-align: center;
-                    border-bottom: .75rem solid $gold;
-                    margin-bottom: 2.5rem;
+                    h2 {
+                        font-size: 4.25rem;
+                        display: inline-block;
+                        // max-width: fit-content;
+                        text-align: center;
+                        border-bottom: .75rem solid $gold;
+                        margin-bottom: 2.5rem;
+                    }
                 }
                 .sec_4_div_1 {
                     // border: 1px solid green; //debug

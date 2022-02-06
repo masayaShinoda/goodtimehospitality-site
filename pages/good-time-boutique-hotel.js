@@ -1,6 +1,6 @@
 import MessengerComponent from 'react-messenger-customer-chat';
-import Layout from '../../components/layout'
-import styles from '../../styles/subpage.module.scss';
+import Layout from '../components/layout'
+import styles from '../styles/subpage.module.scss';
 
 export default function GoodTimeBoutiqueHotel() {
 
