@@ -35,8 +35,9 @@ $tab_panel_bg_height: 65rem;
             box-shadow: .25rem 0 .25rem rgba(40,40,40,.075);
             @media #{$mq-xsmall} {
                 text-align: center;
-                padding: 1.5rem 1rem;
+                padding: 1.75rem 0;
                 width: 100%;
+                border: 0 !important;
             }
         }
         li:first-of-type {
@@ -52,12 +53,15 @@ $tab_panel_bg_height: 65rem;
         li:hover {
             // border-top: 2px solid $gold;
             border-bottom: 2px solid $gold !important;
+            @media #{$mq-xsmall} {border: 0 !important;}
+
         }
         [aria-selected='true'] {
             transition: 200ms ease-in-out all;
             background: $gt-rr-brown;
             color: #fcfcfc;
             border-bottom: 2px solid $gold !important;
+            @media #{$mq-xsmall} {border: 0 !important;}
         }
     }
     > div {
@@ -75,8 +79,10 @@ $tab_panel_bg_height: 65rem;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            // background: linear-gradient(90deg, rgba(19,19,19,1) 0%, rgba(33,33,33,0) 100%);
             // border: 1px solid green; //debug
+            @media #{$mq-xsmall} {
+                height: calc($tab_panel_bg_height * 1.5);
+            }
         }
         .tab_panel_bg_filter {
             position: absolute;
@@ -87,6 +93,10 @@ $tab_panel_bg_height: 65rem;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            @media #{$mq-xsmall} {
+                height: calc($tab_panel_bg_height * 1.5);
+                background: linear-gradient(145deg, rgba(12,12,12,.65) 0%, rgba(33,33,33,0) 65%); 
+            }
         }
         .tab_panel_content {
             // padding: 4.5rem 0;
@@ -102,8 +112,18 @@ $tab_panel_bg_height: 65rem;
             color: #fcfcfc;
             // border: 2px solid yellow; //debug
             // background-color: rgba(240,240,240,.9);
+            @media #{$mq-xsmall} {
+                flex-direction: column; justify-content: flex-start;
+                padding-top: 0;
+                padding: 2.5rem 0;
+                height: calc($tab_panel_bg_height * 1.5);
+                max-height: 125vh;
+            }
             span {
                 width: 30%;
+                @media #{$mq-xsmall} {
+                    width: 100%; padding-top: 3.25rem;
+                }
                 h3 {
                     line-height: 1.1;
                     font-family: $head;
@@ -115,11 +135,7 @@ $tab_panel_bg_height: 65rem;
                     margin-bottom: 2.5rem;
                 }
                 p, li {
-                    // border: 2px solid purple; //debug
-                    // font-size: 1.4rem;
                     max-width: 50ch;
-                    // padding-left: 1.5rem;
-                    // border-left: 0.75rem solid $gold;
                 }
             }
             .tab_panel_gallery_container {
@@ -127,32 +143,41 @@ $tab_panel_bg_height: 65rem;
                 overflow-y: scroll;
                 width: 65%; max-width: 65%;
                 // padding: 2rem 0;
+                // border: 2px solid red; //debug
+                @media #{$mq-xsmall} {
+                    width: 100%; max-width: 100%;
+                    max-height: 100%;
+                    margin-top: 5rem;
+                }
                 img {
                     box-shadow: 0 0 .5rem rgba(40,40,40,.325);
                     object-fit: cover;
                     object-position: center;
                 }
-                // border: 2px solid red; //debug
             }
             /* Works on Firefox */
             .tab_panel_gallery_container {
-            scrollbar-width: thin;
-            scrollbar-color: saturate($lightGold, 100%) rgba(240,240,240,.5);
+            scrollbar-width: auto;
+            scrollbar-color: hsl(0, 0%, 60%) #F1F1F1;
+                @media #{$mq-xsmall} {
+                    scrollbar-width: auto;
+                }
             }
 
             /* Works on Chrome, Edge, and Safari */
             .tab_panel_gallery_container::-webkit-scrollbar {
-            width: 12px;
+            width: 16px;
+                @media #{$mq-xsmall} {
+                    width: 18px;
+                }
             }
 
             .tab_panel_gallery_container::-webkit-scrollbar-track {
-            background: saturate($lightGold, 100%);
+                background: #F1F1F1;
             }
 
             .tab_panel_gallery_container::-webkit-scrollbar-thumb {
-            background-color: saturate($lightGold, 100%);
-            border-radius: 20px;
-            border: 3px solid $gold;
+                background-color: hsl(0, 0%, 60%);
             }
   
             // .tab_panel_photos {

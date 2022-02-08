@@ -35,23 +35,23 @@ export default function BungalowsTabs() {
             photos: [
                 {
                     src: '/images/gt-rr/bungalow/SRN09142_result.webp',
-                    width: 16, height: 10
+                    width: 3, height: 2
                 },
                 {
                     src: '/images/gt-rr/bungalow/DSC08897_result.webp',
-                    width: 4, height: 3
+                    width: 3, height: 2
                 },
-                {
-                    src: '/images/gt-rr/bungalow/SRN07153_result.webp',
-                    width: 4, height: 3
-                },
+                // {
+                //     src: '/images/gt-rr/bungalow/SRN07153_result.webp',
+                //     width: 4, height: 3
+                // },
                 {
                     src: '/images/gt-rr/bungalow/DSC08912_result.webp',
-                    width: 4, height: 3
+                    width: 1, height: 1
                 },
                 {
                     src: '/images/gt-rr/bungalow/SRN07314_result.webp',
-                    width: 3, height: 4
+                    width: 1, height: 1
                 }
             ]
         },
@@ -61,15 +61,11 @@ export default function BungalowsTabs() {
             bg: "/images/gt-rr/sweet-bungalow/DSC08879_result.jpg",
             photos: [
                 {
-                    src: '/images/gt-rr/sweet-bungalow/SRN07052_result.webp',
+                    src: '/images/gt-rr/sweet-bungalow/DSC08879_result.webp',
                     width: 3, height: 2
                 },
                 {
                     src: '/images/gt-rr/sweet-bungalow/IMG_8433_result.webp',
-                    width: 3, height: 2
-                },
-                {
-                    src: '/images/gt-rr/sweet-bungalow/DSC08879_result.webp',
                     width: 3, height: 2
                 },
                 {
@@ -96,24 +92,24 @@ export default function BungalowsTabs() {
                     width: 3, height: 2
                 },
                 {
-                    src: '/images/gt-rr/pool-view-bungalow/SRN09120-edit_result.webp',
-                    width: 3, height: 2
-                },
-                {
                     src: '/images/gt-rr/pool-view-bungalow/SRN07136_result.webp',
                     width: 3, height: 2
                 },
                 {
-                    src: '/images/gt-rr/pool-view-bungalow/DSC08890_result.webp',
-                    width: 1, height: 1
-                },
-                {
-                    src: '/images/gt-rr/pool-view-bungalow/DSC09775_result.webp',
+                    src: '/images/gt-rr/pool-view-bungalow/SRN09120-edit_result.webp',
                     width: 3, height: 2
                 },
+                // {
+                //     src: '/images/gt-rr/pool-view-bungalow/DSC08890_result.webp',
+                //     width: 1, height: 1
+                // },
+                // {
+                //     src: '/images/gt-rr/pool-view-bungalow/DSC09775_result.webp',
+                //     width: 3, height: 2
+                // },
                 {
                     src: '/images/gt-rr/pool-view-bungalow/SRN07080_result.webp',
-                    width: 4, height: 3
+                    width: 1, height: 1
                 },
             ]
         },
@@ -128,24 +124,24 @@ export default function BungalowsTabs() {
                 },
                 {
                     src: '/images/gt-rr/grand-bungalow/IMG_8435_result.webp',
-                    width: 3, height:  2
+                    width: 1, height:  1
                 },
-                {
-                    src: '/images/gt-rr/grand-bungalow/SRN07285_result.webp',
-                    width: 3    , height:  2
-                },
+                // {
+                //     src: '/images/gt-rr/grand-bungalow/SRN07285_result.webp',
+                //     width: 3, height: 2
+                // },
                 {
                     src: '/images/gt-rr/grand-bungalow/SRN07369-cropped_result.webp',
-                    width: 16, height:  9
+                    width: 3, height: 2
                 },
                 {
                     src: '/images/gt-rr/grand-bungalow/DSC08908_result.webp',
-                    width: 4, height:  3
+                    width: 3, height: 2
                 },
-                {
-                    src: '/images/gt-rr/grand-bungalow/SRN07278_result.webp',
-                    width: 3, height:  2
-                },
+                // {
+                //     src: '/images/gt-rr/grand-bungalow/SRN07278_result.webp',
+                //     width: 3, height: 2
+                // },
             ]
         },
         {
@@ -153,9 +149,13 @@ export default function BungalowsTabs() {
             desc: "The two-balcony bungalow will allow you to start a new fresh day with a pleasant lake view and a beautiful sunrise while simply opening your window.",
             bg: "/images/gt-rr/deluxe-bungalow/DSC08905_result.jpg",
             photos: [
+                // {
+                //     src: '/images/gt-rr/deluxe-bungalow/DSC08896_result.webp',
+                //     width: 4, height: 5,
+                // },
                 {
-                    src: '/images/gt-rr/deluxe-bungalow/DSC08896_result.webp',
-                    width: 4, height: 5,
+                    src: '/images/gt-rr/deluxe-bungalow/DSC08905_result.webp',
+                    width: 3, height: 2,
                 },
                 {
                     src: '/images/gt-rr/deluxe-bungalow/SRN09150_result.webp',
@@ -167,11 +167,7 @@ export default function BungalowsTabs() {
                 },
                 {
                     src: '/images/gt-rr/deluxe-bungalow/DSC08901_result.webp',
-                    width: 3, height: 2,
-                },
-                {
-                    src: '/images/gt-rr/deluxe-bungalow/DSC08905_result.webp',
-                    width: 3, height: 2,
+                    width: 3, height: 4,
                 },
             ]
         }
