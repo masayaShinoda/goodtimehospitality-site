@@ -69,10 +69,6 @@ export default function BungalowsTabs() {
                     width: 3, height: 2
                 },
                 {
-                    src: '/images/gt-rr/sweet-bungalow/IMG_8433_result.webp',
-                    width: 3, height: 2
-                },
-                {
                     src: '/images/gt-rr/sweet-bungalow/DSC08879_result.webp',
                     width: 3, height: 2
                 },

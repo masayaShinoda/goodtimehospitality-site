@@ -204,8 +204,9 @@ export default function GoodTimeRelaxResort() {
                             <img 
                             src={gt_rr_pool_bokor_view} 
                             width="100%" height="100%"
-                            alt="Good Time Relax Resort ppol photo with Bokor mountain in background" 
+                            alt="Good Time Relax Resort photo with Bokor mountain in background" 
                             loading="lazy"
+                            style={{backgroundColor: `#333`}}
                             />
                             </Zoom>
                         </div>
