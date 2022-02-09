@@ -137,9 +137,10 @@
                 padding-top: 2.5%; padding-bottom: 2.5%;
             }
             h2 {
-                font-size: 2.8rem; font-family: $body;
+                font-size: 3.2rem; 
+                font-family: $head;
                 // margin: 0 auto;
-                margin-bottom: 2.5rem;
+                // margin-bottom: 2.5rem;
                 padding: 0 2.5%;
                 // border: 1px solid green; //debug
                 @media #{$mq-xxlarge} {
