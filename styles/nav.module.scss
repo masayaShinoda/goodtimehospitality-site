@@ -47,9 +47,10 @@
         }
         .navLinks {
             padding: .5rem 0;
+            display: flex;
             align-items: flex-end;
             a {
-                margin: 0 16px;
+                margin: 0 1.4rem;
                 color: $black;
                 text-decoration: none;
                 transition: color 200ms ease-in-out;
@@ -57,9 +58,56 @@
             a:hover, a:focus {
                 color: $gold;
             }
-            a:last-of-type {margin-right: 0}
+            // a:last-of-type {margin-right: 0}
             a.active {
                 border-bottom: 2px solid $gold;
+            }
+            
+            .dropdownNav {
+                display: inline;
+                cursor: pointer;
+                display: flex; 
+                // border: 1px solid red; //debug
+                > a:hover .dropdownContent {
+                    display: flex;
+                }
+                > a .dropdownContent {
+                    padding: 0 1.4rem;
+                    margin-left: -1.4rem;
+                    display: none; flex-direction: column; align-items: flex-start;
+                    position: absolute;
+                    background: #fff;
+                    box-shadow: 0 .25rem .5rem .25rem rgba(0,0,0,.125);
+                    // margin: 0 1.4rem;
+                    a {
+                        margin: 0; padding: 0;
+                        padding: .5rem 0;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        border-bottom: 2px solid hsl(0, 0%, 90%);
+                        width: 100%;
+                    }
+                    a:nth-of-type(last) {
+                        border: 0;
+                    }
+                    .dropdownLink .dropdownLink_cascade {
+                        display: flex; flex-direction: column; align-items: flex-start;
+                        ul {
+                            padding: 0; margin: 0;
+                            padding-left: 1.5rem;
+                            list-style-type: circle;
+                        }
+                        li:hover {list-style-type: disc;}
+                        a {
+                            font-size: 1.4rem;
+                            border: 0;
+                            // margin-left: .7rem;
+                        }
+                        a:hover {
+                            color: $black;
+                        }
+                    }
+                }
             }
         }
     }
@@ -90,6 +138,10 @@
         color: $black;
         background-color: $gold;
         transition: background-color .2s ease-in;
+        margin: 0 !important;
+        @media #{$mq-xxlarge} {
+            right: 20%;
+        }
         p {
             display: inline;
             font-size: 16px;

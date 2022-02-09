@@ -59,7 +59,6 @@ export default function Footer() {
         <span>
             <p>
             Copyright © 2021 Good Time Group Hospitality
-
             </p>
         </span>
       </div>

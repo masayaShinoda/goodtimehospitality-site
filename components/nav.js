@@ -72,10 +72,31 @@ export default function Nav() {
                     Home
                     </a>
                 </Link>
-                <Link href="/offerings" className={styles.dropdownNav}>
+                <Link href="/offerings">
+                <div className={styles.dropdownNav}>
                     <a className={router.pathname === "/offerings" ? `${styles.active}` : ""}>
                     Offerings
+                    <div className={styles.dropdownContent}>
+                        <Link href="/resorts">
+                        <a className={styles.dropdownLink}>
+                            Resorts
+                            <div className={styles.dropdownLink_cascade}>
+                                <ul>
+                                    <li>
+                                    <Link href="/good-time-relax-resort"><a>Good Time Relax Resort</a></Link>    
+                                    </li>
+                                    <li>
+                                    <Link href="/good-time-boutique-hotel"><a>Good Time Boutique Hotel</a></Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                        </Link>    
+                        <Link href="/vacation-homes"><a>Vacation Homes</a></Link>    
+                        <Link href="/apartments"><a>Apartments</a></Link>    
+                    </div>
                     </a>
+                </div>
                 </Link>
                 <Link href="/about">
                     <a className={router.pathname === "/about" ? `${styles.active}` : ""}>

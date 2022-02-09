@@ -7,6 +7,11 @@ $tab_panel_bg_height: 65rem;
     //     border: 2px solid red; //debug
     // }
     padding-bottom: calc($tab_panel_bg_height / 5);
+    // border: 1px solid red; //debug
+    @media #{$mq-xxlarge} {
+        max-width: 128rem;
+        margin: 0 auto;
+    }
     ul {
         display: flex;
         justify-content: center;
@@ -112,6 +117,11 @@ $tab_panel_bg_height: 65rem;
             color: #fcfcfc;
             // border: 2px solid yellow; //debug
             // background-color: rgba(240,240,240,.9);
+            @media #{$mq-xxlarge} {
+                max-width: 128rem;
+                margin: 0 auto;
+            }
+
             @media #{$mq-xsmall} {
                 flex-direction: column; justify-content: flex-start;
                 padding-top: 0;
