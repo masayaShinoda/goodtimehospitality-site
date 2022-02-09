@@ -72,9 +72,8 @@ export default function Nav() {
                     Home
                     </a>
                 </Link>
-                <Link href="/offerings">
                 <div className={styles.dropdownNav}>
-                    <a className={router.pathname === "/offerings" ? `${styles.active}` : ""}>
+                    <a className={router.pathname === "/good-time-relax-resort" || router.pathname === "/good-time-boutique-hotel"  ||  router.pathname === "/resorts" ? `${styles.active}` : ""}>
                     Offerings
                     <div className={styles.dropdownContent}>
                         <Link href="/resorts">
@@ -97,7 +96,6 @@ export default function Nav() {
                     </div>
                     </a>
                 </div>
-                </Link>
                 <Link href="/about">
                     <a className={router.pathname === "/about" ? `${styles.active}` : ""}>
                     About
@@ -151,24 +149,11 @@ export default function Nav() {
                     Home
                     </a>
                 </Link>
-                <div>
-                    <Link href="/offerings">
-                        <a onClick={closeNav} className={router.pathname === "/locations" ? `${styles.active}` : ""}>
-                        Offerings
-                        </a>
-                    </Link>
-                    <span>
-                        <Link href="/resorts">
-                            Resorts
-                        </Link>
-                        <Link href="/vacation-homes">
-                            Vacation Homes
-                        </Link>
-                        <Link href="/apartments">
-                            Apartments
-                        </Link>
-                    </span>
-                </div>
+                <Link href="/offerings">
+                    <a onClick={closeNav} className={router.pathname === "/good-time-relax-resort" || router.pathname === "/good-time-boutique-hotel"  ||  router.pathname === "/resorts" ? `${styles.active}` : ""}>
+                    Offerings
+                    </a>
+                </Link>
                 <Link href="/about">
                     <a onClick={closeNav} className={router.pathname === "/about" ? `${styles.active}` : ""}>
                     About

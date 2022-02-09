@@ -81,7 +81,7 @@
                     // margin: 0 1.4rem;
                     a {
                         margin: 0; padding: 0;
-                        padding: .5rem 0;
+                        padding: 1rem 0;
                         font-size: 1.6rem;
                         font-weight: 400;
                         border-bottom: 2px solid hsl(0, 0%, 90%);
@@ -92,19 +92,26 @@
                     }
                     .dropdownLink .dropdownLink_cascade {
                         display: flex; flex-direction: column; align-items: flex-start;
+                        width: 100%;
                         ul {
+                            display: flex; flex-direction: column;
                             padding: 0; margin: 0;
+                            width: 100%;
                             padding-left: 1.5rem;
                             list-style-type: circle;
                         }
+                        li {padding: .5rem 0; margin: 0; width: 100%;}
                         li:hover {list-style-type: disc;}
                         a {
                             font-size: 1.4rem;
-                            border: 0;
+                            border: 0; padding: 1rem 0;
+                            // border: 1px solid red; //debug
+                            width: 100%;
                             // margin-left: .7rem;
                         }
                         a:hover {
                             color: $black;
+                            text-decoration: underline;
                         }
                     }
                 }

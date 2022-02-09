@@ -1,10 +1,10 @@
 @import './_variables.scss';
 
 $cardWidthDesktop: 32%;
-$cardHeightDesktop: 250px;
-$cardHeightTablet: 300px;
+$cardHeightDesktop: 25rem;
+$cardHeightTablet: 35rem;
 $cardWidthMobile: 100%;
-$cardHeightMobile: 280px;
+$cardHeightMobile: 28rem;
 
 .headerText {
     padding: 5rem 0;
@@ -23,15 +23,18 @@ $cardHeightMobile: 280px;
     align-items: flex-start;
     flex-wrap: wrap;
     
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
     max-width: 100%;
     // margin-top: $navHeight;
     // outline: 1px solid red; //debug
     
     @media #{$mq-small} {
-        width: 100vw;
+        width: 100%;
+        align-items: center;
+        // flex-direction: column;
     }
     @media #{$mq-medium} {
+        flex-direction: row;
         width: 110rem;
     }
     @media #{$mq-xsmall} {
@@ -58,7 +61,7 @@ $cardHeightMobile: 280px;
         
         
         @media #{$mq-small} {
-            width: $cardWidthDesktop;
+            width: 30vmin;
             height: $cardHeightTablet;
         }
 

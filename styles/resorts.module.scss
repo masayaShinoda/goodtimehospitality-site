@@ -9,8 +9,7 @@
     top: $navHeight;
     
     @media #{$mq-small} {
-        height: $desktopMinHeight;
-
+        height: calc($tabletMinHeight / 1);
     }
     // z-index: -100;
     position: static;

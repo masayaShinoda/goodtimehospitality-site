@@ -18,11 +18,14 @@
         background-size: cover;
         background-position: center;
         // main container, content goes here
-        // margin: 0 auto;    
+        // margin: 0 auto;   
         // padding: 50px 0;
         width: 100%; max-width: 100%;
         margin-top: $navHeight;
         @media #{$mq-large} {
+        }
+        @media #{$mq-small} {
+            min-height: $tabletMinHeight;
         }
         @media #{$mq-medium} {
             min-height: $desktopMinHeight;

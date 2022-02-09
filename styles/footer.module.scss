@@ -23,7 +23,7 @@
 // }
 .footerContainer .content {
   margin: auto;
-  padding: 1.8rem 0;
+  padding: 1.8rem 2.5rem;
   // padding: 30px 40px 40px 40px;
   @media #{$mq-medium} {
     max-width: 100rem;
@@ -191,7 +191,7 @@ background: $black;
 }
 .footerContainer .bottom_details .bottom_text{
   margin: auto;
-  padding: 1rem 0;
+  padding: 1rem 2.5rem;
   display: flex;
   justify-content: space-between;
   @media #{$mq-medium} {
