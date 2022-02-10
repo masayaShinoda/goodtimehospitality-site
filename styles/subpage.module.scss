@@ -396,8 +396,9 @@
         }
         .sec_4 {
             background: #fcfcfc;
-            padding: 7.5%;           
-            width: 100%; 
+            padding: 7.5%;
+            width: 100%;
+            overflow-x: hidden; // prevent AOS overflow
             // border: 1px solid blue; //debug
             @media #{$mq-xsmall} {
                 padding: 15% 2.5% 10% 2.5%;
