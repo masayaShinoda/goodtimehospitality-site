@@ -73,7 +73,8 @@ export default function Hero() {
         showThumbs={false}
         infiniteLoop={true}
         useKeyboardArrows={true}
-        swipeScrollTolerance={10}
+        swipeScrollTolerance={20}
+        
         preventMovementUntilSwipeScrollTolerance={true}
         className={styles.carouselContainer}
     >
