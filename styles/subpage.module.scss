@@ -418,8 +418,19 @@
                     }
                 }
                 .sec_4_div_1 {
+                    @media #{$mq-xsmall} {
+                        padding-bottom: 25rem;
+                    }
                     // border: 1px solid green; //debug
                     .sec_4_div_1_content {
+                        padding: 2.5rem 0;
+                    }
+                }
+                .sec_4_div_2 {
+                    @media #{$mq-xsmall} {
+                        padding-bottom: 25rem;
+                    }
+                    .sec_4_div_2_content {
                         padding: 2.5rem 0;
                     }
                 }

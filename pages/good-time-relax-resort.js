@@ -266,6 +266,9 @@ export default function GoodTimeRelaxResort() {
                             <span className={styles.sec_4_heading_span}>
                             <h2>Dormitories</h2>
                             </span>
+                            <div className={styles.sec_4_div_2_content}>
+                                <BungalowsTabs />
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -73,6 +73,7 @@ export default function Hero() {
         showThumbs={false}
         infiniteLoop={true}
         useKeyboardArrows={true}
+        swipeScrollTolerance={10}
         className={styles.carouselContainer}
     >
         {heros ? heros.map(hero => 
