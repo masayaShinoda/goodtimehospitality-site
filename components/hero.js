@@ -74,6 +74,7 @@ export default function Hero() {
         infiniteLoop={true}
         useKeyboardArrows={true}
         swipeScrollTolerance={10}
+        preventMovementUntilSwipeScrollTolerance={true}
         className={styles.carouselContainer}
     >
         {heros ? heros.map(hero => 
