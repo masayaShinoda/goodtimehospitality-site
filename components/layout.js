@@ -4,8 +4,9 @@ import Nav from '../components/nav'
 import Footer from '../components/footer'
 import styles from '../styles/layout.module.scss'
 
-export default function Layout({ children, pageName, seoDesc, og_image }) {
+export default function Layout({ children, pageName, seoDesc, ogImage }) {
 
+    // console.log(ogImage)
     const goodTimeGroupLogo = 'images/GoodTimeGroup_HOSPITALITY-03_result_512.webp'
     return (
         <div className={styles.layout}>
@@ -25,7 +26,7 @@ export default function Layout({ children, pageName, seoDesc, og_image }) {
                 description: seoDesc ? seoDesc : "Vacation home rental in Cambodia.",
                 images: [
                     {
-                        url: og_image ? og_image : goodTimeGroupLogo,
+                        url: ogImage ? ogImage : goodTimeGroupLogo,
                         alt: "Good Time Hospitality"
                     }
                 ]
