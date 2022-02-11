@@ -53,7 +53,7 @@ export default function GoodTimeRelaxResort() {
         },
     ]
 
-    const bungalows_fallback_bg = 'images/gt-rr/bungalow/SRN09142_result_result.jpg'
+    const bungalows_fallback_bg = 'images/gt-rr/bungalow/SRN09142-edited_result.jpg'
     const dormitories_fallback_bg = 'images/gt-rr/dormitory-4-beds/SRN07244-edited_result.jpg'
 
     return (
@@ -61,7 +61,7 @@ export default function GoodTimeRelaxResort() {
     <Layout
     pageName="Good Time Relax Resort"
     seoDesc={seoDesc}
-    og_image={bungalows_fallback_bg}
+    og_image={'images/gt-rr/bungalow/SRN09142_result.webp'}
     >
         <div className={styles.subpageContainer}>
             <div className={styles.gt_rr}>
