@@ -11,9 +11,9 @@ export default function Resorts() {
                 <div 
                 className={styles.choice}
                 style={{
-                    backgroundImage: `url("/images/gt-rr-choice_result.webp")`
+                    backgroundImage: `url("/thumbnail/gt-rr-bokor-bg-thumb.webp")`
                 }}>
-                    <Link href="/resort/good-time-relax-resort">
+                    <Link href="/good-time-relax-resort">
                         <a>
                         <img 
                         src="/images/goodtimerelaxresort-logo_result.webp" 
@@ -28,7 +28,7 @@ export default function Resorts() {
                 style={{
                     backgroundImage: `url("/images/gt-br-choice_result.webp")`
                 }}>
-                    <Link href="/resort/good-time-boutique-hotel">
+                    <Link href="/good-time-boutique-hotel">
                         <a>
                         <img 
                         src="/images/goodtimeboutiquehotel-logo_result.webp" 

@@ -1,10 +1,10 @@
 @import './_variables.scss';
 
 $cardWidthDesktop: 32%;
-$cardHeightDesktop: 250px;
-$cardHeightTablet: 300px;
+$cardHeightDesktop: 25rem;
+$cardHeightTablet: 35rem;
 $cardWidthMobile: 100%;
-$cardHeightMobile: 280px;
+$cardHeightMobile: 28rem;
 
 .headerText {
     padding: 5rem 0;
@@ -23,14 +23,18 @@ $cardHeightMobile: 280px;
     align-items: flex-start;
     flex-wrap: wrap;
     
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
     max-width: 100%;
     // margin-top: $navHeight;
     // outline: 1px solid red; //debug
+    
     @media #{$mq-small} {
-        width: 100vw;
+        width: 100%;
+        align-items: center;
+        // flex-direction: column;
     }
     @media #{$mq-medium} {
+        flex-direction: row;
         width: 110rem;
     }
     @media #{$mq-xsmall} {
@@ -57,6 +61,7 @@ $cardHeightMobile: 280px;
         
         
         @media #{$mq-small} {
+            width: 30vmin;
             height: $cardHeightTablet;
         }
 
@@ -74,6 +79,7 @@ $cardHeightMobile: 280px;
             width: 100%;
             background: rgb(19,19,19);
             background: linear-gradient(0deg, rgba(48, 39, 41, .75) 0%, rgba(51,51,51,0) 100%);
+            @media #{$mq-xsmall} {padding: 20px 15px}
             @media #{$mq-small} {padding: 20px 15px; height: 55%}
             @media #{$mq-medium} {
                 padding: 8px 20px 12px 20px;
@@ -92,19 +98,31 @@ $cardHeightMobile: 280px;
                 transition: .2 ease-in-out;
                 color: #ececec;
                 animation-duration: .2s;
+                @media #{$mq-xsmall} {
+                    display: inline-block;
+                }
                 @media #{$mq-small} {
                     display: inline-block;
+                }
+                @media #{$mq-medium} {
+                    display: inline-block;
+                }
+                @media #{$mq-large} {
+                    display: none;
                 }
             }
         }
     }
     .card:hover {
-        background-size: 125%;
+        // background-size: 125%;
         background-position: bottom;
         // animation-duration: .8s;
-        span {display: inline-block; }
+        span {display: inline-block;}
         @media #{$mq-small} {
             background-size: cover;
+        }
+        @media #{$mq-medium} {
+            background-size: 135%;
         }
     }
     

@@ -73,24 +73,25 @@ export default function Hero() {
         showThumbs={false}
         infiniteLoop={true}
         useKeyboardArrows={true}
+        swipeScrollTolerance={20}
+        
+        preventMovementUntilSwipeScrollTolerance={true}
         className={styles.carouselContainer}
     >
         {heros ? heros.map(hero => 
-            <>                       
-                
-                <div className={styles.carousel}>
-                    <img src={hero['image'][0]['url']} className={styles.carouselBg}/>
-                    <div className={styles.carouselTextContainer}>
-                        <span className={styles.carouselText}>
-                            <h2>{hero.heading}</h2>
-                            <p>{hero.body}</p>
-                        </span>
+        <>
+            <div className={styles.carousel}>
+                <img src={hero['image'][0]['url']} className={styles.carouselBg}/>
+                <div className={styles.carouselTextContainer}>
+                    <span className={styles.carouselText}>
+                        <h2>{hero.heading}</h2>
+                        <p>{hero.body}</p>
+                    </span>
 
-                    </div>
-                    <img className={styles.carouselImg} src={hero['image'][0]['url']} />
                 </div>
-
-            </>
+                <img className={styles.carouselImg} src={hero['image'][0]['url']} />
+            </div>
+        </>
         ) : <div className="lds_ellipsis"><div></div><div></div><div></div><div></div></div>}
     </Carousel>
     )

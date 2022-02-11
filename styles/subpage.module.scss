@@ -24,9 +24,10 @@
     // padding-bottom: 10%;
     // background: url("/images/gt-rr-hero-1_result.webp");
     background-position: center;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
     background-size: cover;
+    overflow-x: hidden;
+
+    // border: 2px solid red; //debug
     h1 {
         text-align: center;
     }
@@ -92,6 +93,7 @@
                 width: 25rem; height: 25rem; 
                 max-width: 25rem; max-height: 25rem;
                 // margin-right: 7.5rem;
+                // outline: 2px solid red; //debug
                 @media #{$mq-xsmall} {
                     width: 20rem; height: 20rem; 
                     max-width: 20rem; max-height: 20rem;   
@@ -122,8 +124,9 @@
                 }
             }
         }
-        .sec_2, .sec_3 {
+        .sec_2, .sec_3, .sec_4 {
             width: 100%;
+            margin: 0 auto;
             flex-direction: column;
             display: flex; align-items: flex-start;
             justify-content: center;
@@ -132,12 +135,20 @@
             padding: 10%;
             background: #fcfcfc;
             // border: 1px solid red; //debug
+            @media #{$mq-xxlarge} {
+                padding-top: 2.5%; padding-bottom: 2.5%;
+            }
             h2 {
-                font-size: 2.8rem; font-family: $body;
+                font-size: 3.2rem; 
+                font-family: $head;
                 // margin: 0 auto;
-                margin-bottom: 2.5rem;
+                // margin-bottom: 2.5rem;
                 padding: 0 2.5%;
                 // border: 1px solid green; //debug
+                @media #{$mq-xxlarge} {
+                    margin: 0 auto;
+                    margin-left: calc(116rem / 2.4);
+                }
             }
             @media #{$mq-xsmall} {
                 padding: 15% 2.5%;
@@ -145,6 +156,7 @@
             .sec_2_content {
                 width: 100%;
                 margin: 0 auto;
+                max-width: 116rem;
                 // border: 1px solid blue; //debug
                 @media #{$mq-xsmall} {
                     display: flex;
@@ -273,7 +285,6 @@
             justify-content: flex-start;
             background: $gt-rr-brown;
             padding: 0;
-            padding-bottom: 10%;
             // outline: 2px solid greenyellow; //debug
             
             .sec_3_content {
@@ -281,6 +292,12 @@
                 padding: 0 5%;
                 display: flex; flex-direction: column;
                 align-items: flex-start;
+                max-width: 140rem;
+                
+                @media #{$mq-xxlarge} {
+                    margin: 0 auto;
+                    padding: 0%;
+                }
                 // border: 1px solid red; //debug
 
                 @media #{$mq-medium} {
@@ -359,17 +376,68 @@
                         margin: 0;
                         // outline: 2px solid #999; //debug
                         > div {
+                            // individual image container
                             display: flex; justify-content: center; align-items: center;
                             margin: 0;
                             width: 50%;
+                            transition: all 200ms ease-in-out;
                             // outline: 2px solid #999; //debug
                             @media #{$mq-xsmall} {
                                 width: 100%;
                             }                                
                         }
+                        > div:hover {
+                            z-index: 10;
+                            transform: scale(1.05);
+                            outline: .325rem solid $lightGold;
+                            // box-shadow: 0 0 1.5rem .5rem transparentize($lightGold, 0.69);
+                        }
                     }
                 }
             }
+        }
+        .sec_4 {
+            background: #fcfcfc;
+            padding: 7.5%;
+            width: 100%;
+            // border: 1px solid blue; //debug
+            @media #{$mq-xsmall} {
+                padding: 15% 5% 10% 5%;
+            }
+            .sec_4_content {
+                width: 100%;
+                // border: 1px solid red; //debug
+                .sec_4_heading_span {
+                    display: flex; justify-content: center;
+                    width: 100%;
+                    h2 {
+                        font-size: 4.25rem;
+                        display: inline-block;
+                        // max-width: fit-content;
+                        text-align: center;
+                        border-bottom: .75rem solid $gold;
+                        margin-bottom: 2.5rem;
+                    }
+                }
+                .sec_4_div_1 {
+                    @media #{$mq-xsmall} {
+                        padding-bottom: 25rem;
+                    }
+                    // border: 1px solid green; //debug
+                    .sec_4_div_1_content {
+                        padding: 2.5rem 0;
+                    }
+                }
+                .sec_4_div_2 {
+                    @media #{$mq-xsmall} {
+                        padding-bottom: 25rem;
+                    }
+                    .sec_4_div_2_content {
+                        padding: 2.5rem 0;
+                    }
+                }
+            }
+            
         }
     }
 }
@@ -385,6 +453,5 @@
         // filter: blur(px);
         // height: 100%;
         width: 100%;
-    }
-    
+    }   
 }
