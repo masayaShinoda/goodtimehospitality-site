@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+// import Image from 'next/image'
 import GT_RR_Tabs from '../components/gt-rr-tabs'
 import Zoom from 'react-medium-image-zoom'
 import Layout from '../components/layout'
@@ -112,7 +112,7 @@ export default function GoodTimeRelaxResort() {
                                         const element = document.getElementById('tel_link')
                                         element.style.background = "0"
                                     }}>
-                                        <Image 
+                                        <img 
                                         src={phoneIcon} 
                                         alt="telephone icon" 
                                         width="42"
@@ -138,7 +138,7 @@ export default function GoodTimeRelaxResort() {
                                         const element = document.getElementById('fb_link')
                                         element.style.background = "0"
                                     }}>
-                                        <Image 
+                                        <img 
                                         src={fbIcon} 
                                         alt="facebook icon" 
                                         width="42"
@@ -164,7 +164,7 @@ export default function GoodTimeRelaxResort() {
                                         element.style.background = "0"
                                     }}
                                     >
-                                        <Image 
+                                        <img 
                                         src={booking_dot_com_logo_white} 
                                         alt="Booking.com" 
                                         width="120"
@@ -240,9 +240,9 @@ export default function GoodTimeRelaxResort() {
                             return (
                                 <div key={i.desc}>
                                     <Zoom zoomMargin={15} overlayBgColorEnd="rgba(247, 240, 182, .25)"> 
-                                    <Image
+                                    <img
                                     src={i.url}
-                                    width="1500" height="1000"
+                                    width="100%" height="100%"
                                     alt={i.alt}
                                     loading="lazy"
                                     />
