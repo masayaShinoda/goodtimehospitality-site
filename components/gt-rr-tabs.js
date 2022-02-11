@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Gallery from "react-photo-gallery";
