@@ -7,6 +7,8 @@ import styles from '../styles/layout.module.scss'
 export default function Layout({ children, pageName, seoDesc, ogImage }) {
 
     // console.log(ogImage)
+    const siteUrl = "https://goodtimehospitality.com"
+
     const goodTimeGroupLogo = 'images/GoodTimeGroup_HOSPITALITY-03_result_512.webp'
     return (
         <div className={styles.layout}>
@@ -21,12 +23,12 @@ export default function Layout({ children, pageName, seoDesc, ogImage }) {
                 "Vacation home rental in Cambodia."
             }
             openGraph={{
-                url: 'https://goodtimehospitality.com',
+                url: siteUrl,
                 title: pageName ? `${pageName} | Good Time Hospitality Group` : `Good Time Hospitality Group`,
                 description: seoDesc ? seoDesc : "Vacation home rental in Cambodia.",
                 images: [
                     {
-                        url: ogImage ? ogImage.src : goodTimeGroupLogo,
+                        url: ogImage ? `${siteUrl}/${ogImage}` : goodTimeGroupLogo,
                         alt: "Good Time Hospitality"
                     }
                 ]
