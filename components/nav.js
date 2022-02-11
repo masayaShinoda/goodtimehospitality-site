@@ -101,19 +101,18 @@ export default function Nav() {
                     About
                     </a>
                 </Link>
-                <Link href="/">
-                    <a 
-                    className={styles.bookingLink} 
-                    id="booking_link"
-                    title="Contact Us"
-                    >
-                        <img 
-                        src="icons/phone_result.webp" 
-                        className={styles.bookingLinkIcon}
-                        width="18px" height="18px" />
-                        <p>Booking</p>
-                    </a>
-                </Link>
+                <a 
+                className={styles.bookingLink} 
+                id="booking_link"
+                title="Booking"
+                href="https://www.booking.com/hotel/kh/good-time-relax-resort.html"
+                >
+                    <img 
+                    src="icons/phone_result.webp" 
+                    className={styles.bookingLinkIcon}
+                    width="18px" height="18px" />
+                    <p>Booking</p>
+                </a>
             </span>
         </div>
         <button id="openNavBtn" onClick={openNav} className={styles.openNavBtn} 
@@ -159,12 +158,11 @@ export default function Nav() {
                     About
                     </a>
                 </Link>
-                <Link href="/">
-                    <a onClick={closeNav}>
-                    Booking
-                    </a>
-                </Link>
-
+                <a 
+                href="https://www.booking.com/hotel/kh/good-time-relax-resort.html"
+                onClick={closeNav}>
+                Booking
+                </a>
             </span>
         </div>
     </div>

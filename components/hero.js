@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import styles from '../styles/hero.module.scss'
@@ -34,6 +35,10 @@ export default function Hero() {
                         heading
                         body
                         imagecaption
+                        actionButtonOptional {
+                            text
+                            url
+                        }
                       }
                   }`
               }),
@@ -86,6 +91,13 @@ export default function Hero() {
                     <span className={styles.carouselText}>
                         <h2>{hero.heading}</h2>
                         <p>{hero.body}</p>
+                        {hero.actionButtonOptional[0] ? 
+                            <Link href={hero.actionButtonOptional[0].url}>
+                                <a className={styles.callToAction}>
+                                {hero.actionButtonOptional[0].text}
+                                </a>
+                            </Link>
+                        : null}
                     </span>
 
                 </div>

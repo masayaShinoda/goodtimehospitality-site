@@ -194,12 +194,9 @@ $heroHeightMobile: 600px;
         text-align: left;
         max-width: 100%;
         // border: 1px solid green; //debug
-        
         @media #{$mq-small} {width: 80%;}
         @media #{$mq-xsmall} {
-            color: $black; width: 98%; padding: 1.1rem .8rem;
-            border-bottom: .5rem solid $gold;
-            
+            color: $black; width: 98%; padding: 1.1rem .8rem;            
         }
         h2 {
             font-size: 2.8rem; margin-bottom: 1.8rem;
@@ -207,7 +204,25 @@ $heroHeightMobile: 600px;
                 margin-bottom: 1.25rem;
             }
         }
-        p {font-size: 1.4rem; max-width: 45ch}
+        p {
+            font-size: 1.4rem; max-width: 45ch;
+            padding-bottom: 1.5rem;        
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .callToAction {
+        background: $gt-rr-gold;
+        color: #fcfcfc;
+        padding: 1rem 1.25rem;
+        transition: all .2s ease-in-out;
+        box-shadow: 0 0 .75rem .25rem rgba(0,0,0,.125);
+        @media #{$mq-xsmall} {
+            padding: 1.5rem 2rem;
+        }
+    }
+    .callToAction:hover, .callToAction:active {
+        background: lighten($gt-rr-gold, 7.5%);
     }
 
     .carouselImg {
