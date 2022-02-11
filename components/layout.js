@@ -12,27 +12,27 @@ export default function Layout({ children, pageName, seoDesc, og_image }) {
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <link rel="icon" href="/favicon.ico" />
-            <NextSeo
-                title={pageName ? `${pageName} | Good Time Hospitality Group` : `Good Time Hospitality Group`}
-                description={
-                    seoDesc ? seoDesc : 
-                    "Vacation home rental in Cambodia."
-                }
-                openGraph={{
-                    url: 'https://goodtimehospitality.com',
-                    title: pageName ? `${pageName} | Good Time Hospitality Group` : `Good Time Hospitality Group`,
-                    description: seoDesc ? seoDesc : "Vacation home rental in Cambodia.",
-                    images: [
-                        {
-                            url: og_image ? og_image : goodTimeGroupLogo,
-                            alt: "Good Time Hospitality"
-                        }
-                    ]
-
-                }}
-                // keywords="goodtime, goodtimegroup, good time, good time cambodia, good time hospitality, good time hospitality group, goodtime vacation home, vacation home rental, vacation home rental in cambodia, good time resort"
-            />
         </Head>
+        <NextSeo
+            title={pageName ? `${pageName} | Good Time Hospitality Group` : `Good Time Hospitality Group`}
+            description={
+                seoDesc ? seoDesc : 
+                "Vacation home rental in Cambodia."
+            }
+            openGraph={{
+                url: 'https://goodtimehospitality.com',
+                title: pageName ? `${pageName} | Good Time Hospitality Group` : `Good Time Hospitality Group`,
+                description: seoDesc ? seoDesc : "Vacation home rental in Cambodia.",
+                images: [
+                    {
+                        url: og_image ? og_image : goodTimeGroupLogo,
+                        alt: "Good Time Hospitality"
+                    }
+                ]
+
+            }}
+            // keywords="goodtime, goodtimegroup, good time, good time cambodia, good time hospitality, good time hospitality group, goodtime vacation home, vacation home rental, vacation home rental in cambodia, good time resort"
+        />
         <Nav />
 
         <main>
