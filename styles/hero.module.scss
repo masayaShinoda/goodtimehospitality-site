@@ -164,7 +164,7 @@ $heroHeightMobile: 600px;
     }
 
     .carousel {
-        height: $heroHeight;
+        // height: $heroHeight;
         background-position: center;
         display: flex;
         height: 100%;
@@ -177,6 +177,7 @@ $heroHeightMobile: 600px;
             max-width: 1440px;
         }
         @media #{$mq-xsmall} {flex-direction: column-reverse; padding: 0;}
+        
     }
     .carouselTextContainer {
         width: 50%;
@@ -199,9 +200,17 @@ $heroHeightMobile: 600px;
             color: $black; width: 98%; padding: 1.1rem .8rem;            
         }
         h2 {
-            font-size: 2.8rem; margin-bottom: 1.8rem;
+            display: inline-block;
+            font-size: 3.2rem; margin-bottom: 1.8rem;
+            padding-bottom: 1rem;
+            border-bottom: .25rem solid transparentize($lightGold, .2);
             @media #{$mq-xsmall} {
                 margin-bottom: 1.25rem;
+                font-size: 2.8rem;
+                border-bottom: .5rem solid $gold;
+            }
+            @media #{$mq-small} {
+                font-size: 2.4rem;
             }
         }
         p {
@@ -228,6 +237,8 @@ $heroHeightMobile: 600px;
     .carouselImg {
         width: 50%;
         max-width: 50%;
+        object-fit: cover;
+        min-height: 32rem;
         @media #{$mq-xsmall} {
             width: 100%; max-width: 100%;
             min-height: 24rem; height: 24rem;
