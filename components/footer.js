@@ -58,7 +58,7 @@ export default function Footer() {
       <div className={styles.bottom_text}>
         <span>
             <p>
-            Copyright © 2021 Good Time Group Hospitality
+            Copyright © 2022 Good Time Group Hospitality
             </p>
         </span>
       </div>

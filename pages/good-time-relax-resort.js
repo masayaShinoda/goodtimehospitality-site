@@ -61,6 +61,7 @@ export default function GoodTimeRelaxResort() {
     <Layout
     pageName="Good Time Relax Resort"
     seoDesc={seoDesc}
+    og_image={bungalows_fallback_bg}
     >
         <div className={styles.subpageContainer}>
             <div className={styles.gt_rr}>
