@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import Link from 'next/link'
+// import Image from 'next/image'
 import logo from '../public/images/logo-goodtimegrouphospitality.png'
 import styles from '../styles/nav.module.scss'
 import { useEffect } from 'react'
@@ -107,7 +107,7 @@ export default function Nav() {
                     id="booking_link"
                     title="Contact Us"
                     >
-                        <Image 
+                        <img 
                         src="/icons/phone_result.webp" 
                         className={styles.bookingLinkIcon}
                         width="18px" height="18px" />
