@@ -46,10 +46,8 @@ export default function Footer() {
 			</ul>	
 			<ul className={styles.box}>
 				<li className={styles.link_name}>Good Time Boutique Hotel</li>
-				
-				<li><a href="tel:+855964431575">096 443 1575</a></li>
 				<li><a href="mailto:goodtime.resortkps@gmail.com">goodtime.resortkps@gmail.com</a></li>
-			
+				<li><a href="tel:+855964431575">096 443 1575</a></li>
 			</ul>
 	
 		</div>

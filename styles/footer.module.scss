@@ -202,8 +202,8 @@ background: $black;
   }
 }
 .bottom_details .bottom_text span,
-.bottom_details .bottom_text a{
-  font-size: 14px;
+.bottom_details .bottom_text a, .bottom_text p {
+  font-size: 1.24rem;
   font-weight: 300;
   color: #fff;
   opacity: 0.8;
