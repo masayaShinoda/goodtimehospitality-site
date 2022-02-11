@@ -30,8 +30,8 @@ export default function Nav() {
             document.getElementById("nav_container").classList.add(styles.navContainerMinimized)
             document.getElementById("nav_container").classList.add('animate__slideInDown')
             // document.getElementById("nav_container").style.height = "60px"
-            document.getElementById("desktop_logo").src = "/images/logo-text.png"
-            document.getElementById("mobile_logo").src = "/images/logo-text-white.png"
+            document.getElementById("desktop_logo").src = "images/logo-text.png"
+            document.getElementById("mobile_logo").src = "images/logo-text-white.png"
             document.getElementById("desktop_logo").style.width = "20rem"
             document.getElementById("desktop_logo").style.maxWidth = "20rem"
             document.getElementById("mobile_logo").style.width = "17.5rem"
@@ -42,8 +42,8 @@ export default function Nav() {
             document.getElementById("nav_container").classList.remove(styles.navContainerMinimized)
             document.getElementById("nav_container").classList.remove('animate__slideInDown')
             // document.getElementById("nav_container").style.height = "120px"
-            document.getElementById("desktop_logo").src = "/images/logo-goodtimegrouphospitality.png"
-            document.getElementById("mobile_logo").src = "/images/logo-goodtimegrouphospitality.png"
+            document.getElementById("desktop_logo").src = "images/logo-goodtimegrouphospitality.png"
+            document.getElementById("mobile_logo").src = "images/logo-goodtimegrouphospitality.png"
             document.getElementById("desktop_logo").style.width = "10rem"
             document.getElementById("desktop_logo").style.maxWidth = "10rem"
             document.getElementById("mobile_logo").style.width = "10rem"
@@ -60,7 +60,7 @@ export default function Nav() {
                 <a className={styles.logoLink}>
                     {/* <Image src={logo} width="100" height="100" alt="Logo" id="desktop_logo" /> */}
                     <img 
-                    src="/images/logo-goodtimegrouphospitality.png" 
+                    src="images/logo-goodtimegrouphospitality.png" 
                     alt="Good Time Group Logo" 
                     id="desktop_logo"
                     />
@@ -108,7 +108,7 @@ export default function Nav() {
                     title="Contact Us"
                     >
                         <img 
-                        src="/icons/phone_result.webp" 
+                        src="icons/phone_result.webp" 
                         className={styles.bookingLinkIcon}
                         width="18px" height="18px" />
                         <p>Booking</p>
@@ -134,7 +134,7 @@ export default function Nav() {
         <Link href="/">
             <a className={styles.mobileLogoLink}>
                 <img 
-                src="/images/logo-goodtimegrouphospitality.png"
+                src="images/logo-goodtimegrouphospitality.png"
                 alt="Logo" 
                 width="100" height="100" 
                 id="mobile_logo"

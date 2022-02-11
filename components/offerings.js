@@ -7,17 +7,26 @@ export default function Offerings() {
         <div className={styles.offeringsContainer}>
             <h1>What we offer</h1>
             <div className={styles.offeringsGrid + ` animate__animated animate__zoomInUp`}>
-                <div className={styles.box}>
+                <div 
+                className={styles.box}
+                style={{backgroundImage: `url("thumbnail/gt-rr-bokor-bg-thumb.webp")`}}
+                >
                     <Link href="/resorts">
                         <a><font>Resorts</font></a>
                     </Link>
                 </div>
-                <div className={styles.box}>
+                <div 
+                className={styles.box}
+                style={{backgroundImage: `url("thumbnail/asset-4result.webp")`}}
+                >
                     <Link href="/vacation-homes">
                         <a><font>Vacation Homes</font></a>
                     </Link>
                 </div>
-                <div className={styles.box}>
+                <div 
+                className={styles.box}
+                style={{backgroundImage: `url("thumbnail/asset-3result.webp")`}}
+                >
                     <Link href="/apartments">
                         <a><font>Apartments</font></a>
                     </Link>

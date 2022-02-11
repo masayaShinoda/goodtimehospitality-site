@@ -9,7 +9,7 @@ export default function Footer() {
 				<span className={styles.logo_name}>
                     <img 
                         style={{filter: `invert(1)`}}
-                        src="/images/logo-text.png"
+                        src="images/logo-text.png"
                         width="250"
                         alt="Good Time Group" 
 					/>

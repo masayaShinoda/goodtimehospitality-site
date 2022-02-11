@@ -8,13 +8,13 @@ export default function GoodTimeBoutiqueHotel() {
         <>
             <Layout>
                 <div className={styles.background}>
-                    <img src="/images/gt-br-choice_result.webp" alt="background" />
+                    <img src="images/gt-br-choice_result.webp" alt="background" />
                 </div>
                 <div className={styles.subpageContainer}>
                     <img 
                         width="280"
                         height="280"
-                        src="/images/goodtimeboutiquehotel-logo_result.webp" 
+                        src="images/goodtimeboutiquehotel-logo_result.webp" 
                         style={{filter: `grayscale(100%) brightness(10)`}}
                         alt="Good Time Relax Resort logo" 
                     />

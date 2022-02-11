@@ -12,14 +12,14 @@ import 'react-medium-image-zoom/dist/styles.css'
 
 
 export default function GoodTimeRelaxResort() {
-    const gt_rr_logo_white_text = "/images/goodtimerelaxresort-logo-white-text_result.webp"
-    const gt_rr_interior_1 = '/images/gt-rr/SRN09144_result.webp'
-    const gt_rr_exterior_bokor_bg = '/images/gt-rr/SRN07369_result.webp'
-    const gt_rr_pool_bokor_view = '/images/gt-rr/SRN07340_result.webp'
-    const booking_dot_com_logo_white = '/images/Booking.Com-logo-white_result.webp'
+    const gt_rr_logo_white_text = "images/goodtimerelaxresort-logo-white-text_result.webp"
+    const gt_rr_interior_1 = 'images/gt-rr/SRN09144_result.webp'
+    const gt_rr_exterior_bokor_bg = 'images/gt-rr/SRN07369_result.webp'
+    const gt_rr_pool_bokor_view = 'images/gt-rr/SRN07340_result.webp'
+    const booking_dot_com_logo_white = 'images/Booking.Com-logo-white_result.webp'
     
-    // const divider_kbach_khmer_hori_lines_512 = '/images/SVG/khmer-ornament-1-512-hori-with-lines.svg'
-    const divider_kbach_khmer_hori_lines_1920 = '/images/SVG/khmer-ornament-1-1920-hori-with-lines.svg'
+    // const divider_kbach_khmer_hori_lines_512 = 'images/SVG/khmer-ornament-1-512-hori-with-lines.svg'
+    const divider_kbach_khmer_hori_lines_1920 = 'images/SVG/khmer-ornament-1-1920-hori-with-lines.svg'
     const phoneIcon = '/icons/phone_result_transparent.png'
     const fbIcon = '/icons/fb-icon-margins.png'
     const seoDesc = "Surrounded by the Kampot River and set in unparalleled tranquility for complete privacy, each of our resort’s beautiful 2-room bungalow structures is unmatched, specially designed for memorable experiences."
@@ -33,28 +33,28 @@ export default function GoodTimeRelaxResort() {
     const gt_rr_activity_images = [
         {
             desc: 'Kayaking',
-            url: '/images/gt-rr/activities/DSC09092_result.webp',
+            url: 'images/gt-rr/activities/DSC09092_result.webp',
             alt: 'Kayaking'
         },
         {
             desc: 'Gym & Spa',
-            url: '/images/gt-rr/activities/SRN09101_result.webp',
+            url: 'images/gt-rr/activities/SRN09101_result.webp',
             alt: 'Gym & Spa'
         },
         {
             desc: 'Poolside Bar',
-            url: '/images/gt-rr/activities/SRN09113_result.webp',
+            url: 'images/gt-rr/activities/SRN09113_result.webp',
             alt: 'Poolside Bar'
         },
         {
             desc: 'Watercraft',
-            url: '/images/gt-rr/activities/SRN07107_result.webp',
+            url: 'images/gt-rr/activities/SRN07107_result.webp',
             alt: 'Watercraft'
         },
     ]
 
-    const bungalows_fallback_bg = '/images/gt-rr/bungalow/SRN09142_result_result.jpg'
-    const dormitories_fallback_bg = '/images/gt-rr/dormitory-4-beds/SRN07244-edited_result.jpg'
+    const bungalows_fallback_bg = 'images/gt-rr/bungalow/SRN09142_result_result.jpg'
+    const dormitories_fallback_bg = 'images/gt-rr/dormitory-4-beds/SRN07244-edited_result.jpg'
 
     return (
     <>
