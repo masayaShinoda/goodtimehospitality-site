@@ -7,6 +7,8 @@ import Layout from '../components/layout'
 import { bungalowsContent } from '../components/content/bungalowsContent'
 import { dormitoriesContent } from '../components/content/dormitoriesContent'
 
+import og_image from '../public/images/og_image_SRN09142_result.jpg'
+
 import styles from '../styles/subpage.module.scss';
 import 'react-medium-image-zoom/dist/styles.css'
 
@@ -61,7 +63,7 @@ export default function GoodTimeRelaxResort() {
     <Layout
     pageName="Good Time Relax Resort"
     seoDesc={seoDesc}
-    ogImage="images/gt-rr/bungalow/SRN09142_result.webp"
+    ogImage={og_image}
     >
         <div className={styles.subpageContainer}>
             <div className={styles.gt_rr}>

@@ -26,7 +26,7 @@ export default function Layout({ children, pageName, seoDesc, ogImage }) {
                 description: seoDesc ? seoDesc : "Vacation home rental in Cambodia.",
                 images: [
                     {
-                        url: ogImage ? `/${ogImage}` : `/${goodTimeGroupLogo}`,
+                        url: ogImage ? ogImage.src : goodTimeGroupLogo,
                         alt: "Good Time Hospitality"
                     }
                 ]
