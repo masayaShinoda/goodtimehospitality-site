@@ -1,11 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import BungalowsTabs from '../components/bungalowsTabs'
-import Layout from '../components/layout'
-import styles from '../styles/subpage.module.scss';
-
+import GT_RR_Tabs from '../components/gt-rr-tabs'
 import Zoom from 'react-medium-image-zoom'
+import Layout from '../components/layout'
+
+import { bungalowsContent } from '../components/content/bungalowsContent'
+import { dormitoriesContent } from '../components/content/dormitoriesContent'
+
+import styles from '../styles/subpage.module.scss';
 import 'react-medium-image-zoom/dist/styles.css'
+
 
 export default function GoodTimeRelaxResort() {
     const gt_rr_logo_white_text = "/images/goodtimerelaxresort-logo-white-text_result.webp"
@@ -47,8 +51,10 @@ export default function GoodTimeRelaxResort() {
             url: '/images/gt-rr/activities/SRN07107_result.webp',
             alt: 'Watercraft'
         },
-
     ]
+
+    const bungalows_fallback_bg = '/images/gt-rr/bungalow/SRN09142_result_result.jpg'
+    const dormitories_fallback_bg = '/images/gt-rr/dormitory-4-beds/SRN07244-edited_result.jpg'
 
     return (
     <>
@@ -258,7 +264,10 @@ export default function GoodTimeRelaxResort() {
                             <h2>Bungalows</h2>
                             </span>
                             <div className={styles.sec_4_div_1_content}>
-                                <BungalowsTabs />
+                                <GT_RR_Tabs 
+                                content={bungalowsContent} 
+                                fallback_bg={bungalows_fallback_bg}
+                                />
                             </div>
 
                         </div>
@@ -267,7 +276,10 @@ export default function GoodTimeRelaxResort() {
                             <h2>Dormitories</h2>
                             </span>
                             <div className={styles.sec_4_div_2_content}>
-                                <BungalowsTabs />
+                                <GT_RR_Tabs 
+                                content={dormitoriesContent}
+                                fallback_bg={dormitories_fallback_bg}
+                                />
                             </div>
                         </div>
                     </div>

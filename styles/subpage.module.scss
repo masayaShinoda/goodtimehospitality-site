@@ -25,6 +25,8 @@
     // background: url("/images/gt-rr-hero-1_result.webp");
     background-position: center;
     background-size: cover;
+    overflow-x: hidden;
+
     // border: 2px solid red; //debug
     h1 {
         text-align: center;
@@ -398,10 +400,9 @@
             background: #fcfcfc;
             padding: 7.5%;
             width: 100%;
-            overflow-x: hidden; // prevent AOS overflow
             // border: 1px solid blue; //debug
             @media #{$mq-xsmall} {
-                padding: 15% 2.5% 10% 2.5%;
+                padding: 15% 5% 10% 5%;
             }
             .sec_4_content {
                 width: 100%;

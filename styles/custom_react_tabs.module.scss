@@ -6,7 +6,7 @@ $tab_panel_bg_height: 65rem;
     // .react-tabs__tab--selected {
     //     border: 2px solid red; //debug
     // }
-    padding-bottom: calc($tab_panel_bg_height / 5);
+    padding-bottom: calc($tab_panel_bg_height / 5.75);
     // border: 1px solid red; //debug
     @media #{$mq-xxlarge} {
         max-width: 128rem;

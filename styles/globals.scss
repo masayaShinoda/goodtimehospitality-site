@@ -1,20 +1,20 @@
 @import "./_variables.scss";
 
 html {
-    font-size: 62.5%;   
+  font-size: 62.5%;   
 }
 h1, h2, a {
-    font-family: $head;
-    text-decoration: none;
+  font-family: $head;
+  text-decoration: none;
 }
 div, span, p, font {
-    font-family: $body;
+  font-family: $body;
 }
 h1 {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 2.4rem;
-    line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 1.1;
 }
 h2 {text-transform: uppercase; font-size: 2.4rem; line-height: 1.24; font-weight: 500;}
 p {font-size: 1.4rem; line-height: 1.6}
