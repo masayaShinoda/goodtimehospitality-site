@@ -132,26 +132,27 @@
             justify-content: center;
         }
         .sec_2 {
-            padding: 10%;
+            padding: 10rem;
             background: #fcfcfc;
             // border: 1px solid red; //debug
+            @media #{$mq-xsmall} {
+                padding: 15% 2.5%;
+            }
             @media #{$mq-xxlarge} {
                 padding-top: 2.5%; padding-bottom: 2.5%;
             }
-            h2 {
-                font-size: 3.2rem; 
-                font-family: $head;
-                // margin: 0 auto;
-                // margin-bottom: 2.5rem;
-                padding: 0 2.5%;
-                // border: 1px solid green; //debug
-                @media #{$mq-xxlarge} {
-                    margin: 0 auto;
-                    margin-left: calc(116rem / 2.4);
+            .sec_2_heading_span {
+                width: 100%;
+                display: flex; justify-content: center;
+                margin-bottom: 2.5rem;
+                h2 {
+                    font-size: 3.2rem; 
+                    font-family: $head;
+                    // margin: 0 auto;
+                    // margin-bottom: 2.5rem;
+                    padding: 0 2.5%;
+                    // border: 1px solid green; //debug
                 }
-            }
-            @media #{$mq-xsmall} {
-                padding: 15% 2.5%;
             }
             .sec_2_content {
                 width: 100%;
@@ -440,10 +441,17 @@
             
         }
         .sec_5 {
+            // map section
             background: #fcfcfc;
             padding: 10rem;
             padding-top: 0;
             width: 100%;
+            display: flex; flex-direction: column;
+            align-items: center;
+            > iframe {
+                outline: .425rem solid $lightGold;
+                outline-offset: 2.5rem;
+            }
             // border: 1px solid blue; //debug
             @media #{$mq-xsmall} {
                 padding: 15% 5% 10% 5%;
@@ -452,7 +460,8 @@
                 display: flex; justify-content: center;
                 width: 100%;
                 h2 {
-                    font-size: 3.25rem;
+                    padding-bottom: 2.5rem;
+                    font-size: 3.6rem;
                     display: inline-block;
                     // max-width: fit-content;
                     text-align: center;
@@ -475,4 +484,23 @@
         // height: 100%;
         width: 100%;
     }   
+}
+.vid_section {
+    // background: #fcfcfc;
+    background: $gt-rr-brown;
+    .vid_embed_container {
+        display: flex; justify-content: center;
+        position: relative;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 5rem 0;
+        > iframe {
+            margin: 0;
+            padding: 0;
+            // outline: .25rem solid $lightGold;
+            outline-offset: 2.5rem;
+        }
+        // background: $gt-rr-brown;
+    }
 }

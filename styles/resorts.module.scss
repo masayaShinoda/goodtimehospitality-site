@@ -55,7 +55,8 @@
 
     @media #{$mq-xsmall} {
         flex-direction: column;
-        height: $navHeight * 5;
+        height: $navHeight * 7;
+        max-height: 75vmax;
         top: $navHeight * 1.5;
         .choice {
             width: 100%;

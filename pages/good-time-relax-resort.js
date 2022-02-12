@@ -1,9 +1,10 @@
 import Link from 'next/link'
 // import Image from 'next/image'
-import GT_RR_Tabs from '../components/gt-rr-tabs'
 import Zoom from 'react-medium-image-zoom'
 import Layout from '../components/layout'
+import GT_RR_Tabs from '../components/gt-rr-tabs'
 import GT_RR_Maps from '../components/gt-rr-map'
+import GT_RR_Video from '../components/gt-rr-vid-embed'
 
 import { bungalowsContent } from '../components/content/bungalowsContent'
 import { dormitoriesContent } from '../components/content/dormitoriesContent'
@@ -177,12 +178,14 @@ export default function GoodTimeRelaxResort() {
                             </span>
                         </span>
                     </div>
-                    
                 </section>
+
                 <section className={styles.sec_2}>
+                    {/* <span className={styles.sec_2_heading_span}>
                     <h2>
                     Bokor Mountain View
                     </h2>
+                    </span> */}
                     <div 
                     className={styles.sec_2_content} 
                     data-aos="fade-up"
@@ -220,8 +223,13 @@ export default function GoodTimeRelaxResort() {
                         </div>
                     </div>
                 </section>
-                <section className={styles.sec_3}>
+                <section className={styles.vid_section}>
                     {khmer_hori_line}
+                    <div className={styles.vid_embed_container}>
+                        <GT_RR_Video />
+                    </div>
+                </section>
+                <section className={styles.sec_3}>
                     <div 
                     className={styles.sec_3_content}>
                         <div className={styles.sec_3_left_div}>
@@ -288,7 +296,7 @@ export default function GoodTimeRelaxResort() {
                 </section>
                 <section className={styles.sec_5}>
                     <span className={styles.sec_5_heading_span}>
-                        <h2>Contact Us</h2>
+                        <h2>Location</h2>
                     </span>
                     <GT_RR_Maps />
                 </section>
