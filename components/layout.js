@@ -24,7 +24,7 @@ export default function Layout({ children, pageName, seoDesc, ogImage }) {
             }
             openGraph={{
                 url: siteUrl,
-                title: pageName ? `${pageName} | Good Time Hospitality Group` : `Good Time Hospitality Group`,
+                title: pageName ? pageName : `Good Time Hospitality Group`,
                 description: seoDesc ? seoDesc : "Vacation home rental in Cambodia.",
                 images: [
                     {
