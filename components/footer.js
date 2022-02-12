@@ -40,8 +40,12 @@ export default function Footer() {
 					<a href="https://www.facebook.com/Good-Time-Relax-Resort-111918520338184">
 					Facebook	
 					</a>
-				</li>
-				
+				</li>				
+				<li>
+					<a href="https://www.instagram.com/goodtime.relaxresort/">
+					Instagram	
+					</a>
+				</li>				
 				<li><a href="tel:+85599313535">099 313 535</a></li>
 			</ul>	
 			<ul className={styles.box}>
@@ -56,7 +60,7 @@ export default function Footer() {
       <div className={styles.bottom_text}>
         <span>
             <p>
-            Copyright © 2022 Good Time Group Hospitality
+            Copyright © 2022 Good Time Hospitality Group
             </p>
         </span>
       </div>
