@@ -3,6 +3,7 @@ import Link from 'next/link'
 import GT_RR_Tabs from '../components/gt-rr-tabs'
 import Zoom from 'react-medium-image-zoom'
 import Layout from '../components/layout'
+import GT_RR_Maps from '../components/gt-rr-map'
 
 import { bungalowsContent } from '../components/content/bungalowsContent'
 import { dormitoriesContent } from '../components/content/dormitoriesContent'
@@ -284,6 +285,12 @@ export default function GoodTimeRelaxResort() {
                             </div>
                         </div>
                     </div>
+                </section>
+                <section className={styles.sec_5}>
+                    <span className={styles.sec_5_heading_span}>
+                        <h2>Contact Us</h2>
+                    </span>
+                    <GT_RR_Maps />
                 </section>
             </div>
         </div>

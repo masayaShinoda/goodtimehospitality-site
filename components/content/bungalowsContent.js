@@ -2,7 +2,7 @@ export const bungalowsContent = [
     {
         name: "Sweet Bungalow",
         desc: "Provides excellent quality of relaxation with a front balcony attached to the natural Kampot River and a large balcony at the back viewing the lake, the poolside as well as the nicest sunset of Bokor Mountain while ultimately ensuring a high quality of sleep with fine amenities set up.",
-        bg: "images/gt-rr/sweet-bungalow/DSC08879_result.jpg",
+        bg: "images/gt-rr/sweet-bungalow/DSC08879-edit_result.jpg",
         photos: [
             {
                 src: 'images/gt-rr/sweet-bungalow/DSC08879_result.jpg',
