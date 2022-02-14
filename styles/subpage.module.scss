@@ -451,6 +451,11 @@
             > iframe {
                 outline: .425rem solid $lightGold;
                 outline-offset: 2.5rem;
+                @media #{$mq-xsmall} {
+                    outline: 0;
+                    max-width: 100%;
+                    max-height: 35rem;
+                }
             }
             // border: 1px solid blue; //debug
             @media #{$mq-xsmall} {
@@ -461,7 +466,7 @@
                 width: 100%;
                 h2 {
                     padding-bottom: 2.5rem;
-                    font-size: 3.6rem;
+                    font-size: 3.2rem;
                     display: inline-block;
                     // max-width: fit-content;
                     text-align: center;
@@ -470,10 +475,24 @@
             }
         }
     }
+    .gt_bh {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+        iframe {
+            max-width: 100%;
+        }
+    }
 }
-.background {
+.gt_bh_background {
     width: 100%;
     z-index: -10;
+    // margin-top: - $navHeight;
+    // position: fixed;
+
+    // border: 2px solid red;  //debug
     img {
         filter: brightness(0.5);
         // filter: blur(2px);

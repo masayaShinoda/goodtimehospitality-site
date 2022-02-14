@@ -100,7 +100,7 @@ $tab_panel_bg_height: 65rem;
             background-size: cover;
             @media #{$mq-xsmall} {
                 height: calc($tab_panel_bg_height * 1.5);
-                background: linear-gradient(145deg, rgba(12,12,12,.65) 0%, rgba(33,33,33,0) 65%); 
+                background: linear-gradient(145deg, rgba(12,12,12,.8) 0%, rgba(33,33,33,0) 90%); 
             }
         }
         .tab_panel_content {
