@@ -61,6 +61,11 @@
         .choice {
             width: 100%;
             height: 50%;
+            img {
+                max-height: 100%;
+                padding: 1rem;
+                object-fit: contain;
+            }
             // border: 2x solid salmon; //debug
         }
     }

@@ -5,7 +5,7 @@ export default function Offerings() {
     
     return (
         <div className={styles.offeringsContainer}>
-            <h1>What we offer</h1>
+            <h2>What we offer</h2>
             <div className={styles.offeringsGrid + ` animate__animated animate__zoomInUp`}>
                 <div 
                 className={styles.box}

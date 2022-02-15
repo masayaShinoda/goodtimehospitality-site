@@ -1,5 +1,5 @@
 import Link from 'next/link'
-// import Image from 'next/image'
+import Image from 'next/image'
 import Zoom from 'react-medium-image-zoom'
 import Layout from '../components/layout'
 import GT_RR_Tabs from '../components/gt-rr-tabs'
@@ -12,21 +12,29 @@ import { dormitoriesContent } from '../components/content/dormitoriesContent'
 import styles from '../styles/subpage.module.scss';
 import 'react-medium-image-zoom/dist/styles.css'
 
+// images import
+import gt_rr_logo_white_text from "../public/images/goodtimerelaxresort-logo-white-text_result.webp"
+import gt_rr_interior_1 from '../public/images/gt-rr/SRN09144_result.webp'
+import gt_rr_exterior_bokor_bg from '../public/images/gt-rr/SRN07369_result.webp'
+import gt_rr_pool_bokor_view from '../public/images/gt-rr/SRN07340_result.webp'
+import phoneIcon from '../public/icons/phone_result_transparent.png'
+import fbIcon from '../public/icons/fb-icon-margins.png'
+import booking_dot_com_logo_white from '../public/images/Booking.Com-logo-white_result.webp'
+import agoda_logo from '../public/images/agoda-logo.svg'
+
+import gt_rr_activity_kayaking from '../public/images/gt-rr/activities/DSC09092_result.webp'
+import gt_rr_activity_gym_spa from '../public/images/gt-rr/activities/SRN09101_result.webp'
+import gt_rr_activity_poolside_bar from '../public/images/gt-rr/activities/SRN09113_result.webp'
+import gt_rr_activity_watercraft from '../public/images/gt-rr/activities/SRN07107_result.webp'
+
+import divider_kbach_khmer_hori_lines_1920 from '../public/images/SVG/khmer-ornament-1-1920-hori-with-lines.svg'
 
 export default function GoodTimeRelaxResort() {
-    const gt_rr_logo_white_text = "images/goodtimerelaxresort-logo-white-text_result.webp"
-    const gt_rr_interior_1 = 'images/gt-rr/SRN09144_result.webp'
-    const gt_rr_exterior_bokor_bg = 'images/gt-rr/SRN07369_result.webp'
-    const gt_rr_pool_bokor_view = 'images/gt-rr/SRN07340_result.webp'
-    const booking_dot_com_logo_white = 'images/Booking.Com-logo-white_result.webp'
-    
-    // const divider_kbach_khmer_hori_lines_512 = 'images/SVG/khmer-ornament-1-512-hori-with-lines.svg'
-    const divider_kbach_khmer_hori_lines_1920 = 'images/SVG/khmer-ornament-1-1920-hori-with-lines.svg'
-    const phoneIcon = '/icons/phone_result_transparent.png'
-    const fbIcon = '/icons/fb-icon-margins.png'
+
     const seoDesc = "Surrounded by the Kampot River and set in unparalleled tranquility for complete privacy, each of our resort’s beautiful 2-room bungalow structures is unmatched, specially designed for memorable experiences."
 
-    const khmer_hori_line = <img
+    const khmer_hori_line = <Image
+    width="1920" height="20"
     src={divider_kbach_khmer_hori_lines_1920} 
     alt="kbach khmer dividing line"
     className={styles.divider_kbach_khmer_hori_lines}
@@ -35,22 +43,22 @@ export default function GoodTimeRelaxResort() {
     const gt_rr_activity_images = [
         {
             desc: 'Kayaking',
-            url: 'images/gt-rr/activities/DSC09092_result.webp',
+            src: gt_rr_activity_kayaking,
             alt: 'Kayaking'
         },
         {
             desc: 'Gym & Spa',
-            url: 'images/gt-rr/activities/SRN09101_result.webp',
+            src: gt_rr_activity_gym_spa,
             alt: 'Gym & Spa'
         },
         {
             desc: 'Poolside Bar',
-            url: 'images/gt-rr/activities/SRN09113_result.webp',
+            src: gt_rr_activity_poolside_bar,
             alt: 'Poolside Bar'
         },
         {
             desc: 'Watercraft',
-            url: 'images/gt-rr/activities/SRN07107_result.webp',
+            src: gt_rr_activity_watercraft,
             alt: 'Watercraft'
         },
     ]
@@ -69,17 +77,18 @@ export default function GoodTimeRelaxResort() {
             <div className={styles.gt_rr}>
                 <section 
                 className={styles.sec_1}
-                >         
+                >
                     <div
                     className={styles.sec_1_bg}
-                    style={{backgroundImage: `url(${gt_rr_interior_1})`}}
+                    style={{backgroundImage: `url(${gt_rr_interior_1.src})`}}
                     />               
                     <div 
                     className={styles.sec_1_content}
                     >
-                        <img 
+                        <Image
                         src={gt_rr_logo_white_text} 
                         alt="Good Time Relax Resort logo"
+                        width="200" height="200"
                         className={styles.sec_1_logo + ` animate__animated animate__fadeInDown`}
                         />
                         <span className="animate__animated animate__fadeInUp">
@@ -115,11 +124,11 @@ export default function GoodTimeRelaxResort() {
                                         const element = document.getElementById('tel_link')
                                         element.style.background = "0"
                                     }}>
-                                        <img 
+                                        <Image 
                                         src={phoneIcon} 
                                         alt="telephone icon" 
-                                        width="42"
-                                        height="42"
+                                        width="40"
+                                        height="40"
                                         />
                                     </a>
                                 </Link>
@@ -141,11 +150,11 @@ export default function GoodTimeRelaxResort() {
                                         const element = document.getElementById('fb_link')
                                         element.style.background = "0"
                                     }}>
-                                        <img 
+                                        <Image 
                                         src={fbIcon} 
                                         alt="facebook icon" 
-                                        width="42"
-                                        height="42"
+                                        width="40"
+                                        height="40"
                                         />
                                     </a>
                                 </Link>
@@ -167,10 +176,36 @@ export default function GoodTimeRelaxResort() {
                                         element.style.background = "0"
                                     }}
                                     >
-                                        <img 
+                                        <Image 
                                         src={booking_dot_com_logo_white} 
                                         alt="Booking.com" 
                                         width="120"
+                                        height="20"
+                                        />
+                                    </a>
+                                </Link>
+                                <Link href="https://www.agoda.com/good-time-relax-resort/hotel/kampot-kh.html">
+                                    <a 
+                                    id="agoda_link"
+                                    title="View resort on Agoda"
+                                    style={{
+                                        display: `flex`, flexDirection: `row`, alignItems: `center`,
+                                        color: `#fff`, outline: "2px solid #ececec", borderRadius: `.25rem`,
+                                        margin: `0 1rem`, padding: `.75rem`, transition: `all 150ms ease-in`
+                                    }}
+                                    onMouseOver={() => {
+                                        const element = document.getElementById('agoda_link')
+                                        element.style.background = "#AF8C40"
+                                    }}
+                                    onMouseLeave={() => {
+                                        const element = document.getElementById('agoda_link')
+                                        element.style.background = "0"
+                                    }}
+                                    >
+                                        <Image 
+                                        src={agoda_logo} 
+                                        alt="Agoda" 
+                                        width="70"
                                         height="20"
                                         />
                                     </a>
@@ -192,10 +227,11 @@ export default function GoodTimeRelaxResort() {
                     data-aos-duration="500"
                     >   
                         <div className={styles.sec_2_left_img_container}>
-                            <Zoom zoomMargin={15} overlayBgColorEnd="rgba(247, 240, 182, .25)"> 
-                            <img 
+                            <Zoom zoomMargin={15} overlayBgColorEnd="rgba(247, 240, 182, .5)"> 
+                            <Image 
                             src={gt_rr_exterior_bokor_bg} 
-                            width="100%" height="100%"
+                            // width="100%" height="100%"
+                            width="1500" height="1000"
                             alt="Good Time Relax Resort photo with Bokor mountain in background" 
                             loading="lazy"
                             />
@@ -211,13 +247,14 @@ export default function GoodTimeRelaxResort() {
                             </span>
                         </div>
                         <div className={styles.sec_2_right_img_container}>
-                            <Zoom zoomMargin={15} overlayBgColorEnd="rgba(247, 240, 182, .25)"> 
-                            <img 
+                            <Zoom zoomMargin={15} overlayBgColorEnd="rgba(247, 240, 182, .5)"> 
+                            <Image
                             src={gt_rr_pool_bokor_view} 
-                            width="100%" height="100%"
+                            // width="100%" height="100%"
+                            width="1500" height="1000"
                             alt="Good Time Relax Resort photo with Bokor mountain in background" 
                             loading="lazy"
-                            style={{backgroundColor: `#333`}}
+                            // style={{backgroundColor: `#333`}}
                             />
                             </Zoom>
                         </div>
@@ -249,12 +286,14 @@ export default function GoodTimeRelaxResort() {
                             {gt_rr_activity_images.map(i => {
                             return (
                                 <div key={i.desc}>
-                                    <Zoom zoomMargin={15} overlayBgColorEnd="rgba(247, 240, 182, .25)"> 
-                                    <img
-                                    src={i.url}
-                                    width="100%" height="100%"
+                                    <Zoom zoomMargin={15} overlayBgColorEnd="rgba(247, 240, 182, .5)"> 
+                                    <Image
+                                    src={i.src}
+                                    // width="100%" height="100%"
+                                    width="1500" height="1000"
                                     alt={i.alt}
                                     loading="lazy"
+                                    placeholder="blur"
                                     />
                                     </Zoom>
                                     {/* <p>{i.desc}</p> */}

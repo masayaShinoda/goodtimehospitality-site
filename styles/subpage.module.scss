@@ -294,12 +294,12 @@
                 display: flex; flex-direction: column;
                 align-items: flex-start;
                 max-width: 140rem;
+                // border: 1px solid red; //debug
                 
                 @media #{$mq-xxlarge} {
                     margin: 0 auto;
                     padding: 0%;
                 }
-                // border: 1px solid red; //debug
 
                 @media #{$mq-medium} {
                     display: -ms-grid;
