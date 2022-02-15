@@ -6,6 +6,7 @@ export default function About() {
     const gtgh_logo = "images/logo-goodtimegrouphospitality.png"
     const fbIcon = '/icons/fb-icon-margins.png'
     const igIcon = '/icons/ig-icon.png'
+    const emailIcon = '/icons/email-icon.png'
 
     return (
     <Layout pageName="About">
@@ -21,7 +22,7 @@ export default function About() {
                 Our properties have distinctive look, making use of the untouched land in Cambodia. We aim to make our guests remember every second of their stay.                    
                 </p>
                 </blockquote>
-                <span>
+                <span style={{display: `flex`, alignItems: `center`}}>
                     <Link href="https://www.facebook.com/goodtimerelaxresort/">
                         <a 
                         id="fb_link"
@@ -58,6 +59,24 @@ export default function About() {
                             height="40"
                             />
 
+                        </a>
+                    </Link>
+                    <Link href="mailto:info@goodtimehospitality.com">
+                    <a 
+                        id="email_link"
+                        title="Send us an email"
+                        className={styles.social_link}
+                        style={{
+                            display: `inline-flex`, flexDirection: `row`, alignItems: `center`,
+                            color: `#fff`, borderRadius: `100%`,
+                            margin: `0 .5rem`, transition: `all 150ms ease-in`,
+                        }}>
+                            <img 
+                            src={emailIcon} 
+                            alt="email icon" 
+                            width="40"
+                            height="40"
+                            />
                         </a>
                     </Link>
                 </span>
