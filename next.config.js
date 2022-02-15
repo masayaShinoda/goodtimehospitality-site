@@ -13,9 +13,9 @@ module.exports = {
   //   url: false
   // },
   // reactStrictMode: true,
-  // images: {
-    //   loader: 'imgix',
-    //   path: 'https://goodtimehospitality.com/',
-    //   domains: ['www.datocms-assets.com']
-  // },
+  images: {
+      // loader: 'imgix',
+      // path: 'https://goodtimehospitality.com/',
+      domains: ['www.datocms-assets.com']
+  },
 }

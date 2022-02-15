@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import styles from '../styles/hero.module.scss'
@@ -101,10 +102,21 @@ export default function Hero() {
                     </span>
 
                 </div>
-                <img className={styles.carouselImg} src={hero['image'][0]['url']} />
+                <div
+                className={styles.carouselImg} 
+                >
+                    <Image 
+                    width="1500" height="1000"
+                    loading="lazy"
+                    src={hero['image'][0]['url']} />
+                </div>
             </div>
         </>
-        ) : <div className="lds_ellipsis"><div></div><div></div><div></div><div></div></div>}
+        ) : <div className={styles.loading_hero}>
+            <div
+                className="lds_ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div> 
+        }
     </Carousel>
     )
 }

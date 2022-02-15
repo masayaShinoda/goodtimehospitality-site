@@ -18,7 +18,7 @@ $heroHeightMobile: 600px;
     height: $heroHeight;
     // margin-top: 2.5rem;
     // background: red;
-    // border: 2px solid red; //debug
+    border: 2px solid red; //debug
     .heroContent {
         display: flex;
         justify-content: space-between;
@@ -235,18 +235,30 @@ $heroHeightMobile: 600px;
     }
 
     .carouselImg {
+        display: flex;
+        align-items: flex-start;
         width: 50%;
         max-width: 50%;
         object-fit: cover;
         min-height: 32rem;
+        min-height: 100%;
         @media #{$mq-xsmall} {
             width: 100%; max-width: 100%;
-            min-height: 24rem; height: 24rem;
-            max-height: 24rem; 
+            // min-height: 24rem;
+            // max-height: 24rem; 
+            // height: 20rem;
+            min-height: auto;
             object-fit: cover; 
-            margin-bottom: 1.25rem
+            margin-bottom: 1.25rem;
         }
         
 
     }
+}
+
+.loading_hero {
+    display: flex; width: 100%;
+    height: $heroHeight;
+    justify-content: center; align-items: center;
+    // border: 2px solid red;
 }
