@@ -5,70 +5,34 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import styles from '../styles/hero.module.scss'
 
-export default function Hero() {
-    const token = '471202f89cdbcba570cb00dfa31609'
-    const [heros, setHeros] = useState((heros) => {return null})
-    const [order, setOrder] = useState(0)
-    const [animate, setAnimate] = useState(false)
+export default function Hero({ data }) {
+    const [heros, setHeros] = useState((data) => {return null})
+    // const [order, setOrder] = useState(0)
+    // const [animate, setAnimate] = useState(false)
 
-    const handleAnimate = () => {
-        setAnimate(!animate)
-    }
+    // const handleAnimate = () => {
+    //     setAnimate(!animate)
+    // }
 
     useEffect(() => {
-        fetch(
-            'https://graphql.datocms.com/',
-            {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'Authorization': `Bearer ${token}`,
-              },
-              body: JSON.stringify({
-                query: `{ 
-                    allHeros {
-                        id
-                        image {
-                          url
-                          alt
-                        }
-                        heading
-                        body
-                        imagecaption
-                        actionButtonOptional {
-                            text
-                            url
-                        }
-                      }
-                  }`
-              }),
-            }
-        )
-        .then(res => res.json())
-        .then((res) => {
-            setHeros(res.data["allHeros"])
-        })
-        .catch((error) => {
-            console.log(error)
-        });
-        console.log(heros)
-    }, [])     
+        setHeros(data)
+        // console.log(data)
+    }, [data])
 
-    function animChangeSlide(heros) {
-        document.getElementById("heroContentLeft").classList.add(`animate__animated`)
-        document.getElementById("heroContentLeft").classList.add(`animate__fast`)
-        document.getElementById("heroContentLeft").classList.add(`animate__slideInRight`)
-        document.getElementById("heroRightImg").classList.add(`animate__animated`)
-        document.getElementById("heroRightImg").classList.add(`animate__slideInUp`)
-        document.getElementById("heroRightImg").classList.add(`animate__fast`)
-    }
-    function animRemoveClasses() {
-        setTimeout(() => {
-            document.getElementById("heroContentLeft").classList.remove(`animate__slideInRight`)
-            document.getElementById("heroRightImg").classList.remove(`animate__slideInUp`)
-        }, 1200)
-    }
+    // function animChangeSlide(heros) {
+    //     document.getElementById("heroContentLeft").classList.add(`animate__animated`)
+    //     document.getElementById("heroContentLeft").classList.add(`animate__fast`)
+    //     document.getElementById("heroContentLeft").classList.add(`animate__slideInRight`)
+    //     document.getElementById("heroRightImg").classList.add(`animate__animated`)
+    //     document.getElementById("heroRightImg").classList.add(`animate__slideInUp`)
+    //     document.getElementById("heroRightImg").classList.add(`animate__fast`)
+    // }
+    // function animRemoveClasses() {
+    //     setTimeout(() => {
+    //         document.getElementById("heroContentLeft").classList.remove(`animate__slideInRight`)
+    //         document.getElementById("heroRightImg").classList.remove(`animate__slideInUp`)
+    //     }, 1200)
+    // }
 
     return (
     <Carousel 
@@ -86,7 +50,7 @@ export default function Hero() {
     >
         {heros ? heros.map(hero => 
         <>
-            <div className={styles.carousel}>
+            <div className={styles.carousel} key={hero.id}>
                 <img src={hero['image'][0]['url']} className={styles.carouselBg}/>
                 <div className={styles.carouselTextContainer}>
                     <span className={styles.carouselText}>

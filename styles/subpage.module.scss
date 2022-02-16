@@ -26,7 +26,6 @@
     background-position: center;
     background-size: cover;
     overflow-x: hidden;
-
     // border: 2px solid red; //debug
     h1 {
         text-align: center;
@@ -42,6 +41,7 @@
         width: 100%;
         // padding: 10% 0;
         // outline: 1px solid blue; //debug
+
         .sec_1 {
             margin: 0 auto;
             width: 100%;
@@ -66,6 +66,8 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
+                background-color: $gt-rr-brown;
+
                 // outline: 1px solid red; //debug
             }
             .sec_1_content {
@@ -82,7 +84,7 @@
                 // padding: 2.5% 5%;
                 color: #fcfcfc;
                 // outline: 1px solid red; //debug
-                background: rgb(19,19,19);
+                background: $gt-rr-brown;
                 background: linear-gradient(0deg, rgba(10,10,10,.65) 0%, rgba(33,33,33,0) 75%); 
                 @media #{$mq-xsmall} {
                     padding: 15% 0;

@@ -6,7 +6,6 @@ import styles from '../styles/layout.module.scss'
 
 export default function Layout({ children, pageName, seoDesc, ogImage }) {
 
-    // console.log(ogImage)
     const siteUrl = "https://goodtimehospitality.com"
 
     const goodTimeGroupLogo = 'images/GoodTimeGroup_HOSPITALITY-03_result_512.webp'

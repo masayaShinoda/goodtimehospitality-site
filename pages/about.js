@@ -12,7 +12,6 @@ export default function About() {
     <Layout pageName="About">
     <div className={styles.aboutPageContainer}>
         <div className={styles.aboutContent}>
-            {/* <h1>Good Time Hospitality Group</h1> */}
             <div className={styles.div_1}>
                 <img src={gtgh_logo} alt="Good Time Hospitality Group logo" />      
             </div>
@@ -81,9 +80,7 @@ export default function About() {
                     </Link>
                 </span>
             </div>
-
         </div>
-
     </div>
     </Layout>
     )
