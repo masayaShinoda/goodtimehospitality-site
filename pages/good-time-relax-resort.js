@@ -90,7 +90,6 @@ export default function GoodTimeRelaxResort() {
                         alt="Good Time Relax Resort logo"
                         width="200" height="200"
                         className={styles.sec_1_logo + ` animate__animated animate__fadeInDown`}
-                        loading="lazy" placeholder="blur"
                         />
                         <span className="animate__animated animate__fadeInUp">
                             <h2>
