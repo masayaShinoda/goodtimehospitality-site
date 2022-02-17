@@ -1,10 +1,10 @@
 import { useState, useCallback } from 'react'
 // import Image from 'next/image'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import Carousel, { Modal, ModalGateway } from "react-images";
-import Gallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images"
+import Gallery from "react-photo-gallery"
 
-import Zoom from 'react-medium-image-zoom'
+// import Zoom from 'react-medium-image-zoom'
 
 import 'react-tabs/style/react-tabs.css'
 import styles from '../styles/custom_react_tabs.module.scss'
