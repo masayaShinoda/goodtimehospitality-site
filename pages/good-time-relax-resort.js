@@ -83,9 +83,7 @@ export default function GoodTimeRelaxResort() {
                     className={styles.sec_1_bg}
                     style={{backgroundImage: `url(${gt_rr_interior_1.src})`}}
                     />               
-                    <div 
-                    className={styles.sec_1_content}
-                    >
+                    <div className={styles.sec_1_content}>
                         <Image
                         src={gt_rr_logo_white_text} 
                         alt="Good Time Relax Resort logo"
@@ -104,9 +102,11 @@ export default function GoodTimeRelaxResort() {
                             </p>
                             <span style={{
                                 display: `flex`, width: `100%`,
-                                flexDirection: `row`, justifyContent: `center`,
+                                flexDirection: `row`, justifyContent: `center`, flexWrap: `wrap`,
                                 marginTop: `2.5rem`
-                                }}>
+                                }}
+                                className={styles.socialLinksContainer}    
+                            >
 
                                 <Link href="tel:+85599313535">
                                     <a 
@@ -115,7 +115,7 @@ export default function GoodTimeRelaxResort() {
                                     style={{
                                         display: `flex`, flexDirection: `row`, alignItems: `center`,
                                         color: `#fff`, outline: `2px solid #ececec`, borderRadius: `100%`,
-                                        margin: `0 1rem`, transition: `all 150ms ease-in`
+                                        transition: `all 150ms ease-in`
                                     }}
                                     onMouseOver={() => {
                                         const element = document.getElementById('tel_link')
@@ -141,7 +141,7 @@ export default function GoodTimeRelaxResort() {
                                     style={{
                                         display: `flex`, flexDirection: `row`, alignItems: `center`,
                                         color: `#fff`, outline: `2px solid #ececec`, borderRadius: `100%`,
-                                        margin: `0 1rem`, transition: `all 150ms ease-in`
+                                        transition: `all 150ms ease-in`
                                     }}
                                     onMouseOver={() => {
                                         const element = document.getElementById('fb_link')
@@ -167,7 +167,7 @@ export default function GoodTimeRelaxResort() {
                                     style={{
                                         display: `flex`, flexDirection: `row`, alignItems: `center`,
                                         color: `#fff`, outline: "2px solid #ececec", borderRadius: `.25rem`,
-                                        margin: `0 1rem`, padding: `.75rem`, transition: `all 150ms ease-in`
+                                        padding: `.75rem`, transition: `all 150ms ease-in`
                                     }}
                                     onMouseOver={() => {
                                         const element = document.getElementById('booking_dot_com_link')
@@ -193,7 +193,7 @@ export default function GoodTimeRelaxResort() {
                                     style={{
                                         display: `flex`, flexDirection: `row`, alignItems: `center`,
                                         color: `#fff`, outline: "2px solid #ececec", borderRadius: `.25rem`,
-                                        margin: `0 1rem`, padding: `.75rem`, transition: `all 150ms ease-in`
+                                        padding: `.75rem`, transition: `all 150ms ease-in`
                                     }}
                                     onMouseOver={() => {
                                         const element = document.getElementById('agoda_link')
@@ -219,7 +219,7 @@ export default function GoodTimeRelaxResort() {
                                     style={{
                                         display: `flex`, flexDirection: `row`, alignItems: `center`,
                                         color: `#fff`, outline: "2px solid #ececec", borderRadius: `.25rem`,
-                                        margin: `0 1rem`, padding: `.75rem`, transition: `all 150ms ease-in`
+                                        padding: `.75rem`, transition: `all 150ms ease-in`
                                     }}
                                     onMouseOver={() => {
                                         const element = document.getElementById('tripadvisor_link')
