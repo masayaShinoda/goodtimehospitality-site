@@ -73,6 +73,7 @@ export default function GoodTimeRelaxResort() {
     pageName="Good Time Relax Resort"
     seoDesc={seoDesc}
     ogImage="images/og_image_SRN09142_result.jpg"
+    soleTitle={true}
     >
         <div className={styles.subpageContainer}>
             <div className={styles.gt_rr}>

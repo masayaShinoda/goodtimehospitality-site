@@ -4,7 +4,7 @@ import Nav from '../components/nav'
 import Footer from '../components/footer'
 import styles from '../styles/layout.module.scss'
 
-export default function Layout({ children, pageName, seoDesc, ogImage }) {
+export default function Layout({ children, pageName, seoDesc, ogImage, soleTitle }) {
 
     const siteUrl = "https://goodtimehospitality.com"
 
@@ -16,7 +16,7 @@ export default function Layout({ children, pageName, seoDesc, ogImage }) {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <NextSeo
-            title={pageName ? `${pageName} | Good Time Hospitality Group` : `Good Time Hospitality Group`}
+            title={soleTitle ? pageName : pageName ? `${pageName} | Good Time Hospitality Group` : `Good Time Hospitality Group`}
             description={
                 seoDesc ? seoDesc : 
                 "Vacation home rental in Cambodia."
