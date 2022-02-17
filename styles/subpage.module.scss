@@ -87,12 +87,12 @@
                 background: $gt-rr-brown;
                 background: linear-gradient(0deg, rgba(10,10,10,.65) 0%, rgba(33,33,33,0) 75%); 
                 @media #{$mq-xsmall} {
-                    padding: 15% 2.5%;
-                    background: linear-gradient(0deg, rgba(10,10,10,.8) 0%, rgba(33,33,33,.125) 80%); 
+                    padding: 15% 0;
+                    background: linear-gradient(0deg, rgba(10,10,10,.8) 0%, rgba(33,33,33,.25) 80%); 
                 }
                 .socialLinksContainer {
                     a {
-                        margin: .8rem 1rem; 
+                        margin: .8rem; 
                         // border: 1px solid red; //debug
                     }
                 }
@@ -127,8 +127,9 @@
                     p {font-size: 1.6rem;}
                 }
                 @media #{$mq-xsmall} {
-                    h2 {font-size: 2.4rem; margin-bottom: 1.4rem;}
-                    p {font-size: 1.4rem; width: 92%; max-width: 92%}
+                    padding: 0 2.5%;
+                    h2 {font-size: 2.1rem; margin-bottom: 1.4rem;}
+                    p {font-size: 1.4rem; width: 92%; max-width: 92%;}
                 }
             }
         }

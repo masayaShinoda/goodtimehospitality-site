@@ -234,7 +234,7 @@ export default function GoodTimeRelaxResort() {
                                         <Image 
                                         src={tripadvisor_logo} 
                                         alt="Tripadvisor" 
-                                        width="70"
+                                        width="80"
                                         height="20"
                                         />
                                     </a>
