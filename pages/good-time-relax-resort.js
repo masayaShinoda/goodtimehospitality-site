@@ -21,6 +21,7 @@ import phoneIcon from '../public/icons/phone_result_transparent.png'
 import fbIcon from '../public/icons/fb-icon-margins.png'
 import booking_dot_com_logo_white from '../public/images/Booking.Com-logo-white_result.webp'
 import agoda_logo from '../public/images/agoda-logo.svg'
+import tripadvisor_logo from '../public/images/tripadvisor.svg'
 
 import gt_rr_activity_kayaking from '../public/images/gt-rr/activities/DSC09092_result.webp'
 import gt_rr_activity_gym_spa from '../public/images/gt-rr/activities/SRN09101_result.webp'
@@ -206,6 +207,32 @@ export default function GoodTimeRelaxResort() {
                                         <Image 
                                         src={agoda_logo} 
                                         alt="Agoda" 
+                                        width="70"
+                                        height="20"
+                                        />
+                                    </a>
+                                </Link>
+                                <Link href="https://www.tripadvisor.com/Hotel_Review-g21367060-d23821043-Reviews-Good_Time_Relax_Resort-Kampong_Kraeng_Kampot_Province.html?m=19905">
+                                    <a 
+                                    id="tripadvisor_link"
+                                    title="View resort on Tripadvisor"
+                                    style={{
+                                        display: `flex`, flexDirection: `row`, alignItems: `center`,
+                                        color: `#fff`, outline: "2px solid #ececec", borderRadius: `.25rem`,
+                                        margin: `0 1rem`, padding: `.75rem`, transition: `all 150ms ease-in`
+                                    }}
+                                    onMouseOver={() => {
+                                        const element = document.getElementById('tripadvisor_link')
+                                        element.style.background = "#AF8C40"
+                                    }}
+                                    onMouseLeave={() => {
+                                        const element = document.getElementById('tripadvisor_link')
+                                        element.style.background = "0"
+                                    }}
+                                    >
+                                        <Image 
+                                        src={tripadvisor_logo} 
+                                        alt="Tripadvisor" 
                                         width="70"
                                         height="20"
                                         />

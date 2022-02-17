@@ -1,7 +1,13 @@
 import styles from '../styles/footer.module.scss'
 
 export default function Footer() {
-    return (
+
+const tripadvisor_link = "https://www.tripadvisor.com/Hotel_Review-g21367060-d23821043-Reviews-Good_Time_Relax_Resort-Kampong_Kraeng_Kampot_Province.html?m=19905"
+const agoda_link = "https://www.agoda.com/good-time-relax-resort/hotel/kampot-kh.html"
+const booking_link = "https://www.booking.com/hotel/kh/good-time-relax-resort.html"
+
+
+return (
 <footer className={styles.footerContainer}>
 	<div className={styles.content}>
 		<div className={styles.top}>
@@ -45,7 +51,22 @@ export default function Footer() {
 					<a href="https://www.instagram.com/goodtime.relaxresort/">
 					Instagram	
 					</a>
-				</li>				
+				</li>			
+				<li>
+					<a href={booking_link}>
+					Booking.com	
+					</a>
+				</li>			
+				<li>
+					<a href={agoda_link}>
+					Agoda
+					</a>
+				</li>
+				<li>
+					<a href={tripadvisor_link}>
+					Tripadvisor
+					</a>
+				</li>			
 				<li><a href="tel:+85599313535">099 313 535</a></li>
 			</ul>	
 			<ul className={styles.box}>
