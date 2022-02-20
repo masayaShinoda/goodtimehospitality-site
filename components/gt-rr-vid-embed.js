@@ -13,7 +13,9 @@ export default function GT_RR_Video() {
             style={{border: `none`, overflow: `hidden`}} 
             scrolling="no" frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
-            allowFullScreen={true}>
+            allowFullScreen={true}
+            loading="lazy"
+            >
             </iframe>
         </div>
     )
