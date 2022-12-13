@@ -5,7 +5,7 @@ import styles from '../styles/nav.module.scss'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-export default function Nav() {
+export default function Nav({ bookLinkURL }) {
     const router = useRouter()
     function openNav() {
         document.getElementById("navMobile").style.display = "flex"
@@ -37,7 +37,10 @@ export default function Nav() {
             document.getElementById("mobile_logo").style.width = "17.5rem"
             document.getElementById("mobile_logo").style.maxWidth = "17.5rem"
 
-            document.getElementById("booking_link").classList.add(styles.minimizedBookingLink)
+            if(document.getElementById("booking_link")) {
+
+                document.getElementById("booking_link").classList.add(styles.minimizedBookingLink)
+            }
         } else {
             document.getElementById("nav_container").classList.remove(styles.navContainerMinimized)
             document.getElementById("nav_container").classList.remove('animate__slideInDown')
@@ -48,7 +51,10 @@ export default function Nav() {
             document.getElementById("desktop_logo").style.maxWidth = "10rem"
             document.getElementById("mobile_logo").style.width = "10rem"
             document.getElementById("mobile_logo").style.maxWidth = "10rem"
-            document.getElementById("booking_link").classList.remove(styles.minimizedBookingLink)
+            if(document.getElementById("booking_link")) {
+
+                document.getElementById("booking_link").classList.remove(styles.minimizedBookingLink)
+            }
 
         }
     } 
@@ -101,18 +107,21 @@ export default function Nav() {
                     About
                     </a>
                 </Link>
-                <a 
-                className={styles.bookingLink} 
-                id="booking_link"
-                title="Booking"
-                href="https://www.booking.com/hotel/kh/good-time-relax-resort.html"
-                >
-                    <img 
-                    src="icons/phone_result.webp" 
-                    className={styles.bookingLinkIcon}
-                    width="18px" height="18px" />
-                    <p>Booking</p>
-                </a>
+                {
+                    bookLinkURL && 
+                    <a 
+                    className={styles.bookingLink} 
+                    id="booking_link"
+                    title="Booking"
+                    href={bookLinkURL}
+                    >
+                        <img 
+                        src="icons/phone_result.webp" 
+                        className={styles.bookingLinkIcon}
+                        width="18px" height="18px" />
+                        <p>Booking</p>
+                    </a>
+                }
             </span>
         </div>
         <button id="openNavBtn" onClick={openNav} className={styles.openNavBtn} 
@@ -131,7 +140,7 @@ export default function Nav() {
             </div>
         </button>
         <Link href="/">
-            <a className={styles.mobileLogoLink}>
+            <div className={styles.mobileLogoLink}>
                 <img 
                 src="images/logo-goodtimegrouphospitality.png"
                 alt="Logo" 
@@ -139,7 +148,7 @@ export default function Nav() {
                 id="mobile_logo"
                 />
                 
-            </a>
+            </div>
         </Link>
         <div className={styles.navMobile} style={{display: `none`}} id="navMobile">
             <span className={styles.mobileLinks}>
@@ -158,11 +167,15 @@ export default function Nav() {
                     About
                     </a>
                 </Link>
-                <a 
-                href="https://www.booking.com/hotel/kh/good-time-relax-resort.html"
-                onClick={closeNav}>
-                Booking
-                </a>
+                {
+                    bookLinkURL && 
+                    <a 
+                        href={bookLinkURL}
+                        onClick={closeNav}
+                    >
+                        Booking
+                    </a>
+                }
             </span>
         </div>
     </div>

@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -49,8 +50,8 @@ export default function Hero({ data }) {
         className={styles.carouselContainer}
     >
         {heros ? heros.map(hero => 
-        <>
-            <div className={styles.carousel} key={hero.id}>
+        <Fragment key={hero.id}>
+            <div className={styles.carousel}>
                 <img src={hero['image'][0]['url']} className={styles.carouselBg}/>
                 <div className={styles.carouselTextContainer}>
                     <span className={styles.carouselText}>
@@ -75,7 +76,7 @@ export default function Hero({ data }) {
                     src={hero['image'][0]['url']} />
                 </div>
             </div>
-        </>
+        </Fragment >
         ) : <div className={styles.loading_hero}>
             <div
                 className="lds_ellipsis"><div></div><div></div><div></div><div></div></div>
