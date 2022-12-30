@@ -56,11 +56,11 @@
                 transition: color 200ms ease-in-out;
             }
             a:hover, a:focus {
-                color: $gold;
+                color: $gtg-gold;
             }
             // a:last-of-type {margin-right: 0}
             a.active {
-                border-bottom: 2px solid $gold;
+                border-bottom: 2px solid $gtg-gold;
             }
             
             .dropdownNav {

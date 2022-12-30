@@ -82,7 +82,8 @@
 }
 
 .social_link {
-    background: $gold;
+    // background: $gold;
+    background: $gtg-gold;
 }
 .social_link:hover {
     background: darken($gold, 7.5%);

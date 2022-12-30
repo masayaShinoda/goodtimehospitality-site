@@ -1,11 +1,14 @@
 import Link from 'next/link'
 // import Image from 'next/image'
-import logo from '../public/images/logo-goodtimegrouphospitality.png'
 import styles from '../styles/nav.module.scss'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 export default function Nav({ bookLinkURL }) {
+    const logo_vertical = "images/logo-gtg-512.png"
+    const logo_text = "images/logo-gtg-text.png"
+    const logo_text_white = "images/logo-gtg-text-white.png"
+
     const router = useRouter()
     function openNav() {
         document.getElementById("navMobile").style.display = "flex"
@@ -30,8 +33,8 @@ export default function Nav({ bookLinkURL }) {
             document.getElementById("nav_container").classList.add(styles.navContainerMinimized)
             document.getElementById("nav_container").classList.add('animate__slideInDown')
             // document.getElementById("nav_container").style.height = "60px"
-            document.getElementById("desktop_logo").src = "images/logo-text.png"
-            document.getElementById("mobile_logo").src = "images/logo-text-white.png"
+            document.getElementById("desktop_logo").src = logo_text
+            document.getElementById("mobile_logo").src = logo_text_white
             document.getElementById("desktop_logo").style.width = "20rem"
             document.getElementById("desktop_logo").style.maxWidth = "20rem"
             document.getElementById("mobile_logo").style.width = "17.5rem"
@@ -45,8 +48,8 @@ export default function Nav({ bookLinkURL }) {
             document.getElementById("nav_container").classList.remove(styles.navContainerMinimized)
             document.getElementById("nav_container").classList.remove('animate__slideInDown')
             // document.getElementById("nav_container").style.height = "120px"
-            document.getElementById("desktop_logo").src = "images/logo-goodtimegrouphospitality.png"
-            document.getElementById("mobile_logo").src = "images/logo-goodtimegrouphospitality.png"
+            document.getElementById("desktop_logo").src = logo_vertical
+            document.getElementById("mobile_logo").src = logo_vertical
             document.getElementById("desktop_logo").style.width = "10rem"
             document.getElementById("desktop_logo").style.maxWidth = "10rem"
             document.getElementById("mobile_logo").style.width = "10rem"
@@ -66,7 +69,7 @@ export default function Nav({ bookLinkURL }) {
                 <a className={styles.logoLink}>
                     {/* <Image src={logo} width="100" height="100" alt="Logo" id="desktop_logo" /> */}
                     <img 
-                    src="images/logo-goodtimegrouphospitality.png" 
+                    src={logo_vertical}
                     alt="Good Time Group Logo" 
                     id="desktop_logo"
                     />
@@ -142,7 +145,7 @@ export default function Nav({ bookLinkURL }) {
         <Link href="/">
             <div className={styles.mobileLogoLink}>
                 <img 
-                src="images/logo-goodtimegrouphospitality.png"
+                src={logo_vertical}
                 alt="Logo" 
                 width="100" height="100" 
                 id="mobile_logo"

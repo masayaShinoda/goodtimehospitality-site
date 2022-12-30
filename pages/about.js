@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from '../styles/about.module.scss'
 
 export default function About() {
-    const gtgh_logo = "images/logo-goodtimegrouphospitality.png"
+    const gtgh_logo = "images/logo-gtg-512.png"
     const fbIcon = '/icons/fb-icon-margins.png'
     const igIcon = '/icons/ig-icon.png'
     const emailIcon = '/icons/email-icon.png'
