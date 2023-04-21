@@ -4,7 +4,7 @@ import '../styles/globals.scss'
 import 'animate.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-
+import { Analytics } from '@vercel/analytics/react'
 
 function MyApp({ Component, pageProps }) {
   
@@ -14,7 +14,12 @@ function MyApp({ Component, pageProps }) {
     )
   }, [])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  ) 
 }
 
 export default MyApp
